@@ -54,4 +54,8 @@ $(document).on('click', '.btn-addcart', function () {
             window.location.href = "https://comotecshop.myshopify.com/cart";
         }
     });
-})
+});
+
+function goBack() {
+    window.history.back();
+}
