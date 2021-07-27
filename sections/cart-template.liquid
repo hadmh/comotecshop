@@ -8,7 +8,7 @@
         </div>
     </div>
 </div>
-<div class="container w-1000">
+<div class="container w-1200">
     <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
         <div {% if cart.item_count == 0 %} class="hide" {% endif %} data-cart-wrapper>
             <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
@@ -55,19 +55,6 @@
                             {%- if cart.cart_level_discount_applications.size > 0 -%}
                                 {%- assign cartDiscounts = cart.cart_level_discount_applications -%}
                             {%- endif -%}
-                            <div {% if cart.cart_level_discount_applications.size == 0 %} class="hide" {% endif %} data-cart-discount-wrapper>
-                                <div class="order-discount-card-wrapper" data-cart-discount>
-                                    {%- for discount_application in cartDiscounts -%}
-                                        <span class="order-discount order-discount--title order-discount--cart">
-                                            {% include 'icon-saletag' %}<span class="visually-hidden">{{ 'customer.order.discount' | t }}:</span>
-                                            <span data-cart-discount-title>{{- discount_application.title -}}</span>
-                                        </span>
-                                        <span class="order-discount order-discount--cart order-discount--cart-total">
-                                            -<span data-cart-discount-amount>{{ discount_application.total_allocated_amount | money }}</span>
-                                        </span>
-                                    {%- endfor -%}
-                                </div>
-                            </div>
 
                             <div class="cart-subtotal">
                                 <span class="cart-subtotal__title">{{ 'cart.general.subtotal' | t }}</span>
