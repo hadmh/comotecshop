@@ -54,53 +54,18 @@
                     <div class="grid-item text-right{% if settings.cart_notes_enable %} large--one-half{% endif %}">
 
                         <div class="cart-subtotal{% if settings.cart_notes_enable %} cart-subtotal--notes-enabled{% endif %}">
-
-                            {%- if cart.cart_level_discount_applications != blank -%}
-                                <div class="order-discount-cart-wrapper">
-                                    {%- for discount_application in cart.cart_level_discount_applications -%}
-                                        <span class="order-discount order-discount--title">
-                                            <span aria-hidden="true" class="icon icon-saletag"></span>
-                                            <span class="visually-hidden">{{ 'customer.order.discount' | t }}:</span>
-                                            {{- discount_application.title -}}
-                                        </span>
-                                        <span class="order-discount order-discount--cart-price">-{{ discount_application.total_allocated_amount | money }}</span>
-                                    {%- endfor -%}
-                                </div>
-                            {%- endif -%}
-
-                            {{ 'cart.general.subtotal' | t }}
+                            <span class="label">合計</span>
                             <span class="h1 cart-subtotal--price">
                                 {% include 'price' with cart.total_price %}
                             </span>
+                            <span class="vat_include">(税込)</span>
                         </div>
-
-                        {%- capture taxes_shipping_checkout -%}
-                            {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-                                {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                            {%- elsif cart.taxes_included -%}
-                                {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
-                            {%- elsif shop.shipping_policy.body != blank -%}
-                                {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
-                            {%- else -%}
-                                {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
-                            {%- endif -%}
-                        {%- endcapture -%}
-
-                        <p class="cart__policies">
-                            <em>{{ taxes_shipping_checkout }}</em>
-                        </p>
 
                         <input type="submit" name="update" class="btn-secondary update-cart" value="{{ 'cart.general.update' | t }}">
 
-                        <button class="btn" name="checkout" type="submit">
-                            <span class="icon icon-cart"></span>
-                            {{ 'cart.general.checkout' | t }}
+                        <button class="btn btn-checkout" name="checkout" type="submit">
+                            レジに進む
                         </button>
-
-                        {% if additional_checkout_buttons %}
-                            <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
-                        {% endif %}
-
                     </div>
                 </div>
             </div>
