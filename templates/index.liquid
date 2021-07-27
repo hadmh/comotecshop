@@ -61,7 +61,22 @@
                                     {% endfor %}
                                 </p>
                                 <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
+                                    <p>
+                                        {% if on_sale %}
+                                            <span class="visually-hidden">{{ "products.general.sale_price" | t }}</span>
+                                        {% else %}
+                                            <span class="visually-hidden">{{ "products.general.regular_price" | t }}</span>
+                                        {% endif %}
+                                        {% include 'price' with product.price %}
+                                        {% if on_sale and section.settings.product_show_compare_at_price %}
+                                            <small>
+                                                <s>
+                                                    <span class="visually-hidden">{{ "products.general.regular_price" | t }}</span>
+                                                    {% include 'price' with product.compare_at_price %}
+                                                </s>
+                                            </small>
+                                        {% endif %}
+                                    </p>
                                 </h3>
 
                                 <div class="price">
