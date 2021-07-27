@@ -1,5 +1,6 @@
 // JavaScript Document
-(function ($) {
+
+$(document).ready(function () {
     // Tab
     $(function () {
         $(".js-tab-link")
@@ -72,4 +73,4 @@
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, '300');
     });
-})(jQuery);
+});

@@ -292,7 +292,7 @@
                     <div class="product-item row">
                         <div class="image-box col-12 large-3">
                             <div class="col-inner">
-                                <a href="#">
+                                <a href="{{ product.url }}">
                                     <img alt="" src="{{ product | img_url: '450x450' }}">
                                 </a>
                             </div>
@@ -305,9 +305,11 @@
                                         {{ tag }}
                                     {% endfor %}
                                 </p>
-                                <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
-                                </h3>
+                                <a href="{{ product.url }}">
+                                    <h3 class="product-title">
+                                        <p>{{ product.title }}</p>
+                                    </h3>
+                                </a>
 
                                 <div class="price">
                                     <span class="price-yen">{{ product.price }}</span>
@@ -323,7 +325,7 @@
                         <div class="text-box col-12 large-4">
                             <div class="col-inner">
                                 <div class="btn-box">
-                                    <a class="btn btn-readmore" href="#">商品詳細へ</a>
+                                    <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
                                     <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
                                 </div>
                             </div>
