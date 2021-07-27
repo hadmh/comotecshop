@@ -76,6 +76,12 @@
                     </div>
                 </div>
             </div>
+
+            <form action="/cart/add" method="post">
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}"/>
+                <input id="quantity" min="1" name="quantity" type="number" value="1"/>
+                <input class="btn" type="submit" value="Add to cart"/>
+            </form>
         </div>
     </div>
 </div>
