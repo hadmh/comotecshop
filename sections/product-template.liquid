@@ -59,7 +59,7 @@
 
                     <div class="box-order">
                         <div class="price">
-                            <span class="price-yen">{% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}</span>
+                            <span class="price-yen">{{ product.product.regular_price }}</span>
                             <span class="tax-include">(税込)</span>
                         </div>
                         <div class="detail-num-wrap">
@@ -67,18 +67,7 @@
                             <input class="product-form__input product-form__input--quantity" data-quantity-input id="Quantity-{{ section.id }}" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
                         </div>
 
-                        <button type="submit" name="add" {% unless current_variant.available %} aria-disabled="true" {% endunless %} aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}" class="btn btn-addcart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}" {% if settings.enable_ajax %} aria-haspopup="dialog" {% endif %} data-add-to-cart>
-                            <span data-add-to-cart-text>
-                                {% unless current_variant.available %}
-                                    {{ 'products.product.sold_out' | t }}
-                                {% else %}
-                                    買い物カゴへ入れる
-                                {% endunless %}
-                            </span>
-                            <span class="hide" data-loader>
-                                {% include 'icon-spinner' %}
-                            </span>
-                        </button>
+                        <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
                     </div>
                 </div>
             </div>
