@@ -14,63 +14,26 @@ $(document).ready(function () {
             .click();
     });
 
-    //ページネーション
-    $(".paging-btn").on("click", function () {
-        $(".paging-btn").removeClass("selected");
-        $(this).toggleClass("selected");
-    });
-
-    //商品
-    $(".item-select01, .select-item01").on("click", function () {
-        $(".item-select01, .select-item01").toggleClass("selected");
-    });
-
-    $(".item-select02, .select-item02").on("click", function () {
-        $(".item-select02, .select-item02").toggleClass("selected");
-    });
-
-    $(".item-select03, .select-item03").on("click", function () {
-        $(".item-select03, .select-item03").toggleClass("selected");
-    });
-
-    $(".item-select04, .select-item04").on("click", function () {
-        $(".item-select04, .select-item04").toggleClass("selected");
-        //$(".item-select04, .select-item04").removeClass("selected");
-    });
-
-    // $(".item-select").on("click", function () {
-    //     $(".item-select").removeClass("selected");
-    //     $(this).toggleClass("selected");
-    // });
-
-    //購入ボタン
-    $(".purchase-btn").on("click", function () {
-        $(this).toggleClass("selected");
-    });
-
-    //削除ボタン
-    $(".cart-select").on("click", function () {
-        $(".cart-select").removeClass("selected");
-        $(this).toggleClass("selected");
-    });
-
-    //ページネーション
-    $(".page-numbers").on("click", function () {
-        $(".page-numbers").removeClass("selected");
-        $(this).toggleClass("selected");
-    });
-
-    //フッター地上デジタルボタン
-    $(".footer-btn").on("click", function () {
-        $(".footer-btn").removeClass("selected");
-        $(this).toggleClass("selected");
-    });
-
-
     //Get the button:
     var btn = $('#go-top');
     btn.on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+
+    // Select all tabs
+    $(".nav-tab a").click(function (e) {
+        console.log('tab click');
+        e.preventDefault();
+        var tab_box = $(this).parent().parent().parent();
+        var id = $(this).attr('href');
+
+        // Remove active
+        tab_box.find('.nav-tab a').removeClass('active');
+        tab_box.find('.tab-content .tab-item').removeClass('active');
+
+        // Add active
+        $(this).addClass('active');
+        tab_box.find('.tab-content ' + id).addClass('active');
     });
 });
