@@ -37,3 +37,21 @@ $(document).ready(function () {
         tab_box.find('.tab-content ' + id).addClass('active');
     });
 });
+
+$(document).on('click', '.btn-addcart', function () {
+    var ID = $(this).attr("product");
+    var Quantity = $('.product-' + ID + '-quantity').val();
+
+    $.ajax({
+        type: 'POST',
+        url: '/cart/add',
+        data: {
+            quantity: Quantity,
+            id: ID
+        },
+        dataType: 'json',
+        success: function (data) {
+            console.log('add done');
+        }
+    });
+})
