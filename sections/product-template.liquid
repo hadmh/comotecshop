@@ -4,30 +4,15 @@
     {% endcomment %}
     {%- assign current_variant = product.selected_or_first_available_variant -%}
     {%- assign product_image_zoom_size = '1024x1024' -%}
-    {%- assign product_image_scale = '2' -%}
+    {%- assign product_image_scale = '5' -%}
     {%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
     {%- assign compare_at_price = current_variant.compare_at_price -%}
     {%- assign price = current_variant.price -%}
 
-    {% case section.settings.media_size %}
-        {% when 'small' %}
-            {%- assign product_media_width = 'medium-up--one-third' -%}
-            {%- assign product_description_width = 'medium-up--two-thirds' -%}
-            {%- assign height = 345 -%}
-        {% when 'medium' %}
-            {%- assign product_media_width = 'medium-up--one-half' -%}
-            {%- assign product_description_width = 'medium-up--one-half' -%}
-            {%- assign height = 530 -%}
-        {% when 'large' %}
-            {%- assign product_media_width = 'medium-up--two-thirds' -%}
-            {%- assign product_description_width = 'medium-up--one-third' -%}
-            {%- assign height = 720 -%}
-        {% when 'full' %}
-            {%- assign product_media_width = '' -%}
-            {%- assign product_description_width = '' -%}
-            {%- assign height = 1090 -%}
-            {%- assign enable_image_zoom = false -%}
-    {% endcase %}
+    {%- assign product_media_width = '' -%}
+    {%- assign product_description_width = '' -%}
+    {%- assign height = 1090 -%}
+    {%- assign enable_image_zoom = false -%}
 
     <div class="breadcrumb">
         <div class="container w-1000">
@@ -46,7 +31,7 @@
                     <a href="#">
                         {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
-                        <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media" style="max-width: {{ height }}px;">
+                        <img src="{{ featured_media | img_url: product_image_size }}" alt="{{ featured_media.alt }}">
                     </a>
 
                     <p class="product-cat">
