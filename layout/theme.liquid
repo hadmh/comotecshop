@@ -51,10 +51,7 @@
   {%- if page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
   {%- endif -%}
-
-  {% include 'social-meta-tags' %}
-  {% include 'css-variables' %}
-
+  
   <script>
     window.performance.mark('debut:theme_stylesheet_loaded.start');
 
