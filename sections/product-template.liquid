@@ -49,11 +49,14 @@
                     <div class="box-order">
                         <div class="price">
                             <span class="price-yen">
-                                {% if on_sale and section.settings.product_show_compare_at_price %}
-                                    {{ "products.regular_price" | t }}
-                                    {% include 'price' with product.compare_at_price %}
-                                {% endif %}
+                                {% include 'price' with product.price %}
                             </span>
+
+                            {% if on_sale and section.settings.product_show_compare_at_price %}
+                                {{ "products.regular_price" | t }}
+                                {% include 'price' with product.compare_at_price %}
+                            {% endif %}
+
                             <span class="tax-include">(税込)</span>
                         </div>
                         <div class="detail-num-wrap">
