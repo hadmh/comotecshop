@@ -1547,21 +1547,23 @@
     </div>
 
     <script>
-        // Select all tabs
-        $(".nav-tab a").click(function (e) {
-            console.log('tab click');
-            e.preventDefault();
-            var tab_box = $(this).parent().parent().parent();
-            var id = $(this).attr('href');
+        (function ($) {
+            // Select all tabs
+            $(".nav-tab a").click(function (e) {
+                console.log('tab click');
+                e.preventDefault();
+                var tab_box = $(this).parent().parent().parent();
+                var id = $(this).attr('href');
 
-            // Remove active
-            tab_box.find('.nav-tab a').removeClass('active');
-            tab_box.find('.tab-content .tab-item').removeClass('active');
+                // Remove active
+                tab_box.find('.nav-tab a').removeClass('active');
+                tab_box.find('.tab-content .tab-item').removeClass('active');
 
-            // Add active
-            $(this).addClass('active');
-            tab_box.find('.tab-content ' + id).addClass('active');
-        });
+                // Add active
+                $(this).addClass('active');
+                tab_box.find('.tab-content ' + id).addClass('active');
+            });
+        })(jQuery);
     </script>
 </div>
 
