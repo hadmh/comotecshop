@@ -371,6 +371,7 @@ a.text-center.color-av-6.active {
     position: relative;
     margin-top: 20px;
     max-width: 290px;
+    cursor: pointer;
 }
 .product-item a.btn.btn-addcart:before {
     content: "";
@@ -466,6 +467,7 @@ a.text-center.color-av-6.active {
     margin-top: 0;
     width: 290px;
     float: right;
+    cursor: pointer;
 }
 .product-detail a.btn.btn-addcart:before {
     content: "";
