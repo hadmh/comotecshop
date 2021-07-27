@@ -63,24 +63,25 @@
                                 <h3 class="product-title">
                                     <p>{{ product.title }}</p>
                                 </h3>
-
-
-                                <span class="price-yen">
-                                    {% if on_sale %}
-                                        <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
-                                    {% else %}
-                                        <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                    {% endif %}
-                                    {% include 'price' with product.price %}
-                                    {% if on_sale and section.settings.product_show_compare_at_price %}
-                                        <small>
-                                            <s>
-                                                <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                                {% include 'price' with product.compare_at_price %}
-                                            </s>
-                                        </small>
-                                    {% endif %}
-                                </span>
+                                <div class="price">
+                                    <span class="price-yen">
+                                        {% if on_sale %}
+                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                        {% else %}
+                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                        {% endif %}
+                                        {% include 'price' with product.price %}
+                                        {% if on_sale and section.settings.product_show_compare_at_price %}
+                                            <small>
+                                                <s>
+                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    {% include 'price' with product.compare_at_price %}
+                                                </s>
+                                            </small>
+                                        {% endif %}
+                                    </span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
                                 <div class="detail-num-wrap">
                                     <span class="detail-num-txt">個数</span>
                                     <input id="" name="" type="number" value="1">
@@ -126,23 +127,26 @@
                                     <p>{{ product.title }}</p>
                                 </h3>
 
+                                <div class="price">
+                                    <span class="price-yen">
+                                        {% if on_sale %}
+                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                        {% else %}
+                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                        {% endif %}
+                                        {% include 'price' with product.price %}
+                                        {% if on_sale and section.settings.product_show_compare_at_price %}
+                                            <small>
+                                                <s>
+                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    {% include 'price' with product.compare_at_price %}
+                                                </s>
+                                            </small>
+                                        {% endif %}
+                                    </span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
 
-                                <span class="price-yen">
-                                    {% if on_sale %}
-                                        <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
-                                    {% else %}
-                                        <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                    {% endif %}
-                                    {% include 'price' with product.price %}
-                                    {% if on_sale and section.settings.product_show_compare_at_price %}
-                                        <small>
-                                            <s>
-                                                <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                                {% include 'price' with product.compare_at_price %}
-                                            </s>
-                                        </small>
-                                    {% endif %}
-                                </span>
                                 <div class="detail-num-wrap">
                                     <span class="detail-num-txt">個数</span>
                                     <input id="" name="" type="number" value="1">
@@ -187,24 +191,25 @@
                                 <h3 class="product-title">
                                     <p>{{ product.title }}</p>
                                 </h3>
-
-
-                                <span class="price-yen">
-                                    {% if on_sale %}
-                                        <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
-                                    {% else %}
-                                        <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                    {% endif %}
-                                    {% include 'price' with product.price %}
-                                    {% if on_sale and section.settings.product_show_compare_at_price %}
-                                        <small>
-                                            <s>
-                                                <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                                {% include 'price' with product.compare_at_price %}
-                                            </s>
-                                        </small>
-                                    {% endif %}
-                                </span>
+                                <div class="price">
+                                    <span class="price-yen">
+                                        {% if on_sale %}
+                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                        {% else %}
+                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                        {% endif %}
+                                        {% include 'price' with product.price %}
+                                        {% if on_sale and section.settings.product_show_compare_at_price %}
+                                            <small>
+                                                <s>
+                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    {% include 'price' with product.compare_at_price %}
+                                                </s>
+                                            </small>
+                                        {% endif %}
+                                    </span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
                                 <div class="detail-num-wrap">
                                     <span class="detail-num-txt">個数</span>
                                     <input id="" name="" type="number" value="1">
@@ -249,24 +254,25 @@
                                 <h3 class="product-title">
                                     <p>{{ product.title }}</p>
                                 </h3>
-
-
-                                <span class="price-yen">
-                                    {% if on_sale %}
-                                        <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
-                                    {% else %}
-                                        <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                    {% endif %}
-                                    {% include 'price' with product.price %}
-                                    {% if on_sale and section.settings.product_show_compare_at_price %}
-                                        <small>
-                                            <s>
-                                                <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                                {% include 'price' with product.compare_at_price %}
-                                            </s>
-                                        </small>
-                                    {% endif %}
-                                </span>
+                                <div class="price">
+                                    <span class="price-yen">
+                                        {% if on_sale %}
+                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                        {% else %}
+                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                        {% endif %}
+                                        {% include 'price' with product.price %}
+                                        {% if on_sale and section.settings.product_show_compare_at_price %}
+                                            <small>
+                                                <s>
+                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    {% include 'price' with product.compare_at_price %}
+                                                </s>
+                                            </small>
+                                        {% endif %}
+                                    </span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
                                 <div class="detail-num-wrap">
                                     <span class="detail-num-txt">個数</span>
                                     <input id="" name="" type="number" value="1">
@@ -311,24 +317,25 @@
                                 <h3 class="product-title">
                                     <p>{{ product.title }}</p>
                                 </h3>
-
-
-                                <span class="price-yen">
-                                    {% if on_sale %}
-                                        <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
-                                    {% else %}
-                                        <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                    {% endif %}
-                                    {% include 'price' with product.price %}
-                                    {% if on_sale and section.settings.product_show_compare_at_price %}
-                                        <small>
-                                            <s>
-                                                <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                                {% include 'price' with product.compare_at_price %}
-                                            </s>
-                                        </small>
-                                    {% endif %}
-                                </span>
+                                <div class="price">
+                                    <span class="price-yen">
+                                        {% if on_sale %}
+                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                        {% else %}
+                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                        {% endif %}
+                                        {% include 'price' with product.price %}
+                                        {% if on_sale and section.settings.product_show_compare_at_price %}
+                                            <small>
+                                                <s>
+                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    {% include 'price' with product.compare_at_price %}
+                                                </s>
+                                            </small>
+                                        {% endif %}
+                                    </span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
                                 <div class="detail-num-wrap">
                                     <span class="detail-num-txt">個数</span>
                                     <input id="" name="" type="number" value="1">
@@ -375,24 +382,25 @@
                                         <p>{{ product.title }}</p>
                                     </h3>
                                 </a>
-
-
-                                <span class="price-yen">
-                                    {% if on_sale %}
-                                        <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
-                                    {% else %}
-                                        <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                    {% endif %}
-                                    {% include 'price' with product.price %}
-                                    {% if on_sale and section.settings.product_show_compare_at_price %}
-                                        <small>
-                                            <s>
-                                                <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
-                                                {% include 'price' with product.compare_at_price %}
-                                            </s>
-                                        </small>
-                                    {% endif %}
-                                </span>
+                                <div class="price">
+                                    <span class="price-yen">
+                                        {% if on_sale %}
+                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                        {% else %}
+                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                        {% endif %}
+                                        {% include 'price' with product.price %}
+                                        {% if on_sale and section.settings.product_show_compare_at_price %}
+                                            <small>
+                                                <s>
+                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    {% include 'price' with product.compare_at_price %}
+                                                </s>
+                                            </small>
+                                        {% endif %}
+                                    </span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
                                 <div class="detail-num-wrap">
                                     <span class="detail-num-txt">個数</span>
                                     <input id="" name="" type="number" value="1">
