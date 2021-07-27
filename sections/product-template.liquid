@@ -29,9 +29,7 @@
             <div class="image-box col-12 large-4">
                 <div class="col-inner">
                     <a href="#">
-                        {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-
-                        <img src="{{ featured_media | img_url: product_image_size }}" alt="{{ featured_media.alt }}">
+                        {{ product | img_url: '450x450' }}
                     </a>
 
                     <p class="product-cat">
