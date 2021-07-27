@@ -44,10 +44,14 @@
             <div class="image-box col-12 large-4">
                 <div class="col-inner">
                     <a href="#">
-                        <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media" style="max-width: {{ height }}px;">
+                        <img alt="" src="{{ product.featured_image }}">
                     </a>
 
-                    <p class="product-cat">写真はイメージです</p>
+                    <p class="product-cat">
+                        {% for tag in product.tags %}
+                            {{ tag }}
+                        {% endfor %}
+                    </p>
                 </div>
             </div>
 
@@ -59,7 +63,7 @@
 
                     <div class="box-order">
                         <div class="price">
-                            <span class="price-yen">{{ product.product.regular_price }}</span>
+                            <span class="price-yen">{{ product.price }}</span>
                             <span class="tax-include">(税込)</span>
                         </div>
                         <div class="detail-num-wrap">
