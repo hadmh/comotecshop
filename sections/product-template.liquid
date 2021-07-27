@@ -49,7 +49,6 @@
                     <div class="box-order">
                         <div class="price">
                             <span class="price-yen">
-                                {% include 'price' with product.price %}
                                 {% if on_sale and section.settings.product_show_compare_at_price %}
                                     {{ "products.regular_price" | t }}
                                     {% include 'price' with product.compare_at_price %}
