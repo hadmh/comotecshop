@@ -10,15 +10,7 @@
 </div>
 <div class="container w-1000">
     <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
-
         <div {% if cart.item_count == 0 %} class="hide" {% endif %} data-cart-wrapper>
-            <div class="cart-header">
-                <h1 class="cart-header__title">{{ 'cart.general.title' | t }}</h1>
-                <a href="{{ routes.all_products_collection_url }}" class="text-link text-link--accent">
-                    {{ 'cart.general.continue_shopping' | t }}
-                </a>
-            </div>
-
             <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
                 <div data-cart-line-items>
                     {%- for item in cart.items -%}
@@ -119,15 +111,6 @@
             </form>
 
             <p aria-live="polite" class="visually-hidden" data-cart-status role="status"></p>
-        </div>
-
-        <div class="empty-page-content{% if cart.item_count > 0 %} hide{% endif %} text-center" data-empty-page-content>
-            <h1>{{ 'cart.general.title' | t }}</h1>
-            <p class="cart--empty-message">{{ 'cart.general.empty' | t }}</p>
-            <div class="cookie-message">
-                <p>{{ 'cart.general.cookies_required' | t }}</p>
-            </div>
-            <a href="{{ routes.root_url }}" class="btn btn--has-icon-after cart__continue-btn">{{ 'general.404.link' | t }}{% include 'icon-arrow-right' %}</a>
         </div>
     </div>
 </div>
