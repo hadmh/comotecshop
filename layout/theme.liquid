@@ -71,7 +71,7 @@
   <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print"
     onload="this.media='all';onLoadStylesheet()">
 
-  <script src="{{ 'jquery-3.6.0.min.js' | asset_url }}" async="async"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" async="async"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
   <script type="text/javascript">
@@ -136,6 +136,9 @@
               <div class="bdcl-1 tab-item active" id="tab_1">
                   <h2 class="text-center title-tab-content color-1">食品・グルメ</h2>
 
+                  {% for product in collections.food-gourmet.products %}
+                    <p>{{ product.title }}</p>
+                  {% endfor %}
                   <div class="list-prooduct">
                       <div class="product-item row">
                           <div class="image-box col-12 large-3">
