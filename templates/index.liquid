@@ -92,250 +92,48 @@
             <h2 class="text-center title-tab-content color-2">フルーツ</h2>
 
             <div class="list-prooduct">
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                {% for product in collections.fruits.products %}
+                    <div class="product-item row">
+                        <div class="image-box col-12 large-3">
+                            <div class="col-inner">
+                                <a href="#">
+                                    <img alt="" src="{{ product | img_url: '450x450' }}">
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                        <div class="text-box col-12 large-5">
+                            <div class="col-inner">
+                                <p class="product-cat">
+                                    {% for tag in product.tags %}
+                                        {{ tag }}
+                                    {% endfor %}
+                                </p>
+                                <h3 class="product-title">
+                                    <p>{{ product.title }}</p>
+                                </h3>
+
+                                <div class="price">
+                                    <span class="price-yen">{{ product.price }}</span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
+                                <div class="detail-num-wrap">
+                                    <span class="detail-num-txt">個数</span>
+                                    <input id="" name="" type="number" value="1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                        <div class="text-box col-12 large-4">
+                            <div class="col-inner">
+                                <div class="btn-box">
+                                    <a class="btn btn-readmore" href="#">商品詳細へ</a>
+                                    <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -343,250 +141,48 @@
             <h2 class="text-center title-tab-content color-3">飲料類</h2>
 
             <div class="list-prooduct">
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                {% for product in collections.beverages.products %}
+                    <div class="product-item row">
+                        <div class="image-box col-12 large-3">
+                            <div class="col-inner">
+                                <a href="#">
+                                    <img alt="" src="{{ product | img_url: '450x450' }}">
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                        <div class="text-box col-12 large-5">
+                            <div class="col-inner">
+                                <p class="product-cat">
+                                    {% for tag in product.tags %}
+                                        {{ tag }}
+                                    {% endfor %}
+                                </p>
+                                <h3 class="product-title">
+                                    <p>{{ product.title }}</p>
+                                </h3>
+
+                                <div class="price">
+                                    <span class="price-yen">{{ product.price }}</span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
+                                <div class="detail-num-wrap">
+                                    <span class="detail-num-txt">個数</span>
+                                    <input id="" name="" type="number" value="1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                        <div class="text-box col-12 large-4">
+                            <div class="col-inner">
+                                <div class="btn-box">
+                                    <a class="btn btn-readmore" href="#">商品詳細へ</a>
+                                    <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -594,250 +190,48 @@
             <h2 class="text-center title-tab-content color-4">日用品・雑貨</h2>
 
             <div class="list-prooduct">
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                {% for product in collections.necessities-miscellaneous.products %}
+                    <div class="product-item row">
+                        <div class="image-box col-12 large-3">
+                            <div class="col-inner">
+                                <a href="#">
+                                    <img alt="" src="{{ product | img_url: '450x450' }}">
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                        <div class="text-box col-12 large-5">
+                            <div class="col-inner">
+                                <p class="product-cat">
+                                    {% for tag in product.tags %}
+                                        {{ tag }}
+                                    {% endfor %}
+                                </p>
+                                <h3 class="product-title">
+                                    <p>{{ product.title }}</p>
+                                </h3>
+
+                                <div class="price">
+                                    <span class="price-yen">{{ product.price }}</span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
+                                <div class="detail-num-wrap">
+                                    <span class="detail-num-txt">個数</span>
+                                    <input id="" name="" type="number" value="1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                        <div class="text-box col-12 large-4">
+                            <div class="col-inner">
+                                <div class="btn-box">
+                                    <a class="btn btn-readmore" href="#">商品詳細へ</a>
+                                    <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -845,250 +239,48 @@
             <h2 class="text-center title-tab-content color-5">インテリア・装飾品</h2>
 
             <div class="list-prooduct">
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                {% for product in collections.interior-decoration.products %}
+                    <div class="product-item row">
+                        <div class="image-box col-12 large-3">
+                            <div class="col-inner">
+                                <a href="#">
+                                    <img alt="" src="{{ product | img_url: '450x450' }}">
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                        <div class="text-box col-12 large-5">
+                            <div class="col-inner">
+                                <p class="product-cat">
+                                    {% for tag in product.tags %}
+                                        {{ tag }}
+                                    {% endfor %}
+                                </p>
+                                <h3 class="product-title">
+                                    <p>{{ product.title }}</p>
+                                </h3>
+
+                                <div class="price">
+                                    <span class="price-yen">{{ product.price }}</span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
+                                <div class="detail-num-wrap">
+                                    <span class="detail-num-txt">個数</span>
+                                    <input id="" name="" type="number" value="1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                        <div class="text-box col-12 large-4">
+                            <div class="col-inner">
+                                <div class="btn-box">
+                                    <a class="btn btn-readmore" href="#">商品詳細へ</a>
+                                    <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -1096,250 +288,48 @@
             <h2 class="text-center title-tab-content color-6">衣料品</h2>
 
             <div class="list-prooduct">
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                {% for product in collections.clothing.products %}
+                    <div class="product-item row">
+                        <div class="image-box col-12 large-3">
+                            <div class="col-inner">
+                                <a href="#">
+                                    <img alt="" src="{{ product | img_url: '450x450' }}">
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                        <div class="text-box col-12 large-5">
+                            <div class="col-inner">
+                                <p class="product-cat">
+                                    {% for tag in product.tags %}
+                                        {{ tag }}
+                                    {% endfor %}
+                                </p>
+                                <h3 class="product-title">
+                                    <p>{{ product.title }}</p>
+                                </h3>
+
+                                <div class="price">
+                                    <span class="price-yen">{{ product.price }}</span>
+                                    <span class="tax-include">(税込)</span>
+                                </div>
+                                <div class="detail-num-wrap">
+                                    <span class="detail-num-txt">個数</span>
+                                    <input id="" name="" type="number" value="1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
+                        <div class="text-box col-12 large-4">
+                            <div class="col-inner">
+                                <div class="btn-box">
+                                    <a class="btn btn-readmore" href="#">商品詳細へ</a>
+                                    <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item row">
-                    <div class="image-box col-12 large-3">
-                        <div class="col-inner">
-                            <a href="#">
-                                <img alt="" src="{{ 'product-1.png' | asset_url }}">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-5">
-                        <div class="col-inner">
-                            <p class="product-cat">写真はイメージです</p>
-                            <h3 class="product-title">商品名テキストテキストテキストテキストテキストテキスト</h3>
-
-                            <div class="price">
-                                <span class="price-yen">¥1,000</span>
-                                <span class="tax-include">(税込)</span>
-                            </div>
-                            <div class="detail-num-wrap">
-                                <span class="detail-num-txt">個数</span>
-                                <input id="" name="" type="number" value="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-box col-12 large-4">
-                        <div class="col-inner">
-                            <div class="btn-box">
-                                <a class="btn btn-readmore" href="#">商品詳細へ</a>
-                                <a class="btn btn-addcart" href="#">買い物カゴへ入れる</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
