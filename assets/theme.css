@@ -116,7 +116,7 @@
 }
 
 header {
-    background-image: url(images/bg-header.png);
+    background-image: url(bg-header.png);
     background-position: center;
 }
 
@@ -144,8 +144,8 @@ header {
 }
 .btn-cart i.cart {
     background-color: currentColor;
-    -webkit-mask-image: url(images/cart-ico.svg);
-    mask-image: url(images/cart-ico.svg);
+    -webkit-mask-image: url(cart-ico.svg);
+    mask-image: url(cart-ico.svg);
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -186,33 +186,33 @@ ul.nav.nav-main img {
 
 i.fish {
     background-color: currentColor;
-    -webkit-mask-image: url(images/icon-fish.svg);
-    mask-image: url(images/icon-fish.svg);
+    -webkit-mask-image: url(icon-fish.svg);
+    mask-image: url(icon-fish.svg);
 }
 i.fruits {
     background-color: currentColor;
-    -webkit-mask-image: url(images/icon-fruits.svg);
-    mask-image: url(images/icon-fruits.svg);
+    -webkit-mask-image: url(icon-fruits.svg);
+    mask-image: url(icon-fruits.svg);
 }
 i.drink {
     background-color: currentColor;
-    -webkit-mask-image: url(images/icon-drink.svg);
-    mask-image: url(images/icon-drink.svg);
+    -webkit-mask-image: url(icon-drink.svg);
+    mask-image: url(icon-drink.svg);
 }
 i.goods {
     background-color: currentColor;
-    -webkit-mask-image: url(images/icon-goods.svg);
-    mask-image: url(images/icon-goods.svg);
+    -webkit-mask-image: url(icon-goods.svg);
+    mask-image: url(icon-goods.svg);
 }
 i.interior {
     background-color: currentColor;
-    -webkit-mask-image: url(images/icon-interior.svg);
-    mask-image: url(images/icon-interior.svg);
+    -webkit-mask-image: url(icon-interior.svg);
+    mask-image: url(icon-interior.svg);
 }
 i.wear {
     background-color: currentColor;
-    -webkit-mask-image: url(images/icon-wear.svg);
-    mask-image: url(images/icon-wear.svg);
+    -webkit-mask-image: url(icon-wear.svg);
+    mask-image: url(icon-wear.svg);
 }
 
 main {
@@ -380,8 +380,8 @@ a.text-center.color-av-6.active {
     height: 30px;
     width: 30px;
     background: #ff6a00;
-    -webkit-mask-image: url(images/cart-ico.svg);
-    mask-image: url(images/cart-ico.svg);
+    -webkit-mask-image: url(cart-ico.svg);
+    mask-image: url(cart-ico.svg);
     display: inline-block;
 }
 .product-item a.btn.btn-addcart:after {
@@ -475,8 +475,8 @@ a.text-center.color-av-6.active {
     height: 30px;
     width: 30px;
     background: #ff6a00;
-    -webkit-mask-image: url(images/cart-ico.svg);
-    mask-image: url(images/cart-ico.svg);
+    -webkit-mask-image: url(cart-ico.svg);
+    mask-image: url(cart-ico.svg);
     display: inline-block;
 }
 .product-detail a.btn.btn-addcart:after {
