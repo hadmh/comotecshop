@@ -65,4 +65,12 @@ $(document).ready(function () {
         $(".footer-btn").removeClass("selected");
         $(this).toggleClass("selected");
     });
+
+
+    //Get the button:
+    var btn = $('#go-top');
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
 });
