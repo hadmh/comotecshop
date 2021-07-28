@@ -1038,6 +1038,51 @@ div#go-top {
         width: 50px;
         top: -55px;
     }
+
+    .breadcrumb .link {
+        display: none;
+    }
+
+    .breadcrumb h2 {
+        font-size: 20px;
+    }
+
+    .breadcrumb {
+        padding: 20px 0;
+    }
+
+    .product-detail .image-box {
+        -ms-flex: 0 0 250px;
+        flex: 0 0 250px;
+        max-width: 250px;
+        margin: 0 auto 20px;
+    }
+
+    .product-detail h3.product-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .product-detail .product-description {
+        font-size: 14px;
+    }
+
+    .product-detail .price, .product-detail .detail-num-wrap {
+        width: 100%;
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .product-detail a.btn.btn-addcart {
+        float: unset;
+        margin: auto;
+        clear: both;
+        width: 100%;
+    }
+
+    .product-detail input[type=number] {
+        width: 161px;
+    }
 }
 
 .price-yen small, .price-yen span.visually-hidden:first-child {
