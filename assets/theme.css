@@ -1039,3 +1039,9 @@ div#go-top {
         top: -55px;
     }
 }
+
+@media (min-width: 768px) {
+    .sm-hide.btn-cart {
+        display: inline-block !important;
+    }
+}
