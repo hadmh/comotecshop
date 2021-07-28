@@ -1,39 +1,51 @@
 <footer>
-    <div class="footer-top pt-40 pb-40">
+    <div class="footer-top pt-40 pb-40 pt-sm-30 pb-sm-10">
         <div class="container w-1100">
             <div class="container-inner">
+                <div class="show" id="go-top">
+                    <a href="#"><img alt="" src="{{ 'logo.png' | asset_url }}"></a>
+                </div>
                 <div class="row">
-                    <div class="col-12 large-12 text-center pb-40">
+                    <div class="col-12 large-12 text-center pb-40 pb-sm-15">
                         <div class="col-inner">
                             <a href="#"><img alt="" src="{{ 'logo.png' | asset_url }}"></a>
                         </div>
                     </div>
 
-                    <div class="col-12 large-3 text-center">
+                    <div class="col-12 large-12 text-center sm-only">
+                        <div class="col-inner">
+                            <a class="btn btn-cart" href="#">
+                                <i class="cart" height="25px" width="25px"></i>
+                                <span>買い物カゴを見る・購入へ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 large-3 text-center">
                         <div class="col-inner">
                             <a class="btn btn-footer bfcl-3" href="/">TOPへ</a>
                         </div>
                     </div>
 
-                    <div class="col-12 large-3 text-center">
+                    <div class="col-6 large-3 text-center">
                         <div class="col-inner">
                             <a class="btn btn-footer bfcl-8" href="/cart">購入・取り消し</a>
                         </div>
                     </div>
 
-                    <div class="col-12 large-3 text-center">
+                    <div class="col-6 large-3 text-center">
                         <div class="col-inner">
                             <a class="btn btn-footer bfcl-7" href="#">購入履歴</a>
                         </div>
                     </div>
 
-                    <div class="col-12 large-3 text-center">
+                    <div class="col-6 large-3 text-center">
                         <div class="col-inner">
                             <a class="btn btn-footer bfcl-6" onclick="goBack()">もどる</a>
                         </div>
                     </div>
 
-                    <div class="col-12 large-12 text-center pt-40">
+                    <div class="col-12 large-12 text-center pt-40 sm-hide">
                         <div class="col-inner">
                             <ul class="nav nav-footer">
                                 <li class="menu-item">

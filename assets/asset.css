@@ -1,9 +1,12 @@
+.sm-hide {
+  display: none !important;
+}
 @media (min-width: 768px) {
   .sm-only {
-    display: none;
+    display: none !important;
   }
   .sm-hide {
-    display: block;
+    display: block !important;
   }
 }
 body,
@@ -239,10 +242,20 @@ p {
   flex: 0 0 33.3333%;
   max-width: 33.3333%;
 }
+.col-5 {
+  -ms-flex: 0 0 41.6667%;
+  flex: 0 0 41.6667%;
+  max-width: 41.6667%;
+}
 .col-6 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
+}
+.col-7 {
+  -ms-flex: 0 0 58.3333%;
+  flex: 0 0 58.3333%;
+  max-width: 58.3333%;
 }
 .col-8 {
   -ms-flex: 0 0 66.6667%;
@@ -1226,12 +1239,4 @@ h6 {
   .pr-sm-22{
     padding-right: 22px;
   }
-}
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip: rect(0,0,0,0);
-  overflow: hidden;
-  position: absolute;
-  height: 1px;
-  width: 1px;
 }

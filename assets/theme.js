@@ -23,7 +23,6 @@ $(document).ready(function () {
 
     // Select all tabs
     $(".nav-tab a").click(function (e) {
-        console.log('tab click');
         e.preventDefault();
         var tab_box = $(this).parent().parent().parent();
         var id = $(this).attr('href');
@@ -35,6 +34,29 @@ $(document).ready(function () {
         // Add active
         $(this).addClass('active');
         tab_box.find('.tab-content ' + id).addClass('active');
+    });
+
+
+    $('#nav-tab').change(function () {
+        var id = $(this).val();
+        $('.tab-content').find('.tab-item').removeClass('active');
+        $('.tab-content').find('#' + id).addClass('active');
+    })
+
+    $('.navbar-toggler').click(function () {
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+            $('body').removeClass('menu-open').css('top', '0');;
+            $('.navbar-box').removeClass('open');
+            $('html,body').animate(
+                { scrollTop: $('body').text() },
+                10
+            );
+        } else {
+            $(this).addClass('open')
+            $('body').addClass('menu-open');
+            $('.navbar-box').addClass('open').css('top', '-' + scrollTop + 'px');
+        }
     });
 });
 
