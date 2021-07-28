@@ -1040,10 +1040,9 @@ div#go-top {
     }
 }
 
-.price-yen small, .price-yen span.visually-hidden:first-child {
+.price-yen span.visually-hidden:first-child {
     display: none;
 }
-
 
 @media (min-width: 768px) {
     .sm-hide.btn-cart {
