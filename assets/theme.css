@@ -668,6 +668,7 @@ a.text-center.color-av-6.active {
     margin-top: 30px;
 }
 
+
 .product-detail .box-order:after {
     content: "";
     display: table;
@@ -1067,6 +1068,10 @@ div#go-top {
         font-size: 14px;
     }
 
+    .product-detail .box-order {
+        max-width: 280px;
+        margin: auto;
+    }
     .product-detail .price, .product-detail .detail-num-wrap {
         width: 100%;
         text-align: right;
