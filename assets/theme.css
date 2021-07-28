@@ -1088,6 +1088,99 @@ div#go-top {
     .product-detail input[type=number] {
         width: 161px;
     }
+
+    .cart__row:first-child {
+        border-top: none;
+    }
+
+    .cart__row {
+        padding: 15px 5px;
+        -ms-flex-align: start;
+        align-items: start;
+    }
+
+    .cart__row .title-box {
+        -ms-flex: 0 0 calc(100% - 70px);
+        flex: 0 0 calc(100% - 70px);
+        max-width: calc(100% - 70px);
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .cart__row .image-box {
+        -ms-flex: 0 0 70px;
+        flex: 0 0 70px;
+        max-width: 70px;
+        margin-bottom: 15px;
+    }
+
+    .cart__row .final-price-box {
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .cart__row .final-price-box {
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+        margin-bottom: 15px;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .cart__row .quantity-box {
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+        margin-bottom: 15px;
+    }
+
+    .cart__row .remove-box {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        float: right;
+    }
+
+    .cart__row .remove-box a {
+        max-width: 110px;
+        float: right;
+    }
+
+    .cart__row span.price-yen {
+        font-size: 24px;
+    }
+
+    .cart__row span.vat_include {
+        font-size: 11px;
+    }
+
+    .cart-subtotal span.h1.cart-subtotal--price small {
+        display: none;
+    }
+
+    .cart-subtotal span.h1.cart-subtotal--price * {
+        font-size: 22px;
+    }
+
+    .cart-subtotal span.label {
+        font-size: 15px;
+    }
+
+    .cart-subtotal span.vat_include {
+        font-size: 11px;
+    }
+
+    button.btn.btn-checkout, input.btn-secondary.update-cart {
+        max-width: 100%;
+        margin-top: 15px;
+        height: 55px;
+    }
+
+    .cart-subtotal {
+        margin-bottom: 10px;
+    }
 }
 
 .price-yen small, .price-yen span.visually-hidden:first-child {
