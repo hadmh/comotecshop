@@ -1183,7 +1183,8 @@ div#go-top {
     }
 }
 
-.price-yen small, .price-yen span.visually-hidden:first-child {
+.price-yen small, .price-yen span.visually-hidden:first-child,
+.cart-subtotal span.h1.cart-subtotal--price small {
     display: none;
 }
 
