@@ -55,7 +55,7 @@
             <h2 class="text-center title-tab-content color-1">食品・グルメ</h2>
 
             <div class="list-prooduct">
-                {% for product in collections.food-gourmet.products %}
+                {% for product in collections.food-gourmet.products.product %}
                     <div class="product-item row">
                         <div class="image-box col-5 large-3">
                             <div class="col-inner">
@@ -84,15 +84,15 @@
                                 <div class="price">
                                     <span class="price-yen">
                                         {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
                                         {% else %}
-                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                         {% endif %}
                                         {% include 'price' with product.price %}
                                         {% if on_sale and section.settings.product_show_compare_at_price %}
                                             <small>
                                                 <s>
-                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                                     {% include 'price' with product.compare_at_price %}
                                                 </s>
                                             </small>
@@ -124,7 +124,7 @@
             <h2 class="text-center title-tab-content color-2">フルーツ</h2>
 
             <div class="list-prooduct">
-                {% for product in collections.fruits.products %}
+                {% for product in collections.fruits.products.product %}
                     <div class="product-item row">
                         <div class="image-box col-5 large-3">
                             <div class="col-inner">
@@ -153,15 +153,15 @@
                                 <div class="price">
                                     <span class="price-yen">
                                         {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
                                         {% else %}
-                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                         {% endif %}
                                         {% include 'price' with product.price %}
                                         {% if on_sale and section.settings.product_show_compare_at_price %}
                                             <small>
                                                 <s>
-                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                                     {% include 'price' with product.compare_at_price %}
                                                 </s>
                                             </small>
@@ -193,7 +193,7 @@
             <h2 class="text-center title-tab-content color-3">飲料類</h2>
 
             <div class="list-prooduct">
-                {% for product in collections.beverages.products %}
+                {% for product in collections.beverages.products.product %}
                     <div class="product-item row">
                         <div class="image-box col-5 large-3">
                             <div class="col-inner">
@@ -222,15 +222,15 @@
                                 <div class="price">
                                     <span class="price-yen">
                                         {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
                                         {% else %}
-                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                         {% endif %}
                                         {% include 'price' with product.price %}
                                         {% if on_sale and section.settings.product_show_compare_at_price %}
                                             <small>
                                                 <s>
-                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                                     {% include 'price' with product.compare_at_price %}
                                                 </s>
                                             </small>
@@ -262,7 +262,7 @@
             <h2 class="text-center title-tab-content color-4">日用品・雑貨</h2>
 
             <div class="list-prooduct">
-                {% for product in collections.necessities-miscellaneous.products %}
+                {% for product in collections.necessities-miscellaneous.products.product %}
                     <div class="product-item row">
                         <div class="image-box col-5 large-3">
                             <div class="col-inner">
@@ -291,15 +291,15 @@
                                 <div class="price">
                                     <span class="price-yen">
                                         {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
                                         {% else %}
-                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                         {% endif %}
                                         {% include 'price' with product.price %}
                                         {% if on_sale and section.settings.product_show_compare_at_price %}
                                             <small>
                                                 <s>
-                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                                     {% include 'price' with product.compare_at_price %}
                                                 </s>
                                             </small>
@@ -331,7 +331,7 @@
             <h2 class="text-center title-tab-content color-5">インテリア・装飾品</h2>
 
             <div class="list-prooduct">
-                {% for product in collections.interior-decoration.products %}
+                {% for product in collections.interior-decoration.products.product %}
                     <div class="product-item row">
                         <div class="image-box col-5 large-3">
                             <div class="col-inner">
@@ -360,15 +360,15 @@
                                 <div class="price">
                                     <span class="price-yen">
                                         {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
                                         {% else %}
-                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                         {% endif %}
                                         {% include 'price' with product.price %}
                                         {% if on_sale and section.settings.product_show_compare_at_price %}
                                             <small>
                                                 <s>
-                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                                     {% include 'price' with product.compare_at_price %}
                                                 </s>
                                             </small>
@@ -400,7 +400,7 @@
             <h2 class="text-center title-tab-content color-6">衣料品</h2>
 
             <div class="list-prooduct">
-                {% for product in collections.clothing.products %}
+                {% for product in collections.clothing.products.product %}
                     <div class="product-item row">
                         <div class="image-box col-5 large-3">
                             <div class="col-inner">
@@ -429,15 +429,15 @@
                                 <div class="price">
                                     <span class="price-yen">
                                         {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.sale_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
                                         {% else %}
-                                            <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                         {% endif %}
                                         {% include 'price' with product.price %}
                                         {% if on_sale and section.settings.product_show_compare_at_price %}
                                             <small>
                                                 <s>
-                                                    <span class="visually-hidden">{{ "products.regular_price" | t }}</span>
+                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                                     {% include 'price' with product.compare_at_price %}
                                                 </s>
                                             </small>
