@@ -1247,6 +1247,7 @@ div#go-top {
         position: fixed;
         top: 60px;
         right: 100px;
+        z-index: 99;
     }
     .device-tv .sidebar-hearder {
         height: 250px;
