@@ -1270,4 +1270,49 @@ div#go-top {
         border-bottom: 1px solid #8f8f8f;
         padding-bottom: 5px;
     }
+    .device-tv .form__input {
+        width: 45px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 23px;
+        text-align: center;
+        font-weight: 700;
+        margin-left: 6px;
+        border-radius: 0 !important;
+    }
+    .device-tv .image-box {
+        margin-bottom: 5px;
+    }
+    .device-tv span.detail-num-txt {
+        font-size: 18px;
+    }
+    .device-tv .cart-drawer__footer {
+        padding-top: 20px;
+        border-top: 1px solid;
+        margin-top: 15px;
+    }
+    .device-tv h3.cart-drawer__subtotal, p.cart-drawer__subtotal-value {
+        width: 50%;
+        font-size: 27px;
+        line-height: 40px;
+        margin: 0;
+    }
+    .device-tv p.cart-drawer__subtotal-value {
+        text-align: right;
+        font-size: 40px;
+    }
+    .device-tv .cart-drawer__totals {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .device-tv button.button {
+        width: 100%;
+        line-height: 1;
+        padding: 15px 15px 10px;
+        font-size: 27px;
+        text-align: left;
+        border: 1px solid #c1c1c1;
+        border-radius: 5px;
+        background: #fff;
+    }
 }
