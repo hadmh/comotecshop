@@ -1196,3 +1196,19 @@ div#go-top {
         display: inline-block !important;
     }
 }
+
+@media (min-width: 1500px) {
+    .device-tv .header-middle {
+        display: none !important;
+    }
+
+    .device-tv footer .col-12.large-12,
+    .device-tv footer .copyright,
+    .device-tv footer #go-top {
+        display: none !important;
+    }
+    .device-tv footer .footer-top {
+        background: #ff6900;
+        padding: 50px 0 110px;
+    } 
+}

@@ -81,3 +81,10 @@ $(document).on('click', '.btn-addcart', function () {
 function goBack() {
     window.history.back();
 }
+
+$(document).ready(function () {
+    var user_agent = navigator.userAgent;
+    if (user_agent.includes('Mac')) {
+        $('body').addClass('device-tv');
+    }
+});
