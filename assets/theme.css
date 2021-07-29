@@ -1198,7 +1198,8 @@ div#go-top {
 }
 
 @media (min-width: 1500px) {
-    .device-tv .header-middle {
+    .device-tv .header-middle, 
+    .device-tv header .btn-cart {
         display: none !important;
     }
     .device-tv header {
@@ -1208,6 +1209,7 @@ div#go-top {
         text-align: left;
         margin-left: 100px;
     }
+    
 
     .device-tv .container {
         margin-left: 100px;
