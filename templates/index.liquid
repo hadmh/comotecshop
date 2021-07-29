@@ -484,10 +484,9 @@
         <div class="cart-drawer__content">
             <div class="cart-list row row-xsmall">
                 {% for item in cart.items %}
-                    {% render 'cart-item' with item as item %}
                     <div class="cart-item col-12 large-3">
                         <div class="image-box">
-                            <img srcset="{% if item.image.width >= 67 %}{{ item.image | img_url: '67x' }} 1x,{% endif %} {% if item.image.width >= 134 %}{{ item.image | img_url: '134x' }} 2x{% endif %}" width="{{ item.image.width }}" height="{{ item.image.height }}" loading="lazy" src="{{ item | img_url: '134x' }}" alt="{{ item.image.alt | escape }}">
+                            <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}" alt="{{ item.image.alt | escape }}">
                         </div>
 
                         <div class="detail-num-wrap">
