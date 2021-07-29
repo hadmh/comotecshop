@@ -1201,6 +1201,21 @@ div#go-top {
     .device-tv .header-middle {
         display: none !important;
     }
+    .device-tv header {
+        padding-bottom: 145px;
+    }
+
+
+    .device-tv .container {
+        margin-left: 100px;
+    }
+    .device-tv .tab-content h2.title-tab-content {
+        max-width: 1250px;
+        margin-left: 100px;
+    }
+    .device-tv .list-prooduct {
+        margin-left: 100px;
+    }
 
     .device-tv footer .col-12.large-12,
     .device-tv footer .copyright,
@@ -1210,5 +1225,9 @@ div#go-top {
     .device-tv footer .footer-top {
         background: #ff6900;
         padding: 50px 0 110px;
-    } 
+    }
+    .device-tv .copyright p {
+        max-width: 1250px;
+        margin-left: 100px;
+    }
 }
