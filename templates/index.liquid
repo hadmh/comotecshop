@@ -466,3 +466,32 @@
         </div>
     </div>
 </div>
+
+{% render 'cart-drawer' %}
+
+<div class="sidebar">
+    <div class="sidebar-hearder">
+        <p>TV画面が入ります</p>
+    </div>
+
+    <div class="cart-box">
+        <div class="title-box">
+            <img alt="" src="">
+            <span>買い物カゴ</span>
+        </div>
+        <p class="des">購入手続き・変更はリモコンの赤ボタンを押してください</p>
+    </div>
+
+    <div class="cart-list row row-xsmall">
+        <div class="cart-item col-12 large-3">
+            <div class="image-box">
+                <img alt="" src="">
+            </div>
+
+            <div class="detail-num-wrap">
+                <span class="detail-num-txt">個数</span>
+                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
+            </div>
+        </div>
+    </div>
+</div>

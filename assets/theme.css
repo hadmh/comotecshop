@@ -1204,6 +1204,7 @@ div#go-top {
     }
     .device-tv header {
         padding-bottom: 145px;
+        background-size: cover;
     }
     .device-tv ul.nav.nav-tab {
         text-align: left;

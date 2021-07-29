@@ -100,6 +100,7 @@ acronym {
 
 html {
   background: #efefef;
+  padding: 0 !important;
 }
 
 body {
