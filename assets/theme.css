@@ -543,6 +543,7 @@ a.text-center.color-av-6.active {
 }
 .product-item span.tax-include {
     font-size: 17px;
+    font-family: fot-tsukuardgothic-std, sans-serif;
 }
 .product-item span.detail-num-txt {
     font-size: 19px;
@@ -862,6 +863,7 @@ a.btn.btn-footer:before {
     line-height: 1;
     font-weight: 400;
     font-size: 18px;
+    font-family: fot-tsukuardgothic-std, sans-serif;
 }
 .nav-footer li.menu-item:first-child {
     border-left: 2px solid;
