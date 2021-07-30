@@ -1214,7 +1214,8 @@ div#go-top {
     top: 15px;
 }
 
-.product-item a.btn.btn-addcart:hover:before {    
+.product-item a.btn.btn-addcart:hover:before,
+.product-item a.btn.btn-readmore:hover:before {    
     background: #fff;
 }
 
