@@ -1194,20 +1194,15 @@ div#go-top {
     display: none;
 }
 
-.btn-cart:hover, 
 .product-item a.btn.btn-addcart:hover {
     background-color: #ec1c24;
     color: #ffffff;
 }
 
-.btn-cart:hover:after,
 .product-item a.btn.btn-addcart:hover:after {
     background: #fff;
     color: #ec1c24;
-    height: 20px;
-    width: 20px;
     border-radius: 50%;
-    line-height: 1.2;
 }
 
 .product-item a.btn.btn-addcart:hover:after {
