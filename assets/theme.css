@@ -1259,8 +1259,13 @@ button.btn.btn-checkout:hover:after {
         display: none !important;
     }
     .device-tv header {
-        padding-bottom: 145px;
+        padding-bottom: 160px;
         background-size: cover;
+        padding-top: 20px;
+        background-size: cover;
+    }
+    .device-tv main {
+        margin-top: -150px;
     }
     .device-tv ul.nav.nav-tab {
         text-align: left;
