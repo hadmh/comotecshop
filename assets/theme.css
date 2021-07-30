@@ -115,6 +115,10 @@
   background-color: rgb(255, 255, 255);
 }
 
+html {  
+    background-color: rgb(255, 255, 255);
+}
+
 header {
     background-image: url(bg-header.png);
     background-position: center;
