@@ -73,22 +73,28 @@ $(document).on('click', '.btn-addcart', function () {
         },
         dataType: 'json',
         success: function (data) {
-            var user_agent = navigator.userAgent;
-            if (user_agent.includes('Mac')) {
-                window.location.href = window.location.origin;
-            } else {
-                window.location.href = window.location.origin + "/cart";
-            }
-
+            window.location.href = window.location.origin + "/cart";
         }
     });
 });
 
-$(document).on('click', '.device-tv .product-item', function () {
+$(document).on('click', '.product-item', function () {
     var user_agent = navigator.userAgent;
     if (user_agent.includes('Mac')) {
-        window.location.href = window.location.origin;
-        $(this).find('.btn-addcart').click();
+        var ID = $(this).find('.btn-addcart').attr("product");
+
+        $.ajax({
+            type: 'POST',
+            url: '/cart/add',
+            data: {
+                quantity: 1,
+                id: ID
+            },
+            dataType: 'json',
+            success: function (data) {
+                window.location.href = window.location.origin;
+            }
+        });
     }
 });
 
