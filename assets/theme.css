@@ -1398,12 +1398,7 @@ button.btn.btn-checkout:hover:after {
         margin-bottom: 10px;
     }
     .device-tv div#shopify-section-cart-items {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-right: -5px;
-        margin-left: -5px;
+        width: 100%;
     }
     .device-tv .cart-item {
         margin-bottom: 10px;
