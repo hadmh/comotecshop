@@ -493,20 +493,18 @@
             <form id="CartDrawer" action="{{ routes.cart_url }}" class="cart-drawer critical-hidden" method="post" novalidate>
                 <div class="cart-drawer__content">
                     <div class="cart-list row row-xsmall">
-                        <div class="shopify-section" id="shopify-section-cart-items">
-                            {% for item in cart.items %}
-                                <div class="cart-item col-12 large-3">
-                                    <div class="image-box">
-                                        <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}" alt="{{ item.image.alt | escape }}">
-                                    </div>
-
-                                    <div class="detail-num-wrap">
-                                        <span class="detail-num-txt">個数</span>
-                                        <input id="quantity_{{ item.key }}" class="form__input cart-drawer__input" value="{{ item.quantity }}" type="number" pattern="\d*" min="1" aria-label="{{ 'cart.general.item_quantity' | t }}" data-cart-item-quantity>
-                                    </div>
+                        {% for item in cart.items %}
+                            <div class="cart-item col-12 large-3">
+                                <div class="image-box">
+                                    <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}" alt="{{ item.image.alt | escape }}">
                                 </div>
-                            {% endfor %}
-                        </div>
+
+                                <div class="detail-num-wrap">
+                                    <span class="detail-num-txt">個数</span>
+                                    <input id="quantity_{{ item.key }}" class="form__input cart-drawer__input" value="{{ item.quantity }}" type="number" pattern="\d*" min="1" aria-label="{{ 'cart.general.item_quantity' | t }}" data-cart-item-quantity>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
 
                     {% if settings.show_cart_note %}
