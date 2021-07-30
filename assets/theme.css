@@ -1644,7 +1644,7 @@ button.btn.btn-checkout:hover:after {
         flex: 0 0 160px;
         max-width: 160px;
     }
-    .device-tv .cart__row a.text-link.text-link--accent:after, .cart__row a.text-link.text-link--accent:before {
+    .device-tv .cart__row a.text-link.text-link--accent:after, .device-tv .cart__row a.text-link.text-link--accent:before {
         height: 30px;
         top: 15px;
     }
