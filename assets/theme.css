@@ -1518,7 +1518,8 @@ button.btn.btn-checkout:hover:after {
         display: none;
     }
 
-    .device-tv div#shopify-section-cart-template {
+    .device-tv div#shopify-section-cart-template,
+    .device-tv div#shopify-section-product-template {
         background: #fff;
     }
 
