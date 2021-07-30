@@ -107,6 +107,9 @@ function goBack() {
 
 $(document).ready(function () {
     var user_agent = navigator.userAgent;
+    console.log(user_agent);
+    $(".main-content").append("<h1>" + user_agent + "</h1>");
+
     if (user_agent.includes('SmartTV')) {
         $('body').addClass('device-tv');
     }
