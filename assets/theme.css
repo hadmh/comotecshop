@@ -1505,4 +1505,73 @@ button.btn.btn-checkout:hover:after {
     .device-tv footer .row > div:nth-child(4) a.btn.btn-footer:before {content: "緑";}
     .device-tv footer .row > div:nth-child(5) a.btn.btn-footer:before {content: "赤";}
     .device-tv footer .row > div:nth-child(6) a.btn.btn-footer:before {content: "青";}
+
+    .device-tv .breadcrumb {
+        background: #f4f4f4;
+        padding: 20px 0 20px;
+        text-align: left;
+    }
+    .device-tv .breadcrumb .link {
+        text-align: left;
+    }
+    .device-tv .breadcrumb h2 {
+        display: none;
+    }
+
+    .device-tv div#shopify-section-cart-template {
+        background: #fff;
+    }
+
+    .device-tv div#shopify-section-cart-template .container {
+        max-width: calc(100% - 200px);
+    }
+
+    .device-tv .cart__row .title-box {
+        -ms-flex: 0 0 600px;
+        flex: 0 0 600px;
+        max-width: 600px;
+        font-size: 30px;
+    }
+    .device-tv .cart__row .image-box {
+        -ms-flex: 0 0 140px;
+        flex: 0 0 140px;
+        max-width: 140px;
+    }
+    .device-tv .cart__row .quantity-box {
+        -ms-flex: 0 0 275px;
+        flex: 0 0 275px;
+        max-width: 275px;
+        font-size: 22px;
+    }
+    .device-tv .cart__row .final-price-box {
+        -ms-flex: 0 0 360px;
+        flex: 0 0 360px;
+        max-width: 360px;
+        font-size: 22px;
+    }
+    .device-tv .cart__row .quantity-box input {
+        width: 85px;
+        height: 45px;
+        font-size: 30px;
+    }
+    .device-tv .cart__row span.price-yen {
+        font-size: 41px;
+    }
+    .device-tv .cart__row span.vat_include {
+        font-size: 20px;
+    }
+    .device-tv .cart__row a.text-link.text-link--accent {
+        height: 60px;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .device-tv .cart__row .remove-box {
+        -ms-flex: 0 0 160px;
+        flex: 0 0 160px;
+        max-width: 160px;
+    }
+    .device-tv .cart__row a.text-link.text-link--accent:after, .cart__row a.text-link.text-link--accent:before {
+        height: 30px;
+        top: 15px;
+    }
 }
