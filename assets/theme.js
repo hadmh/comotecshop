@@ -80,7 +80,7 @@ $(document).on('click', '.btn-addcart', function () {
 
 $(document).on('click', '.product-item', function () {
     var user_agent = navigator.userAgent;
-    if (user_agent.includes('Mac')) {
+    if (user_agent.includes('SmartTV')) {
         var ID = $(this).find('.btn-addcart').attr("product");
 
         $.ajax({
@@ -107,7 +107,7 @@ function goBack() {
 
 $(document).ready(function () {
     var user_agent = navigator.userAgent;
-    if (user_agent.includes('Mac')) {
+    if (user_agent.includes('SmartTV')) {
         $('body').addClass('device-tv');
     }
 });
