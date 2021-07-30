@@ -1,6 +1,16 @@
 // JavaScript Document
 
+var user_agent = navigator.userAgent;
+console.log(user_agent);
+
 $(document).ready(function () {
+
+    $(".main-content").append("<h1>" + user_agent + "</h1>");
+
+    if (user_agent.includes('SmartTV')) {
+        $('body').addClass('device-tv');
+    }
+
     // Tab
     $(function () {
         $(".js-tab-link")
@@ -79,7 +89,6 @@ $(document).on('click', '.btn-addcart', function () {
 });
 
 $(document).on('click', '.product-item', function () {
-    var user_agent = navigator.userAgent;
     if (user_agent.includes('SmartTV')) {
         var ID = $(this).find('.btn-addcart').attr("product");
 
@@ -106,11 +115,4 @@ function goBack() {
 }
 
 $(document).ready(function () {
-    var user_agent = navigator.userAgent;
-    console.log(user_agent);
-    $(".main-content").append("<h1>" + user_agent + "</h1>");
-
-    if (user_agent.includes('SmartTV')) {
-        $('body').addClass('device-tv');
-    }
 });
