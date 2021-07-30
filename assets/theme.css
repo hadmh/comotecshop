@@ -1531,6 +1531,15 @@ button.btn.btn-checkout:hover:after {
         width: 100%;
         z-index: 10;
     }
+    .device-tv header .container .large-6 {
+    -ms-flex: 0 0 750px;
+    flex: 0 0 750px;
+    max-width: 750px;
+}
+
+.device-tv header .container .large-6 img {
+    width: 100%;
+}
 
     .device-tv a.btn.btn-footer {
         text-align: right;
