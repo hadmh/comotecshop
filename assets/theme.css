@@ -1499,7 +1499,7 @@ button.btn.btn-checkout:hover:after {
         line-height: 48px;
     }
     .device-tv footer .container {
-        width: 1250px;
+        max-width: 1250px;
         margin-left: 70px;
     }
     .device-tv footer .row {
