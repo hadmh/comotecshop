@@ -1397,6 +1397,14 @@ button.btn.btn-checkout:hover:after {
         font-size: 27px;
         margin-bottom: 10px;
     }
+    .device-tv div#shopify-section-cart-items {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
     .device-tv .cart-box {
         border: 3px solid #ec1c24;
         padding: 10px 25px;
