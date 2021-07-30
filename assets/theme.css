@@ -1240,6 +1240,9 @@ button.btn.btn-checkout:hover:after {
     color: #ec1c24;
 }
 
+.paging {
+    display: none;
+}
 
 @media (min-width: 768px) {
     .sm-hide.btn-cart {
