@@ -1408,6 +1408,8 @@ button.btn.btn-checkout:hover:after {
     .device-tv p.des {
         border-bottom: 1px solid #8f8f8f;
         padding-bottom: 5px;
+        margin-bottom: 10px;
+        font-size: 20px;
     }
     .device-tv .form__input {
         width: 45px;
@@ -1467,6 +1469,40 @@ button.btn.btn-checkout:hover:after {
         text-align: center;
         border-radius: 50%;
         background-color: red;
+    }
+
+    .sidebar .title-box {
+        text-align: left;
+        position: relative;
+        padding: 0px 50px;
+        font-size: 40px;
+    }
+
+    .sidebar .title-box:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        background: #ff6a00;
+        -webkit-mask-image: url(cart-ico.svg);
+        mask-image: url(cart-ico.svg);
+        display: inline-block;
+    }
+    .sidebar .title-box:after{
+        content: "緑";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 50px;
+        width: 50px;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        background: #ff0000;
+        font-size: 28px;
     }
 
     .device-tv {
