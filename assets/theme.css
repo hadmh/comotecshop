@@ -1289,14 +1289,14 @@ button.btn.btn-checkout:hover:after {
         padding: 10px 0 0;
         font-size: 18px;
         line-height: 1.3;
-        background-image: url(/arrow-red.svg);
+        background-image: url(arrow-red.svg);
         background-position: center 80%;
         background-size: 32%;
         background-repeat: no-repeat;
     }
 
     .device-tv li.paging:last-child a {
-        background-image: url(/arrow-red-next.svg);
+        background-image: url(arrow-red-next.svg);
     }
 
     .device-tv .container {
