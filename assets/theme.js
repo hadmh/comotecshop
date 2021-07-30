@@ -92,11 +92,9 @@ $(document).on('click', '.product-item', function () {
             },
             dataType: 'json',
             success: function (data) {
-                var cart_items = $.get(window.location.origin + '/?section_id=cart-items', function (data) { content = data });
-
-                console.log(cart_items);
-
-                $('.cart-list').html(cart_items);
+                $.get(window.location.origin + '/?section_id=cart-items', function (data) {
+                    $('.cart-list').html(cart_items);
+                });
             }
         });
     }
