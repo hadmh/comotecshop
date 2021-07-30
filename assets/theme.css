@@ -118,6 +118,7 @@
 header {
     background-image: url(bg-header.png);
     background-position: center;
+    background-size: cover;
 }
 @media (max-width: 767px) {
     header {
@@ -1532,14 +1533,14 @@ button.btn.btn-checkout:hover:after {
         z-index: 10;
     }
     .device-tv header .container .large-6 {
-    -ms-flex: 0 0 750px;
-    flex: 0 0 750px;
-    max-width: 750px;
-}
+        -ms-flex: 0 0 750px;
+        flex: 0 0 750px;
+        max-width: 750px;
+    }
 
-.device-tv header .container .large-6 img {
-    width: 100%;
-}
+    .device-tv header .container .large-6 img {
+        width: 100%;
+    }
 
     .device-tv a.btn.btn-footer {
         text-align: right;
