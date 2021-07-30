@@ -1477,11 +1477,37 @@ button.btn.btn-checkout:hover:after {
     .device-tv {
         padding-bottom: 210px;
     }
-
     .device-tv div#shopify-section-footer {
         position: fixed;
         bottom: 0;
         width: 100%;
         z-index: 10;
     }
+
+    .device-tv a.btn.btn-footer {
+        text-align: right;
+        height: 65px;
+        line-height: 65px;
+        font-size: 27px;
+        padding: 0 15px;
+    }
+    .device-tv a.btn.btn-footer:before {
+        right: auto;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        line-height: 48px;
+    }
+    .device-tv footer .container {
+        width: 1250px;
+        margin-left: 70px;
+    }
+    .device-tv footer .row {
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+    .device-tv footer .row > div:nth-child(3) a.btn.btn-footer:before {content: "黃";}
+    .device-tv footer .row > div:nth-child(4) a.btn.btn-footer:before {content: "緑";}
+    .device-tv footer .row > div:nth-child(5) a.btn.btn-footer:before {content: "赤";}
+    .device-tv footer .row > div:nth-child(6) a.btn.btn-footer:before {content: "青";}
 }
