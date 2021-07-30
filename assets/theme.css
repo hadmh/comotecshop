@@ -1473,4 +1473,15 @@ button.btn.btn-checkout:hover:after {
         border-radius: 50%;
         background-color: red;
     }
+
+    .device-tv {
+        padding-bottom: 210px;
+    }
+
+    .device-tv div#shopify-section-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
