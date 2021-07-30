@@ -5,8 +5,6 @@ console.log(user_agent);
 
 $(document).ready(function () {
 
-    $(".main-content").append("<h1>" + user_agent + "</h1>");
-
     if (user_agent.includes('SmartTV')) {
         $('body').addClass('device-tv');
     }
@@ -113,6 +111,3 @@ $(document).on('click', '.product-item', function () {
 function goBack() {
     window.history.back();
 }
-
-$(document).ready(function () {
-});
