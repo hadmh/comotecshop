@@ -1194,6 +1194,46 @@ div#go-top {
     display: none;
 }
 
+.btn-cart:hover, 
+.product-item a.btn.btn-addcart:hover {
+    background-color: #ec1c24;
+    color: #ffffff;
+}
+
+.btn-cart:hover:after,
+.product-item a.btn.btn-addcart:hover:after {
+    background: #fff;
+    color: #ec1c24;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    line-height: 1.2;
+}
+
+.product-item a.btn.btn-addcart:hover:after {
+    top: 15px;
+}
+
+.product-item a.btn.btn-addcart:hover:before {    
+    background: #fff;
+}
+
+.product-item a.btn.btn-readmore:hover {
+    background-color: #ff6900;
+    border-color: #ff6900;
+    color: #ffffff;
+}
+
+.product-item a.btn.btn-readmore:hover:after {
+    background: #fff;
+    color: #ff6900;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    line-height: 1.2;
+}
+
+
 @media (min-width: 768px) {
     .sm-hide.btn-cart {
         display: inline-block !important;
@@ -1265,6 +1305,7 @@ div#go-top {
         border: 3px solid #ec1c24;
         padding: 10px 25px;
         border-radius: 5px;
+        background: #fff;
     }
     .device-tv p.des {
         border-bottom: 1px solid #8f8f8f;
