@@ -1322,11 +1322,7 @@ button.btn.btn-checkout:hover:after {
     }
     .device-tv footer .footer-top {
         background: #ff6900;
-        padding: 50px 0 110px;
-    }
-    .device-tv .copyright p {
-        max-width: 1250px;
-        margin-left: 100px;
+        padding: 25px 0 55px;
     }
 
     .device-tv .product-item {
