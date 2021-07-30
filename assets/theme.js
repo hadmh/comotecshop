@@ -64,8 +64,6 @@ $(document).on('click', '.btn-addcart', function () {
     var ID = $(this).attr("product");
     var Quantity = $('.product-' + ID + '-quantity').val();
 
-
-
     $.ajax({
         type: 'POST',
         url: '/cart/add',
@@ -85,6 +83,15 @@ $(document).on('click', '.btn-addcart', function () {
         }
     });
 });
+
+$(document).on('click', '.device-tv .product-item', function () {
+    var user_agent = navigator.userAgent;
+    if (user_agent.includes('Mac')) {
+        window.location.href = window.location.origin;
+        $(this).find('.btn-addcart').click();
+    }
+});
+
 
 function goBack() {
     window.history.back();
