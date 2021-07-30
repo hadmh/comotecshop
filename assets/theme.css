@@ -1527,7 +1527,7 @@ button.btn.btn-checkout:hover:after {
     }
 
     .device-tv .cart__row {
-        padding: 10px 25px;
+        padding: 25px 10px;
     }
     .device-tv .cart__row .title-box {
         -ms-flex: 0 0 700px;
