@@ -93,7 +93,7 @@ $(document).on('click', '.product-item', function () {
             dataType: 'json',
             success: function (data) {
                 $.get(window.location.origin + '/?section_id=cart-items', function (data) {
-                    $('.cart-list').html(cart_items);
+                    $('.cart-list').html(data);
                 });
             }
         });
