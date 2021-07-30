@@ -1513,6 +1513,7 @@ button.btn.btn-checkout:hover:after {
     }
     .device-tv .breadcrumb .link {
         text-align: left;
+        font-size: 23px;
     }
     .device-tv .breadcrumb h2 {
         display: none;
@@ -1523,7 +1524,8 @@ button.btn.btn-checkout:hover:after {
         background: #fff;
     }
 
-    .device-tv div#shopify-section-cart-template .container {
+    .device-tv div#shopify-section-cart-template .container,
+    .device-tv div#shopify-section-product-template .container {
         max-width: calc(100% - 200px);
     }
 
