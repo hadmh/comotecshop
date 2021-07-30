@@ -1234,6 +1234,16 @@ div#go-top {
     line-height: 1.2;
 }
 
+button.btn.btn-checkout:hover {
+    background: #ec1c24;
+    color: #fff;
+}
+
+button.btn.btn-checkout:hover:after {
+    background-color: #fff;
+    color: #ec1c24;
+}
+
 
 @media (min-width: 768px) {
     .sm-hide.btn-cart {
