@@ -1217,6 +1217,7 @@ div#go-top {
 .product-item a.btn.btn-addcart:hover:before,
 .product-item a.btn.btn-readmore:hover:before {    
     background: #fff;
+    color: #ff6900;
 }
 
 .product-item a.btn.btn-readmore:hover {
