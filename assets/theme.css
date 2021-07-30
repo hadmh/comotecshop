@@ -1530,15 +1530,16 @@ button.btn.btn-checkout:hover:after {
         padding: 10px 25px;
     }
     .device-tv .cart__row .title-box {
-        -ms-flex: 0 0 600px;
-        flex: 0 0 600px;
-        max-width: 600px;
+        -ms-flex: 0 0 700px;
+        flex: 0 0 700px;
+        max-width: 700px;
         font-size: 30px;
+        padding-right: 100px;
     }
     .device-tv .cart__row .image-box {
-        -ms-flex: 0 0 140px;
-        flex: 0 0 140px;
-        max-width: 140px;
+        -ms-flex: 0 0 70px;
+        flex: 0 0 70px;
+        max-width: 70px;
     }
     .device-tv .cart__row .quantity-box {
         -ms-flex: 0 0 275px;
