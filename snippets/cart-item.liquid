@@ -1,60 +1,10 @@
-<div class="product-item row">
-    <div class="image-box col-5 large-3">
-        <div class="col-inner">
-            <a href="{{ product.url }}">
-                <img alt="" src="{{ product | img_url: '450x450' }}">
-            </a>
-
-            <p class="product-cat">
-                {% for tag in product.tags %}
-                    {{ tag }}
-                {% endfor %}
-            </p>
-        </div>
+<div class="cart-item col-12 large-3">
+    <div class="image-box">
+        <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}" alt="{{ item.image.alt | escape }}">
     </div>
 
-    <div class="text-box col-7 large-5">
-        <div class="col-inner">
-            <p class="product-cat sm-hide">
-                {% for tag in product.tags %}
-                    {{ tag }}
-                {% endfor %}
-            </p>
-            <h3 class="product-title">
-                <p>{{ product.title }}</p>
-            </h3>
-            <div class="price">
-                <span class="price-yen">
-                    {% if on_sale %}
-                        <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
-                    {% else %}
-                        <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                    {% endif %}
-                    {% include 'price' with product.price %}
-                    {% if on_sale and section.settings.product_show_compare_at_price %}
-                        <small>
-                            <s>
-                                <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                {% include 'price' with product.compare_at_price %}
-                            </s>
-                        </small>
-                    {% endif %}
-                </span>
-                <span class="tax-include">(税込)</span>
-            </div>
-            <div class="detail-num-wrap">
-                <span class="detail-num-txt">個数</span>
-                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
-            </div>
-        </div>
-    </div>
-
-    <div class="text-box col-12 large-4">
-        <div class="col-inner">
-            <div class="btn-box">
-                <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
-                <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
-            </div>
-        </div>
+    <div class="detail-num-wrap">
+        <span class="detail-num-txt">個数</span>
+        <input id="quantity_{{ item.key }}" class="form__input cart-drawer__input" value="{{ item.quantity }}" type="number" pattern="\d*" min="1" aria-label="{{ 'cart.general.item_quantity' | t }}" data-cart-item-quantity>
     </div>
 </div>
