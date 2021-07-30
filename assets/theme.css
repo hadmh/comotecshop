@@ -1405,6 +1405,9 @@ button.btn.btn-checkout:hover:after {
         margin-right: -5px;
         margin-left: -5px;
     }
+    .device-tv .cart-item {
+        margin-top: 10px;
+    }
     .device-tv .cart-box {
         border: 3px solid #ec1c24;
         padding: 10px 25px;
