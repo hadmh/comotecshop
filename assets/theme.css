@@ -1264,7 +1264,7 @@ button.btn.btn-checkout:hover:after {
     }
     .device-tv ul.nav.nav-tab {
         text-align: left;
-        margin-left: 100px;
+        margin-left: 80px;
     }
     .device-tv .nav-tab li.menu-item {
         padding: 0 5px;
@@ -1313,13 +1313,13 @@ button.btn.btn-checkout:hover:after {
     }
 
     .device-tv .container {
-        margin-left: 100px;
+        margin-left: 80px;
     }
     .device-tv .tab-content h2.title-tab-content {
         display: none;
     }
     .device-tv .list-prooduct {
-        margin-left: 100px;
+        margin-left: 80px;
     }
 
     .device-tv footer .col-12.large-12,
@@ -1385,7 +1385,7 @@ button.btn.btn-checkout:hover:after {
         width: 450px;
         position: fixed;
         top: 60px;
-        right: 100px;
+        right: 80px;
         z-index: 99;
     }
     .device-tv .sidebar-hearder {
