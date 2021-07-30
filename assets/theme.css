@@ -1249,6 +1249,9 @@ button.btn.btn-checkout:hover:after {
     .sm-hide.btn-cart {
         display: inline-block !important;
     }
+    .image-box p.product-cat {
+        display: none !important;
+    }
 }
 
 @media (min-width: 1500px) {
@@ -1291,6 +1294,53 @@ button.btn.btn-checkout:hover:after {
         margin-left: 100px;
     }
 
+    .device-tv .image-box  p.product-cat {
+        display: none;
+    }
+
+    .device-tv .product-item span.price-yen {
+        font-size: 54px;
+        line-height: 1.4;
+    }
+    .device-tv .product-item span.tax-include,
+    .device-tv .product-item .detail-num-wrap,
+    .device-tv .product-item .text-box.col-12.large-4 {
+        display: none !important;
+    }
+
+    .device-tv .product-item .text-box.col-7.large-5 {
+        -ms-flex: 0 0 calc(100% - 150px);
+        flex: 0 0 calc(100% - 150px);
+        max-width: calc(100% - 150px);
+    }
+
+    .device-tv .image-box.col-5.large-3 {
+        -ms-flex: 0 0 150px;
+        flex: 0 0 150px;
+        max-width: 150px;
+    }
+
+    .device-tv .product-item h3.product-title {
+        margin-bottom: 0;
+        font-size: 40px;
+        width: calc(100% - 280px);
+        float: left;
+    }
+
+    .device-tv .product-item {
+        padding: 15px 0;
+    }
+
+    .device-tv .product-item p.product-cat {
+        font-size: 24px;
+        width: calc(100% - 280px);
+    }
+
+    .device-tv .product-item .price {
+        width: 250px;
+        float: right;
+        text-align: left;
+    }
 
     .device-tv .sidebar {
         display: block;

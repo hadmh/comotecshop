@@ -64,6 +64,8 @@ $(document).on('click', '.btn-addcart', function () {
     var ID = $(this).attr("product");
     var Quantity = $('.product-' + ID + '-quantity').val();
 
+
+
     $.ajax({
         type: 'POST',
         url: '/cart/add',
@@ -73,7 +75,13 @@ $(document).on('click', '.btn-addcart', function () {
         },
         dataType: 'json',
         success: function (data) {
-            window.location.href = "https://comotecshop.myshopify.com/cart";
+            var user_agent = navigator.userAgent;
+            if (user_agent.includes('Mac')) {
+                window.location.href = window.location.origin;
+            } else {
+                window.location.href = window.location.origin + "/cart";
+            }
+
         }
     });
 });
