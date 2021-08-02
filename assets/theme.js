@@ -1,14 +1,5 @@
 // JavaScript Document
-
-var user_agent = navigator.userAgent;
-console.log(user_agent);
-
 $(document).ready(function () {
-
-    if (user_agent.includes('SmartTV')) {
-        $('body').addClass('device-tv');
-    }
-
     // Tab
     $(function () {
         $(".js-tab-link")
@@ -86,25 +77,8 @@ $(document).on('click', '.btn-addcart', function () {
     });
 });
 
-$(document).on('click', '.product-item', function () {
-    if (user_agent.includes('SmartTV')) {
-        var ID = $(this).find('.btn-addcart').attr("product");
-
-        $.ajax({
-            type: 'POST',
-            url: '/cart/add',
-            data: {
-                quantity: 1,
-                id: ID
-            },
-            dataType: 'json',
-            success: function (data) {
-                $.get(window.location.origin + '/?section_id=cart-items', function (data) {
-                    $('.sidebar .list').html(data);
-                });
-            }
-        });
-    }
+$(document).on('click', '.device-tv .product-item', function () {
+    $(this).find('.btn-readmore').click();
 });
 
 
