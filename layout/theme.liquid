@@ -62,13 +62,14 @@
 
     if (user_agent.includes('TV') || user_agent.includes('Macintosh')) {
       window.onload = () => {
-        document.body.classList.add("device-tv");
+        document.body.classList.add("device-tv show");
+      }
+    } else {
+      window.onload = () => {
+        document.body.classList.add("show");
       }
     }
 
-    window.onload = () => {
-      document.body.classList.add("show");
-    }
   </script>
 
   <script>
