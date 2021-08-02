@@ -97,11 +97,10 @@
   var user_agent = navigator.userAgent;
   console.log(user_agent);
 
-  var element = document.getElementById("body_page");
-  element.appendChild("<h1>" + user_agent + "</h1>");
+  document.body.appendChild("<h1>" + user_agent + "</h1>");
 
   if (user_agent.includes('SmartTV')) {
-    element.classList.add("device-tv");
+    document.body.classList.add("device-tv");
   }
 </script>
   {{ content_for_header }}
