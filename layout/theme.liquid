@@ -97,9 +97,10 @@
   var user_agent = navigator.userAgent;
   console.log(user_agent);
 
+  $('body').append("<h1>" + user_agent + "</h1>");
+
   if (user_agent.includes('SmartTV')) {
     $('body').addClass('device-tv');
-    $('body').append("<h1>user_agent</h1>");
   }
 </script>
   {{ content_for_header }}
