@@ -97,16 +97,7 @@
   var user_agent = navigator.userAgent;
   console.log(user_agent);
 
-  window.onload = () => {
-    const h1 = document.createElement('h1');
-    h1.innerHTML = user_agent;
-    document.body.appendChild(h1);
-    const h2 = document.createElement('h2');
-    h2.innerHTML = "Test";
-    document.body.appendChild(h2);
-  }
-
-  if (user_agent.includes('SmartTV')) {
+  if (user_agent.includes('TV') || user_agent.includes('Macintosh') ) {
     document.body.classList.add("device-tv");
   }
 
