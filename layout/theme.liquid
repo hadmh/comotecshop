@@ -107,7 +107,7 @@
   {{ content_for_header }}
 </head>
 
-<body id="body_page" class="template-{{ request.page_type | handle }}  {{user_agent}} ">
+<body id="body_page" class="template-{{ request.page_type | handle }}  {{user_agent.value}} ">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
