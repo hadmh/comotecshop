@@ -97,15 +97,19 @@
   var user_agent = navigator.userAgent;
   console.log(user_agent);
 
-  if (user_agent.includes('SmartTV')) {
-    document.body.classList.add("device-tv");
-  }
-
   window.onload = () => {
     const h1 = document.createElement('h1');
     h1.innerHTML = user_agent;
     document.body.appendChild(h1);
+    const h2 = document.createElement('h2');
+    h2.innerHTML = "Test";
+    document.body.appendChild(h2);
   }
+
+  if (user_agent.includes('SmartTV')) {
+    document.body.classList.add("device-tv");
+  }
+
 </script>
   {{ content_for_header }}
 </head>
