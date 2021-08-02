@@ -78,7 +78,7 @@ $(document).on('click', '.btn-addcart', function () {
 });
 
 $(document).on('click', '.device-tv .product-item', function () {
-    $(this).find('.btn-readmore').click();
+    window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
 });
 
 
