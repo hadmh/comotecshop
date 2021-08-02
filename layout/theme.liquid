@@ -58,16 +58,13 @@
   {%- endif -%}
   <script>
     var user_agent = navigator.userAgent;
-    console.log(user_agent);
-    window.addEventListener("load", () => {
+    function checkDevice() {
+      console.log(user_agent);
       if (user_agent.includes('TV') || user_agent.includes('Macintosh')) {
-        var myElement = document.querySelector("#my-element");
-        myElement.addEventListener("event", handler);
         document.body.classList.add("device-tv");
       }
       document.body.classList.add("show");
-    });
-
+    }
   </script>
 
   <script>
@@ -114,7 +111,7 @@
   {{ content_for_header }}
 </head>
 
-<body id="body_page" class="template-{{ request.page_type | handle }}">
+<body onload="checkDevice()" class="template-{{ request.page_type | handle }}">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
