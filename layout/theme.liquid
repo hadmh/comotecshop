@@ -97,8 +97,10 @@
   var user_agent = navigator.userAgent;
   console.log(user_agent);
 
-  if (user_agent.includes('TV') || user_agent.includes('Macintosh') ) {
-    document.body.classList.add("device-tv");
+  if (user_agent.includes('TV') || user_agent.includes('Macintosh')) {
+    window.onload = () => {
+      document.body.classList.add("device-tv");
+    }
   }
 
 </script>
