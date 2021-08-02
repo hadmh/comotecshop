@@ -97,16 +97,17 @@
   var user_agent = navigator.userAgent;
   console.log(user_agent);
 
-  $('body').append("<h1>" + user_agent + "</h1>");
+  var element = document.getElementById("body_page");
+  element.appendChild("<h1>" + user_agent + "</h1>");
 
   if (user_agent.includes('SmartTV')) {
-    $('body').addClass('device-tv');
+    element.classList.add("device-tv");
   }
 </script>
   {{ content_for_header }}
 </head>
 
-<body class="template-{{ request.page_type | handle }}">
+<body id="body_page" class="template-{{ request.page_type | handle }}">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
