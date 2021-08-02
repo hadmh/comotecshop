@@ -60,16 +60,9 @@
     var user_agent = navigator.userAgent;
     if (user_agent.includes('TV') || user_agent.includes('Macintosh')) {
       console.log(user_agent);
-
-      window.onload = () => {
-        document.body.classList.add("device-tv");
-        document.body.classList.add("show");
-      }
-    } else {
-      window.onload = () => {
-        document.body.classList.add("show");
-      }
+      document.body.classList.add("device-tv");
     }
+    document.body.classList.add("show");
 
   </script>
 
