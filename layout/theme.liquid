@@ -104,15 +104,15 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
+
     var user_agent = navigator.userAgent;
+    if (user_agent.includes('TV') || user_agent.includes('Macintosh')) {
+      $('body').addClass('device-tv');
+    }
+    $('body').addClass('show');
 
-    $(document).ready(function () {
-      if (user_agent.includes('TV') || user_agent.includes('Macintosh')) {
-        $('body').addClass('device-tv');
-      }
+    $('body').append("<h1>" + user_agent + "</h1>");
 
-      $('body').addClass('show');
-    });
   </script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
