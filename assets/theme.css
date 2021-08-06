@@ -888,14 +888,18 @@ div#go-top {
 }
 
 /* Contact Page */
-.contact-form label {
+.contact-form label,
+#customer_login label,
+#RecoverPasswordForm label {
   display: block;
   font-size: 16px;
   line-height: 40px;
   font-weight: bold;
 }
 
-.contact-form input {
+.contact-form input,
+#customer_login input,
+#RecoverPasswordForm input {
   height: 40px;
   width: 100%;
   padding: 10px;
@@ -908,12 +912,28 @@ textarea#ContactForm-message {
   height: 180px;
 }
 
-.contact-form input.btn {
+.contact-form input.btn,
+#customer_login input.btn,
+#RecoverPasswordForm input.btn {
   width: 200px;
   background: #ff6900;
   border: none;
   color: #fff;
   margin-bottom: 30px;
+}
+
+.form-message {
+  border: 1px solid;
+  padding: 20px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+h1#LoginHeading,
+h2#RecoverHeading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 767px) {
