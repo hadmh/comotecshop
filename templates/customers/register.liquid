@@ -17,7 +17,7 @@
         {% include 'form-status', form: form, form_id: formId %}
 
         <div class="row">
-          <div class="col-12 large-12">
+          <div class="col-12 large-6">
             <label for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
             <input type="text" name="customer[first_name]" id="{{ formId }}-FirstName" {% if form.first_name
               %}value="{{ form.first_name }}" {% endif %} autocomplete="given-name">
@@ -46,7 +46,7 @@
             {%- endif -%}
           </div>
 
-          <div class="col-12 large-12">
+          <div class="col-12 large-6">
             <label for="{{ formId }}-password">{{ 'customer.register.password' | t }}</label>
             <input type="password" name="customer[password]" id="{{ formId }}-password"
               class="{% if form.errors contains 'password' %} input--error{% endif %}" aria-required="true" {%- if
