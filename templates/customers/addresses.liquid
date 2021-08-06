@@ -120,45 +120,43 @@
             {% endcomment %}
             <div class="row">
               {% for address in customer.addresses %}
-              <li class="col-12 large-6">
-                <div class="address text-center">
+              <div class="col-12 large-6">
+                <div class="address">
                   {% if address == customer.default_address %}
                   <h2 class="h4">{{ 'customer.addresses.default' | t }}</h2>
                   {% endif %}
 
                   {{ address | format_address }}
 
-                  <ul class="list--inline">
-                    <li>
+                  <div class="row">
+                    <div class="col-12 large-6">
                       <button id="EditFormButton_{{ address.id }}" type="button"
                         class="btn btn--small address-edit-toggle" data-form-id="{{ address.id }}"
                         aria-owns="EditAddress_{{ address.id }}" aria-expanded="false">
                         {{ 'customer.addresses.edit' | t }}
                       </button>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="col-12 large-6">
                       <button type="button" class="btn btn--secondary btn--small address-delete"
                         data-target="{{ address.url }}"
                         data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}">
                         {{ 'customer.addresses.delete' | t }}
                       </button>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </div>
 
                 <div id="EditAddress_{{ address.id }}" class="form-vertical hide">
                   {% form 'customer_address', address %}
 
                   <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
-
-                  <div class="grid">
-                    <div class="grid__item medium-up--one-half">
+                  <div class="row">
+                    <div class="col-12 large-6">
                       <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
                       <input type="text" id="AddressFirstName_{{ form.id }}" name="address[first_name]"
                         value="{{ form.first_name }}" autocomplete="given-name">
                     </div>
-
-                    <div class="grid__item medium-up--one-half">
+                    <div class="col-12 large-6">
                       <label for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label>
                       <input type="text" id="AddressLastName_{{ form.id }}" name="address[last_name]"
                         value="{{ form.last_name }}" autocomplete="family-name">
@@ -177,13 +175,13 @@
                   <input type="text" id="AddressAddress2_{{ form.id }}" name="address[address2]"
                     value="{{ form.address2 }}" autocomplete="street-address address-line2">
 
-                  <div class="grid">
-                    <div class="grid__item medium-up--one-half">
+                  <div class="row">
+                    <div class="col-12 large-6">
                       <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
                       <input type="text" id="AddressCity_{{ form.id }}" name="address[city]" value="{{ form.city }}"
                         autocomplete="address-level2">
                     </div>
-                    <div class="grid__item medium-up--one-half">
+                    <div class="col-12 large-6">
                       <label for="AddressCountry_{{ form.id }}">{{ 'customer.addresses.country' | t }}</label>
                       <select id="AddressCountry_{{ form.id }}" class="address-country-option"
                         data-form-id="{{ form.id }}" name="address[country]" data-default="{{ form.country }}"
@@ -198,14 +196,13 @@
                       data-default="{{ form.province }}" autocomplete="address-level1"></select>
                   </div>
 
-                  <div class="grid">
-                    <div class="grid__item">
+                  <div class="row">
+                    <div class="col-12 large-6">
                       <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
                       <input type="text" id="AddressZip_{{ form.id }}" name="address[zip]" value="{{ form.zip }}"
                         autocapitalize="characters" autocomplete="postal-code">
                     </div>
-
-                    <div class="grid__item">
+                    <div class="col-12 large-6">
                       <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
                       <input type="tel" id="AddressPhone_{{ form.id }}" name="address[phone]" value="{{ form.phone }}"
                         autocomplete="phone">
@@ -225,18 +222,18 @@
                   {% endform %}
                   <hr>
                 </div>
-              </li>
+              </div>
               {% endfor %}
-              </ul>
-
-              {%- if paginate.pages > 1 -%}
-              {% include 'pagination', paginate: paginate %}
-              {%- endif -%}
             </div>
-          </div>
 
+            {%- if paginate.pages > 1 -%}
+            {% include 'pagination', paginate: paginate %}
+            {%- endif -%}
+          </div>
         </div>
-        {% endpaginate %}
+
       </div>
+      {% endpaginate %}
     </div>
   </div>
+</div>
