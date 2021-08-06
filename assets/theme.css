@@ -984,9 +984,6 @@ h2.h4 {
 .address-delete {
   background: red;
 }
-.address-item form {
-  margin-top: 30px;
-}
 
 @media (max-width: 767px) {
   .tab-content h2.title-tab-content {
