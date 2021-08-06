@@ -217,7 +217,8 @@
                           }}</label>
 
                         <div><input type="submit" class="btn" value="{{ 'customer.addresses.update' | t }}"></div>
-                        <div><button type="button" class="text-link address-edit-toggle" data-form-id="{{ form.id }}">{{
+                        <div><button type="button" class="text-link address-edit-toggle" data-form-id="{{ form.id }}"
+                            aria-owns="EditAddress_{{ address.id }}">{{
                             'customer.addresses.cancel' | t }}</button></div>
                       </div>
 
