@@ -899,7 +899,8 @@ div#go-top {
 
 .contact-form input,
 #customer_login input,
-#RecoverPasswordForm input {
+#RecoverPasswordForm input,
+.contact-form select {
   height: 40px;
   width: 100%;
   padding: 10px;
@@ -982,6 +983,9 @@ h2.tt-acc {
 }
 .address-delete {
   background: red;
+}
+.address-item form {
+  margin-top: 30px;
 }
 
 @media (max-width: 767px) {
