@@ -937,6 +937,25 @@ h2#RecoverHeading {
   margin-bottom: 10px;
 }
 
+/* Account page */
+ul.menu-acc li {
+  height: 40px;
+  line-height: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+ul.menu-acc li:hover {
+  border-color: #ff6900;
+  background: #ff6900;
+  color: #fff;
+}
+.template-customers-account .text-center h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 767px) {
   .tab-content h2.title-tab-content {
     border-bottom: 10px solid;
