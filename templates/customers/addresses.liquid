@@ -24,57 +24,58 @@
       {% paginate customer.addresses by 5 %}
 
       <div class="text-left">
-        <h2>{{ 'customer.addresses.title' | t }}</h2>
+        <h2 class="tt-acc">{{ 'customer.addresses.title' | t }}</h2>
       </div>
 
       <div class="page-width">
         <div class="row">
+
           <div class="col-12 large-12">
             {% comment %}
             Add address form, hidden by default
             {% endcomment %}
-            <div id="AddressNewForm" class="form-vertical hide">
+            <div id="AddressNewForm" class="contact-form hide">
               {% form 'customer_address', customer.new_address %}
               <h2>{{ 'customer.addresses.add_new' | t }}</h2>
 
-              <div class="grid">
-                <div class="grid__item medium-up--one-half">
+              <div class="row">
+                <div class="col-12 large-6">
                   <label for="AddressFirstNameNew">{{ 'customer.addresses.first_name' | t }}</label>
                   <input type="text" id="AddressFirstNameNew" name="address[first_name]" value="{{ form.first_name }}"
                     autocomplete="given-name">
                 </div>
 
-                <div class="grid__item medium-up--one-half">
+                <div class="col-12 large-6">
                   <label for="AddressLastNameNew">{{ 'customer.addresses.last_name' | t }}</label>
                   <input type="text" id="AddressLastNameNew" name="address[last_name]" value="{{ form.last_name }}"
                     autocomplete="family-name">
                 </div>
-              </div>
 
-              <div class="grid">
-                <div class="grid__item">
+                <div class="col-12 large-12">
                   <label for="AddressCompanyNew">{{ 'customer.addresses.company' | t }}</label>
                   <input type="text" id="AddressCompanyNew" name="address[company]" value="{{ form.company }}"
                     autocomplete="organization">
+                </div>
 
+                <div class="col-12 large-12">
                   <label for="AddressAddress1New">{{ 'customer.addresses.address1' | t }}</label>
                   <input type="text" id="AddressAddress1New" name="address[address1]" value="{{ form.address1 }}"
                     autocomplete="street-address address-line1">
+                </div>
 
+                <div class="col-12 large-12">
                   <label for="AddressAddress2New">{{ 'customer.addresses.address2' | t }}</label>
                   <input type="text" id="AddressAddress2New" name="address[address2]" value="{{ form.address2 }}"
                     autocomplete="street-address address-line2">
                 </div>
-              </div>
 
-              <div class="grid">
-                <div class="grid__item medium-up--one-half">
+                <div class="col-12 large-6">
                   <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
                   <input type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}"
                     autocomplete="address-level2">
                 </div>
 
-                <div class="grid__item medium-up--one-half">
+                <div class="col-12 large-6">
                   <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
                   <select id="AddressCountryNew" name="address[country]" data-default="{{ form.country }}"
                     autocomplete="country">{{ all_country_option_tags }}</select>
@@ -107,6 +108,7 @@
               <hr>
             </div>
           </div>
+
           <div class="col-12 large-12">
             {% comment %}
             List all customer addresses with a unique edit form.
