@@ -11,7 +11,7 @@
 
 <div class="breadcrumb">
   <div class="container w-1000">
-    <h2 class="text-center">Login</h2>
+    <h2 class="text-left">Login</h2>
     <div class="link">
       <a href="/">TOP</a>
       >
@@ -29,7 +29,7 @@
     <div class="col-12 large-6">
       <div id="CustomerLoginForm" class="form-vertical">
 
-        <h1 id="LoginHeading" class="text-center">{{ 'customer.login.title' | t }}</h1>
+        <h1 id="LoginHeading" class="text-left">{{ 'customer.login.title' | t }}</h1>
 
         {% form 'customer_login', novalidate: 'novalidate' %}
 
@@ -54,23 +54,15 @@
             {% endif %}
 
           </div>
-          {% if form.password_needed %}
           <div class="col-12 large-6">
-            <p><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
-          </div>
-          {% endif %}
-          <div class="col-12 large-6">
-            <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
-
             <p>
               {{ 'layout.customer.create_account' | t | customer_register_link }}
             </p>
           </div>
+          <div class="col-12 large-6">
+            <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
+          </div>
         </div>
-
-
-
-
 
         {% endform %}
       </div>
@@ -79,7 +71,7 @@
     <div class="col-12 large-6">
       <div id="RecoverPasswordForm" class="hide">
 
-        <div class="text-center">
+        <div class="text-left">
           <h2 id="RecoverHeading">{{ 'customer.recover_password.title' | t }}</h2>
           <p>{{ 'customer.recover_password.subtext' | t }}</p>
         </div>
@@ -106,7 +98,7 @@
           </span>
           {%- endif -%}
 
-          <div class="text-center">
+          <div class="text-left">
             <p>
               <input type="submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
             </p>
@@ -121,7 +113,7 @@
   </div>
 
   {% if shop.checkout.guest_login %}
-  <div class="text-center">
+  <div class="text-left">
     <hr class="hr--invisible">
     <h2>{{ 'customer.login.guest_title' | t }}</h2>
 
