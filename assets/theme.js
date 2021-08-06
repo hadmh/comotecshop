@@ -65,6 +65,11 @@ $(document).ready(function () {
     $('.address-new-open').click(function () {
         $('#AddressNewForm').show();
     });
+
+    $('.address-edit-toggle').click(function () {
+        var id = $(this).attr('aria-owns');
+        $('#' + id).toggleClass('hide');
+    });
 });
 
 $(document).on('click', '.btn-addcart', function () {
