@@ -57,6 +57,14 @@ $(document).ready(function () {
             $('.navbar-box').addClass('open').css('top', '-' + scrollTop + 'px');
         }
     });
+
+    $('.address-new-close').click(function () {
+        $('#address_form_new').hide();
+    });
+
+    $('.address-new-open').click(function () {
+        $('#address_form_new').show();
+    });
 });
 
 $(document).on('click', '.btn-addcart', function () {

@@ -30,13 +30,11 @@
       <div class="page-width">
         <div class="row">
 
-          <div class="col-12 large-12">
-            {% comment %}
-            Add address form, hidden by default
-            {% endcomment %}
-            <div id="AddressNewForm" class="contact-form hide">
+          <div class="col-12 large-12 mb-40">
+            <button type="button" class="text-link address-new-open">{{ 'customer.addresses.add_new' | t }}</button>
+
+            <div id="AddressNewForm" class="contact-form" style="display: hide;">
               {% form 'customer_address', customer.new_address %}
-              <h2>{{ 'customer.addresses.add_new' | t }}</h2>
 
               <div class="row">
                 <div class="col-12 large-6">
@@ -96,13 +94,19 @@
               <input type="tel" id="AddressPhoneNew" name="address[phone]" value="{{ form.phone }}"
                 autocomplete="phone">
 
-              {{ form.set_as_default_checkbox }}
-              <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
-
-              <div><input type="submit" class="btn" value="{{ 'customer.addresses.add' | t }}"></div>
-              <div><button type="button" class="text-link address-new-toggle">{{ 'customer.addresses.cancel' | t
-                  }}</button>
+              <div class="row">
+                <div class="col-12 large-6">{{ form.set_as_default_checkbox }}
+                  <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
+                </div>
+                <div class="col-12 large-6">
+                  <div><input type="submit" class="btn" value="{{ 'customer.addresses.add' | t }}"></div>
+                  <div><button type="button" class="text-link address-new-close">{{ 'customer.addresses.cancel' | t
+                      }}</button>
+                  </div>
+                </div>
               </div>
+
+
 
               {% endform %}
               <hr>
