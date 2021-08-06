@@ -53,11 +53,13 @@
               contains 'form' -%} class="input--error" aria-invalid="true" {%- endif -%}>
             {% endif %}
 
-            {% if form.password_needed %}
-            <p><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
-            {% endif %}
           </div>
-          <div class="col-12 large-12">
+          {% if form.password_needed %}
+          <div class="col-12 large-6">
+            <p><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
+          </div>
+          {% endif %}
+          <div class="col-12 large-6">
             <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
 
             <p>
