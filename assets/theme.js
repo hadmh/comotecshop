@@ -59,11 +59,11 @@ $(document).ready(function () {
     });
 
     $('.address-new-close').click(function () {
-        $('#address_form_new').hide();
+        $('#AddressNewForm').hide();
     });
 
     $('.address-new-open').click(function () {
-        $('#address_form_new').show();
+        $('#AddressNewForm').show();
     });
 });
 
