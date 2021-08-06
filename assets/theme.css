@@ -903,6 +903,7 @@ div#go-top {
   height: 40px;
   width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
 }
 
 textarea#ContactForm-message {
