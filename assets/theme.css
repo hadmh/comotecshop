@@ -951,7 +951,7 @@ ul.menu-acc li:hover {
   background: #ff6900;
   color: #fff;
 }
-.template-customers-account .text-center h2 {
+.template-customers-account .container h2 {
   font-size: 28px;
   margin-bottom: 30px;
 }
