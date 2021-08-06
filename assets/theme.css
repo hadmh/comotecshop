@@ -887,6 +887,35 @@ div#go-top {
   right: 10px;
 }
 
+/* Contact Page */
+.contact-form label {
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.contact-form input {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+}
+
+textarea#ContactForm-message {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 180px;
+}
+
+.contact-form input.btn {
+  width: 200px;
+  background: #ff6900;
+  border: none;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 767px) {
   .tab-content h2.title-tab-content {
     border-bottom: 10px solid;
