@@ -965,7 +965,8 @@ h2.h4 {
   border-bottom: 1px solid;
   padding: 10px 0;
 }
-.address-item {
+.address-item,
+#AddressNewForm {
   border: 1px solid;
   padding: 20px;
   margin-bottom: 30px;
