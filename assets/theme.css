@@ -1773,3 +1773,11 @@ body.template-page .rte.container h2:not(:first-child){
 body.template-page .rte.container p{
   margin-bottom:10px;
 }
+body.template-page .rte.container table{
+}
+
+body.template-page .rte.container table td{
+  border-left:1px solid #ff6900;
+  border-top:1px solid #ff6900;
+  padding: 10px;
+}
