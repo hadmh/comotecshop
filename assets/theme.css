@@ -1762,11 +1762,11 @@ button.btn.btn-checkout:hover:after {
   }
 }
 
-body.template-page .container h2{
+body.template-page .rte.container h2{
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-body.template-page .container h2:not(:first-child){
+body.template-page .rte.container h2:not(:first-child){
   margin-top:50px;
 }
