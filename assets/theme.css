@@ -1788,7 +1788,8 @@ body.template-page .rte.container table td,body.template-page .rte.container tab
 body.template-page .rte.container table th{
   font-weight: bold;
   width: 25%;
-  background-color: rgba(255, 105, 0, 0.3);
+  background-color: rgba(255, 105, 0, 0.2);
+  text-align: center;
 }
 a:hover{
   opacity: 0.6;
