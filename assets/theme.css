@@ -1774,8 +1774,11 @@ body.template-page .rte.container p{
   margin-bottom:10px;
 }
 body.template-page .rte.container table{
+  border-right:1px solid #ff6900;
+  border-bottom:1px solid #ff6900;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-
 body.template-page .rte.container table td{
   border-left:1px solid #ff6900;
   border-top:1px solid #ff6900;
