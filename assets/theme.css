@@ -1767,3 +1767,6 @@ body.template-page .container h2{
   font-weight: bold;
   margin-bottom: 10px;
 }
+body.template-page .container h2:not(:first-child){
+  margin-top:30px;
+}
