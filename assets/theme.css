@@ -1785,7 +1785,7 @@ body.template-page .rte.container table td,body.template-page .rte.container tab
   border-top:1px solid #ff6900;
   padding: 10px;
 }
-body.template-page .rte.container table th{
+body.template-page .rte.container table th,body.template-page .rte.container table.law td:first-child{
   font-weight: bold;
   width: 25%;
   background-color: rgba(255, 105, 0, 0.2);
