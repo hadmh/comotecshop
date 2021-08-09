@@ -1362,6 +1362,10 @@ button.btn.btn-checkout:hover:after {
   .product-item h3.product-title{
     min-height:140px;
     margin-bottom:10px;
+  }
+  .product-item a.btn.btn-readmore{
+    line-height:51px;
+  }
 }
 
 @media (min-width: 1500px) {
