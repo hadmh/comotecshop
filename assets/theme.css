@@ -1804,3 +1804,7 @@ a:hover{
 .btn-box a.btn:hover{
   opacity:1;
 }
+.breadcrumb h2,.nav-footer li.menu-item,.copyright{
+  font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 700;
+  font-style: normal;}
