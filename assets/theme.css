@@ -1794,3 +1794,6 @@ body.template-page .rte.container table th,body.template-page .rte.container tab
 a:hover{
   opacity: 0.6;
 }
+.btn-box a.btn:hover{
+  opacity:1;
+}
