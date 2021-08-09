@@ -547,7 +547,7 @@ a.text-center.color-av-6.active {
 }
 .product-item span.tax-include {
   font-size: 17px;
-  font-family: fot-tsukuardgothic-std, sans-serif;
+  1ily: fot-tsukuardgothic-std, sans-serif;
 }
 .product-item span.detail-num-txt {
   font-size: 19px;
@@ -1008,6 +1008,8 @@ h2.h4 {
     color: #ff6900;
     padding-bottom: 10px;
     display: block;
+    
+  font-family: fot-tsukuardgothic-std, sans-serif;
   }
 
   .tab_mobile select#nav-tab {
@@ -1805,11 +1807,9 @@ a:hover{
   opacity:1;
 }
 .breadcrumb h2,.nav-footer li.menu-item,.copyright{
-  font-family: fot-tsukuardgothic-std, sans-serif;
+  	font-family: fot-tsukuardgothic-std, sans-serif;
 	font-weight: 700;
-  font-style: normal;}
+ 	font-style: normal;}
 button.btn.btn-checkout, input.btn-secondary.update-cart{
-  
- 
-    font-family: source-han-sans-japanese,sans-serif;
+	font-family: source-han-sans-japanese,sans-serif;
 }
