@@ -1814,3 +1814,7 @@ a:hover{
 button.btn.btn-checkout, input.btn-secondary.update-cart{
 	font-family: source-han-sans-japanese,sans-serif;
 }
+#RecoverPasswordForm input.btn:hover, #customer_login input.btn:hover, .contact-form input.btn:hover{
+  opacity:0.6;
+  cursor:pointer;
+}
