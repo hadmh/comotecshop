@@ -1360,7 +1360,8 @@ button.btn.btn-checkout:hover:after {
     display: none !important;
   }
   .product-item h3.product-title{
-    min-height:150px;
+    min-height:140px;
+    margin-bottom:10px;
 }
 
 @media (min-width: 1500px) {
