@@ -1021,6 +1021,7 @@ h2.h4 {
     border-radius: 10px;
     width: 100%;
     max-width: 300px;
+    font-family: source-han-sans-japanese,sans-serif;
   }
 
   .product-item.row {
