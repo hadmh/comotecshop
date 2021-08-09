@@ -1359,6 +1359,8 @@ button.btn.btn-checkout:hover:after {
   .image-box p.product-cat {
     display: none !important;
   }
+  .product-item h3.product-title{
+    min-height:150px;
 }
 
 @media (min-width: 1500px) {
