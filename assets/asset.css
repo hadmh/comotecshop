@@ -115,6 +115,11 @@ body {
   line-height: 1.5;
   background: #fff;
 }
+.tsuku{
+	font-family: fot-tsukuardgothic-std, sans-serif;
+ 	font-weight: 700;
+	font-style: normal;
+}
 p {
   margin: 4px 0;
 }
