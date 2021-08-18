@@ -99,13 +99,12 @@
 
   {{ content_for_header }}
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     function checkdevice() {
       var user_agent = navigator.userAgent;
 
-      alert(user_agent.includes('TV'));
-
-      if (user_agent.includes('TV') || user_agent.includes('Macintosh1')) {
+      if (user_agent.indexOf('TV')) {
         $('body').addClass('device-tv');
       }
     }
@@ -115,19 +114,6 @@
 
 <body class="template-{{ request.page_type | handle }}" onload="checkdevice()">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    function checkdevice() {
-      var user_agent = navigator.userAgent;
-
-      // alert(user_agent);
-      // alert(user_agent.indexOf('TV'));
-
-      if (user_agent.indexOf('TV')) {
-        $('body').addClass('device-tv');
-      }
-    }
-  </script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
 
