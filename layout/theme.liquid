@@ -120,10 +120,10 @@
     function checkdevice() {
       var user_agent = navigator.userAgent;
 
-      alert(user_agent);
-      alert(user_agent.indexOf('TV'));
+      // alert(user_agent);
+      // alert(user_agent.indexOf('TV'));
 
-      if (user_agent.indexOf('TV') || user_agent.indexOf('Macintosh1')) {
+      if (user_agent.indexOf('TV')) {
         $('body').addClass('device-tv');
       }
     }
