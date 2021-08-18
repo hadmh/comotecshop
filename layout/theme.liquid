@@ -107,7 +107,7 @@
     function checkdevice() {
       var user_agent = navigator.userAgent;
 
-      alert(user_agent);
+      alert(user_agent.includes('TV'));
 
       if (user_agent.includes('TV') || user_agent.includes('Macintosh1')) {
         $('body').addClass('device-tv');
