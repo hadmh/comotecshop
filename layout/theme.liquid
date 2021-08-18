@@ -100,7 +100,7 @@
   {{ content_for_header }}
 </head>
 
-<body class="template-{{ request.page_type | handle }}">
+<body class="template-{{ request.page_type | handle }}" onload="console.log(navigator.userAgent)">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
