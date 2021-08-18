@@ -100,15 +100,20 @@
   {{ content_for_header }}
 </head>
 
-<body class="template-{{ request.page_type | handle }}" onload="alert(navigator.userAgent)">
+<body class="template-{{ request.page_type | handle }}" onload="checkdevice()">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
+    function checkdevice() {
+      var user_agent = navigator.userAgent;
 
-    var user_agent = navigator.userAgent;
-    if (user_agent.includes('TV') || user_agent.includes('Macintosh1')) {
-      $('body').addClass('device-tv');
+      alert(user_agent);
+
+      if (user_agent.includes('TV') || user_agent.includes('Macintosh1')) {
+        $('body').addClass('device-tv');
+      }
     }
+
 
   </script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
