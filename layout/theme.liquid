@@ -104,6 +104,8 @@
     function checkdevice() {
       var user_agent = navigator.userAgent;
 
+      console.log(user_agent.indexOf('TV'));
+
       if (user_agent.indexOf('TV')) {
         $('body').addClass('device-tv');
       }
