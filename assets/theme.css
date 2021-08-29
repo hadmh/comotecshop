@@ -1506,6 +1506,7 @@ button.btn.btn-checkout:hover:after {
     font-size: 40px;
     width: calc(100% - 280px);
     float: left;
+    min-height: 75px;
   }
   .device-tv .product-item {
     padding: 15px 0;
