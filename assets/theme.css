@@ -1529,7 +1529,7 @@ button.btn.btn-checkout:hover:after {
     width: 450px;
     position: fixed;
     top: 60px;
-    right: 80px;
+    right: 50px;
     z-index: 99;
   }
   .device-tv .sidebar-hearder {
