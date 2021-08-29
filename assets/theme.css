@@ -1667,9 +1667,7 @@ button.btn.btn-checkout:hover:after {
   .device-tv {
     padding-bottom: 145px;
   }
-  .device-tv .product-tab {
-    padding-bottom: 30px;
-  }
+
   .device-tv div#shopify-section-footer {
     position: fixed;
     bottom: 0;
