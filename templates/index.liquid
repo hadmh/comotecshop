@@ -8,7 +8,7 @@
         <li class="menu-item">
             <a class="text-center active color-av-1" href="#tab_1">
                 <i class="fish color-1"></i>
-                <span>食品・<br/>グルメ</span>
+                <span>食品・<br />グルメ</span>
             </a>
         </li>
         <li class="menu-item">
@@ -26,13 +26,13 @@
         <li class="menu-item">
             <a class="text-center color-av-4" href="#tab_4">
                 <i class="goods color-4"></i>
-                <span>日用品・<br/>雑貨</span>
+                <span>日用品・<br />雑貨</span>
             </a>
         </li>
         <li class="menu-item">
             <a class="text-center color-av-5" href="#tab_5">
                 <i class="interior color-5"></i>
-                <span>インテリア・<br/>装飾品</span>
+                <span>インテリア・<br />装飾品</span>
             </a>
         </li>
         <li class="menu-item">
@@ -66,66 +66,68 @@
 
             <div class="list-prooduct">
                 {% for product in collections.food-gourmet.products %}
-                    <div class="product-item row">
-                        <div class="image-box col-5 large-3">
-                            <div class="col-inner">
-                                <a href="{{ product.url }}">
-                                    <img alt="" src="{{ product | img_url: '450x450' }}">
-                                </a>
+                <div class="product-item row">
+                    <div class="image-box col-5 large-3">
+                        <div class="col-inner">
+                            <a href="{{ product.url }}">
+                                <img alt="" src="{{ product | img_url: '450x450' }}">
+                            </a>
 
-                                <p class="product-cat">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                            </div>
+                            <p class="product-cat">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="text-box col-7 large-5">
-                            <div class="col-inner">
-                                <p class="product-cat sm-hide">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                                <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
-                                </h3>
-                                <div class="price">
-                                    <span class="price-yen">
-                                        {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
-                                        {% else %}
-                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                        {% endif %}
-                                        {% include 'price' with product.price %}
-                                        {% if on_sale and section.settings.product_show_compare_at_price %}
-                                            <small>
-                                                <s>
-                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                                    {% include 'price' with product.compare_at_price %}
-                                                </s>
-                                            </small>
-                                        {% endif %}
-                                    </span>
-                                    <span class="tax-include">(税込)</span>
-                                </div>
-                                <div class="detail-num-wrap">
-                                    <span class="detail-num-txt">個数</span>
-                                    <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
-                                </div>
+                    <div class="text-box col-7 large-5">
+                        <div class="col-inner">
+                            <p class="product-cat sm-hide">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
+                            <h3 class="product-title">
+                                <p>{{ product.title }}</p>
+                            </h3>
+                            <div class="price">
+                                <span class="price-yen">
+                                    {% if on_sale %}
+                                    <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
+                                    {% else %}
+                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                    {% endif %}
+                                    {% include 'price' with product.price %}
+                                    {% if on_sale and section.settings.product_show_compare_at_price %}
+                                    <small>
+                                        <s>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t
+                                                }}</span>
+                                            {% include 'price' with product.compare_at_price %}
+                                        </s>
+                                    </small>
+                                    {% endif %}
+                                </span>
+                                <span class="tax-include">(税込)</span>
                             </div>
-                        </div>
-
-                        <div class="text-box col-12 large-4">
-                            <div class="col-inner">
-                                <div class="btn-box">
-                                    <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
-                                    <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
-                                </div>
+                            <div class="detail-num-wrap">
+                                <span class="detail-num-txt">個数</span>
+                                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
+                                    pattern="[0-9]*" type="number" value="1">
                             </div>
                         </div>
                     </div>
+
+                    <div class="text-box col-12 large-4">
+                        <div class="col-inner">
+                            <div class="btn-box">
+                                <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
+                                <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -135,66 +137,68 @@
 
             <div class="list-prooduct">
                 {% for product in collections.fruits.products %}
-                    <div class="product-item row">
-                        <div class="image-box col-5 large-3">
-                            <div class="col-inner">
-                                <a href="{{ product.url }}">
-                                    <img alt="" src="{{ product | img_url: '450x450' }}">
-                                </a>
+                <div class="product-item row">
+                    <div class="image-box col-5 large-3">
+                        <div class="col-inner">
+                            <a href="{{ product.url }}">
+                                <img alt="" src="{{ product | img_url: '450x450' }}">
+                            </a>
 
-                                <p class="product-cat">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                            </div>
+                            <p class="product-cat">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="text-box col-7 large-5">
-                            <div class="col-inner">
-                                <p class="product-cat sm-hide">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                                <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
-                                </h3>
-                                <div class="price">
-                                    <span class="price-yen">
-                                        {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
-                                        {% else %}
-                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                        {% endif %}
-                                        {% include 'price' with product.price %}
-                                        {% if on_sale and section.settings.product_show_compare_at_price %}
-                                            <small>
-                                                <s>
-                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                                    {% include 'price' with product.compare_at_price %}
-                                                </s>
-                                            </small>
-                                        {% endif %}
-                                    </span>
-                                    <span class="tax-include">(税込)</span>
-                                </div>
-                                <div class="detail-num-wrap">
-                                    <span class="detail-num-txt">個数</span>
-                                    <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
-                                </div>
+                    <div class="text-box col-7 large-5">
+                        <div class="col-inner">
+                            <p class="product-cat sm-hide">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
+                            <h3 class="product-title">
+                                <p>{{ product.title }}</p>
+                            </h3>
+                            <div class="price">
+                                <span class="price-yen">
+                                    {% if on_sale %}
+                                    <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
+                                    {% else %}
+                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                    {% endif %}
+                                    {% include 'price' with product.price %}
+                                    {% if on_sale and section.settings.product_show_compare_at_price %}
+                                    <small>
+                                        <s>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t
+                                                }}</span>
+                                            {% include 'price' with product.compare_at_price %}
+                                        </s>
+                                    </small>
+                                    {% endif %}
+                                </span>
+                                <span class="tax-include">(税込)</span>
                             </div>
-                        </div>
-
-                        <div class="text-box col-12 large-4">
-                            <div class="col-inner">
-                                <div class="btn-box">
-                                    <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
-                                    <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
-                                </div>
+                            <div class="detail-num-wrap">
+                                <span class="detail-num-txt">個数</span>
+                                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
+                                    pattern="[0-9]*" type="number" value="1">
                             </div>
                         </div>
                     </div>
+
+                    <div class="text-box col-12 large-4">
+                        <div class="col-inner">
+                            <div class="btn-box">
+                                <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
+                                <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -204,66 +208,68 @@
 
             <div class="list-prooduct">
                 {% for product in collections.beverages.products %}
-                    <div class="product-item row">
-                        <div class="image-box col-5 large-3">
-                            <div class="col-inner">
-                                <a href="{{ product.url }}">
-                                    <img alt="" src="{{ product | img_url: '450x450' }}">
-                                </a>
+                <div class="product-item row">
+                    <div class="image-box col-5 large-3">
+                        <div class="col-inner">
+                            <a href="{{ product.url }}">
+                                <img alt="" src="{{ product | img_url: '450x450' }}">
+                            </a>
 
-                                <p class="product-cat">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                            </div>
+                            <p class="product-cat">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="text-box col-7 large-5">
-                            <div class="col-inner">
-                                <p class="product-cat sm-hide">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                                <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
-                                </h3>
-                                <div class="price">
-                                    <span class="price-yen">
-                                        {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
-                                        {% else %}
-                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                        {% endif %}
-                                        {% include 'price' with product.price %}
-                                        {% if on_sale and section.settings.product_show_compare_at_price %}
-                                            <small>
-                                                <s>
-                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                                    {% include 'price' with product.compare_at_price %}
-                                                </s>
-                                            </small>
-                                        {% endif %}
-                                    </span>
-                                    <span class="tax-include">(税込)</span>
-                                </div>
-                                <div class="detail-num-wrap">
-                                    <span class="detail-num-txt">個数</span>
-                                    <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
-                                </div>
+                    <div class="text-box col-7 large-5">
+                        <div class="col-inner">
+                            <p class="product-cat sm-hide">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
+                            <h3 class="product-title">
+                                <p>{{ product.title }}</p>
+                            </h3>
+                            <div class="price">
+                                <span class="price-yen">
+                                    {% if on_sale %}
+                                    <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
+                                    {% else %}
+                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                    {% endif %}
+                                    {% include 'price' with product.price %}
+                                    {% if on_sale and section.settings.product_show_compare_at_price %}
+                                    <small>
+                                        <s>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t
+                                                }}</span>
+                                            {% include 'price' with product.compare_at_price %}
+                                        </s>
+                                    </small>
+                                    {% endif %}
+                                </span>
+                                <span class="tax-include">(税込)</span>
                             </div>
-                        </div>
-
-                        <div class="text-box col-12 large-4">
-                            <div class="col-inner">
-                                <div class="btn-box">
-                                    <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
-                                    <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
-                                </div>
+                            <div class="detail-num-wrap">
+                                <span class="detail-num-txt">個数</span>
+                                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
+                                    pattern="[0-9]*" type="number" value="1">
                             </div>
                         </div>
                     </div>
+
+                    <div class="text-box col-12 large-4">
+                        <div class="col-inner">
+                            <div class="btn-box">
+                                <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
+                                <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -273,66 +279,68 @@
 
             <div class="list-prooduct">
                 {% for product in collections.necessities-miscellaneous.products %}
-                    <div class="product-item row">
-                        <div class="image-box col-5 large-3">
-                            <div class="col-inner">
-                                <a href="{{ product.url }}">
-                                    <img alt="" src="{{ product | img_url: '450x450' }}">
-                                </a>
+                <div class="product-item row">
+                    <div class="image-box col-5 large-3">
+                        <div class="col-inner">
+                            <a href="{{ product.url }}">
+                                <img alt="" src="{{ product | img_url: '450x450' }}">
+                            </a>
 
-                                <p class="product-cat">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                            </div>
+                            <p class="product-cat">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="text-box col-7 large-5">
-                            <div class="col-inner">
-                                <p class="product-cat sm-hide">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                                <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
-                                </h3>
-                                <div class="price">
-                                    <span class="price-yen">
-                                        {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
-                                        {% else %}
-                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                        {% endif %}
-                                        {% include 'price' with product.price %}
-                                        {% if on_sale and section.settings.product_show_compare_at_price %}
-                                            <small>
-                                                <s>
-                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                                    {% include 'price' with product.compare_at_price %}
-                                                </s>
-                                            </small>
-                                        {% endif %}
-                                    </span>
-                                    <span class="tax-include">(税込)</span>
-                                </div>
-                                <div class="detail-num-wrap">
-                                    <span class="detail-num-txt">個数</span>
-                                    <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
-                                </div>
+                    <div class="text-box col-7 large-5">
+                        <div class="col-inner">
+                            <p class="product-cat sm-hide">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
+                            <h3 class="product-title">
+                                <p>{{ product.title }}</p>
+                            </h3>
+                            <div class="price">
+                                <span class="price-yen">
+                                    {% if on_sale %}
+                                    <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
+                                    {% else %}
+                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                    {% endif %}
+                                    {% include 'price' with product.price %}
+                                    {% if on_sale and section.settings.product_show_compare_at_price %}
+                                    <small>
+                                        <s>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t
+                                                }}</span>
+                                            {% include 'price' with product.compare_at_price %}
+                                        </s>
+                                    </small>
+                                    {% endif %}
+                                </span>
+                                <span class="tax-include">(税込)</span>
                             </div>
-                        </div>
-
-                        <div class="text-box col-12 large-4">
-                            <div class="col-inner">
-                                <div class="btn-box">
-                                    <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
-                                    <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
-                                </div>
+                            <div class="detail-num-wrap">
+                                <span class="detail-num-txt">個数</span>
+                                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
+                                    pattern="[0-9]*" type="number" value="1">
                             </div>
                         </div>
                     </div>
+
+                    <div class="text-box col-12 large-4">
+                        <div class="col-inner">
+                            <div class="btn-box">
+                                <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
+                                <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -342,66 +350,68 @@
 
             <div class="list-prooduct">
                 {% for product in collections.interior-decoration.products %}
-                    <div class="product-item row">
-                        <div class="image-box col-5 large-3">
-                            <div class="col-inner">
-                                <a href="{{ product.url }}">
-                                    <img alt="" src="{{ product | img_url: '450x450' }}">
-                                </a>
+                <div class="product-item row">
+                    <div class="image-box col-5 large-3">
+                        <div class="col-inner">
+                            <a href="{{ product.url }}">
+                                <img alt="" src="{{ product | img_url: '450x450' }}">
+                            </a>
 
-                                <p class="product-cat">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                            </div>
+                            <p class="product-cat">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="text-box col-7 large-5">
-                            <div class="col-inner">
-                                <p class="product-cat sm-hide">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                                <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
-                                </h3>
-                                <div class="price">
-                                    <span class="price-yen">
-                                        {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
-                                        {% else %}
-                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                        {% endif %}
-                                        {% include 'price' with product.price %}
-                                        {% if on_sale and section.settings.product_show_compare_at_price %}
-                                            <small>
-                                                <s>
-                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                                    {% include 'price' with product.compare_at_price %}
-                                                </s>
-                                            </small>
-                                        {% endif %}
-                                    </span>
-                                    <span class="tax-include">(税込)</span>
-                                </div>
-                                <div class="detail-num-wrap">
-                                    <span class="detail-num-txt">個数</span>
-                                    <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
-                                </div>
+                    <div class="text-box col-7 large-5">
+                        <div class="col-inner">
+                            <p class="product-cat sm-hide">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
+                            <h3 class="product-title">
+                                <p>{{ product.title }}</p>
+                            </h3>
+                            <div class="price">
+                                <span class="price-yen">
+                                    {% if on_sale %}
+                                    <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
+                                    {% else %}
+                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                    {% endif %}
+                                    {% include 'price' with product.price %}
+                                    {% if on_sale and section.settings.product_show_compare_at_price %}
+                                    <small>
+                                        <s>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t
+                                                }}</span>
+                                            {% include 'price' with product.compare_at_price %}
+                                        </s>
+                                    </small>
+                                    {% endif %}
+                                </span>
+                                <span class="tax-include">(税込)</span>
                             </div>
-                        </div>
-
-                        <div class="text-box col-12 large-4">
-                            <div class="col-inner">
-                                <div class="btn-box">
-                                    <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
-                                    <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
-                                </div>
+                            <div class="detail-num-wrap">
+                                <span class="detail-num-txt">個数</span>
+                                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
+                                    pattern="[0-9]*" type="number" value="1">
                             </div>
                         </div>
                     </div>
+
+                    <div class="text-box col-12 large-4">
+                        <div class="col-inner">
+                            <div class="btn-box">
+                                <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
+                                <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -411,66 +421,68 @@
 
             <div class="list-prooduct">
                 {% for product in collections.clothing.products %}
-                    <div class="product-item row">
-                        <div class="image-box col-5 large-3">
-                            <div class="col-inner">
-                                <a href="{{ product.url }}">
-                                    <img alt="" src="{{ product | img_url: '450x450' }}">
-                                </a>
+                <div class="product-item row">
+                    <div class="image-box col-5 large-3">
+                        <div class="col-inner">
+                            <a href="{{ product.url }}">
+                                <img alt="" src="{{ product | img_url: '450x450' }}">
+                            </a>
 
-                                <p class="product-cat">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                            </div>
+                            <p class="product-cat">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="text-box col-7 large-5">
-                            <div class="col-inner">
-                                <p class="product-cat sm-hide">
-                                    {% for tag in product.tags %}
-                                        {{ tag }}
-                                    {% endfor %}
-                                </p>
-                                <h3 class="product-title">
-                                    <p>{{ product.title }}</p>
-                                </h3>
-                                <div class="price">
-                                    <span class="price-yen">
-                                        {% if on_sale %}
-                                            <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
-                                        {% else %}
-                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                        {% endif %}
-                                        {% include 'price' with product.price %}
-                                        {% if on_sale and section.settings.product_show_compare_at_price %}
-                                            <small>
-                                                <s>
-                                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                                    {% include 'price' with product.compare_at_price %}
-                                                </s>
-                                            </small>
-                                        {% endif %}
-                                    </span>
-                                    <span class="tax-include">(税込)</span>
-                                </div>
-                                <div class="detail-num-wrap">
-                                    <span class="detail-num-txt">個数</span>
-                                    <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
-                                </div>
+                    <div class="text-box col-7 large-5">
+                        <div class="col-inner">
+                            <p class="product-cat sm-hide">
+                                {% for tag in product.tags %}
+                                {{ tag }}
+                                {% endfor %}
+                            </p>
+                            <h3 class="product-title">
+                                <p>{{ product.title }}</p>
+                            </h3>
+                            <div class="price">
+                                <span class="price-yen">
+                                    {% if on_sale %}
+                                    <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
+                                    {% else %}
+                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                    {% endif %}
+                                    {% include 'price' with product.price %}
+                                    {% if on_sale and section.settings.product_show_compare_at_price %}
+                                    <small>
+                                        <s>
+                                            <span class="visually-hidden">{{ "products.product.regular_price" | t
+                                                }}</span>
+                                            {% include 'price' with product.compare_at_price %}
+                                        </s>
+                                    </small>
+                                    {% endif %}
+                                </span>
+                                <span class="tax-include">(税込)</span>
                             </div>
-                        </div>
-
-                        <div class="text-box col-12 large-4">
-                            <div class="col-inner">
-                                <div class="btn-box">
-                                    <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
-                                    <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
-                                </div>
+                            <div class="detail-num-wrap">
+                                <span class="detail-num-txt">個数</span>
+                                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
+                                    pattern="[0-9]*" type="number" value="1">
                             </div>
                         </div>
                     </div>
+
+                    <div class="text-box col-12 large-4">
+                        <div class="col-inner">
+                            <div class="btn-box">
+                                <a class="btn btn-readmore" href="{{ product.url }}">商品詳細へ</a>
+                                <a class="btn btn-addcart" product="{{ product.variants.first.id }}">カゴへ入れる</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -487,31 +499,35 @@
             <img alt="" src="">
             <span>買い物カゴ</span>
         </div>
-        <p class="des">購入手続き・変更はリモコンの赤ボタンを押してください</p>
+        <p class="des">購入手続き・変更はリモコンの<span style="color: #ec1c24;">赤</span>ボタンを押してください</p>
 
         <div class="list">
-            <form id="CartDrawer" action="{{ routes.cart_url }}" class="cart-drawer critical-hidden" method="post" novalidate>
+            <form id="CartDrawer" action="{{ routes.cart_url }}" class="cart-drawer critical-hidden" method="post"
+                novalidate>
                 <div class="cart-drawer__content">
                     <div class="cart-list row row-xsmall">
                         {% for item in cart.items %}
-                            <div class="cart-item col-12 large-3">
-                                <div class="image-box">
-                                    <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}" alt="{{ item.image.alt | escape }}">
-                                </div>
-
-                                <div class="detail-num-wrap">
-                                    <span class="detail-num-txt">個数</span>
-                                    <input id="quantity_{{ item.key }}" class="form__input cart-drawer__input" value="{{ item.quantity }}" type="number" pattern="\d*" min="1" aria-label="{{ 'cart.general.item_quantity' | t }}" data-cart-item-quantity>
-                                </div>
+                        <div class="cart-item col-12 large-3">
+                            <div class="image-box">
+                                <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}"
+                                    alt="{{ item.image.alt | escape }}">
                             </div>
+
+                            <div class="detail-num-wrap">
+                                <span class="detail-num-txt">個数</span>
+                                <input id="quantity_{{ item.key }}" class="form__input cart-drawer__input"
+                                    value="{{ item.quantity }}" type="number" pattern="\d*" min="1"
+                                    aria-label="{{ 'cart.general.item_quantity' | t }}" data-cart-item-quantity>
+                            </div>
+                        </div>
                         {% endfor %}
                     </div>
 
                     {% if settings.show_cart_note %}
-                        <div class="cart-drawer__note-wrapper">
-                            <label class="cart__note-label" for="Note">{{ 'cart.general.note' | t }}</label>
-                            <textarea class="cart__note" data-cart-note id="Note" name="note">{{ cart.note }}</textarea>
-                        </div>
+                    <div class="cart-drawer__note-wrapper">
+                        <label class="cart__note-label" for="Note">{{ 'cart.general.note' | t }}</label>
+                        <textarea class="cart__note" data-cart-note id="Note" name="note">{{ cart.note }}</textarea>
+                    </div>
                     {% endif %}
                 </div>
 
@@ -524,20 +540,21 @@
 
                     <div data-discounts>
                         {% unless cart.cart_level_discount_applications.size == 0 %}
-                            <ul class="cart__discounts cart-drawer__discounts" role="list">
-                                {% for discount in cart.cart_level_discount_applications %}
-                                    <li>
-                                        {% render 'icon-discount' %}
-                                        {{ discount.title }}
-                                        (-{{ discount.total_allocated_amount | money }})
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                        <ul class="cart__discounts cart-drawer__discounts" role="list">
+                            {% for discount in cart.cart_level_discount_applications %}
+                            <li>
+                                {% render 'icon-discount' %}
+                                {{ discount.title }}
+                                (-{{ discount.total_allocated_amount | money }})
+                            </li>
+                            {% endfor %}
+                        </ul>
                         {% endunless %}
                     </div>
 
                     <div class="center">
-                        <button type="submit" class="button" name="checkout" data-checkout-button {% if cart.items.size == 0 %} disabled {% endif %}>
+                        <button type="submit" class="button" name="checkout" data-checkout-button {% if
+                            cart.items.size==0 %} disabled {% endif %}>
                             {{ 'cart.general.checkout' | t }}
                         </button>
                     </div>

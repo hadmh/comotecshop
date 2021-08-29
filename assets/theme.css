@@ -1635,6 +1635,7 @@ button.btn.btn-checkout:hover:after {
     padding: 0px 50px;
     font-size: 40px;
     margin-bottom: 13px;
+    font-weight: bold;
   }
 
   .sidebar .title-box:before {
