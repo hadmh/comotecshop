@@ -1008,8 +1008,8 @@ h2.h4 {
     color: #ff6900;
     padding-bottom: 10px;
     display: block;
-    
-  font-family: fot-tsukuardgothic-std, sans-serif;
+
+    font-family: fot-tsukuardgothic-std, sans-serif;
   }
 
   .tab_mobile select#nav-tab {
@@ -1021,7 +1021,7 @@ h2.h4 {
     border-radius: 10px;
     width: 100%;
     max-width: 300px;
-    font-family: source-han-sans-japanese,sans-serif;
+    font-family: source-han-sans-japanese, sans-serif;
   }
 
   .product-item.row {
@@ -1362,12 +1362,12 @@ button.btn.btn-checkout:hover:after {
   .image-box p.product-cat {
     display: none !important;
   }
-  .product-item h3.product-title{
-    min-height:140px;
-    margin-bottom:10px;
+  .product-item h3.product-title {
+    min-height: 140px;
+    margin-bottom: 10px;
   }
-  .product-item a.btn.btn-readmore{
-    line-height:51px;
+  .product-item a.btn.btn-readmore {
+    line-height: 51px;
   }
 }
 
@@ -1380,7 +1380,7 @@ button.btn.btn-checkout:hover:after {
     padding-bottom: 160px;
     background-size: cover;
     padding-top: 20px;
-    background-size: cover;
+    background-image: url(bg-header-sm.png);
   }
   .device-tv main {
     margin-top: -150px;
@@ -1415,13 +1415,31 @@ button.btn.btn-checkout:hover:after {
     background-position: center 80%;
     background-size: 32%;
     background-repeat: no-repeat;
+    position: relative;
   }
 
   .device-tv .nav-tab li.menu-item a {
     height: 150px;
     width: 170px;
     font-size: 27px;
+    position: relative;
   }
+
+  .device-tv .nav-tab li.menu-item a.active:before,
+  .device-tv li.paging a.active:before {
+    border-left: 0.4em solid;
+    border-top: 0.4em solid;
+    border-right: 0.4em solid;
+    border-color: #ec1c24;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 18px 18px 0 0;
+  }
+
   .device-tv .nav-tab li.menu-item a i {
     width: 70px;
     height: 60px;
@@ -1772,49 +1790,56 @@ button.btn.btn-checkout:hover:after {
   }
 }
 
-
-body.template-page .rte.container h2{
+body.template-page .rte.container h2 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-body.template-page .rte.container h2:not(:first-child){
-  margin-top:50px;
+body.template-page .rte.container h2:not(:first-child) {
+  margin-top: 50px;
 }
-body.template-page .rte.container p{
-  margin-bottom:10px;
+body.template-page .rte.container p {
+  margin-bottom: 10px;
 }
-body.template-page .rte.container table{
-  border-right:1px solid #ff6900;
-  border-bottom:1px solid #ff6900;
+body.template-page .rte.container table {
+  border-right: 1px solid #ff6900;
+  border-bottom: 1px solid #ff6900;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-body.template-page .rte.container table td,body.template-page .rte.container table th{
-  border-left:1px solid #ff6900;
-  border-top:1px solid #ff6900;
+body.template-page .rte.container table td,
+body.template-page .rte.container table th {
+  border-left: 1px solid #ff6900;
+  border-top: 1px solid #ff6900;
   padding: 10px;
 }
-body.template-page .rte.container table th,body.template-page .rte.container table.law td:first-child{
+body.template-page .rte.container table th,
+body.template-page .rte.container table.law td:first-child {
   font-weight: bold;
   width: 25%;
   background-color: rgba(255, 105, 0, 0.2);
   text-align: center;
 }
-a:hover{
+a:hover {
   opacity: 0.6;
 }
-.btn-box a.btn:hover{
-  opacity:1;
+.btn-box a.btn:hover {
+  opacity: 1;
 }
-.breadcrumb h2,.nav-footer li.menu-item,.copyright{
-  	font-family: fot-tsukuardgothic-std, sans-serif;
-	font-weight: 700;
- 	font-style: normal;}
-button.btn.btn-checkout, input.btn-secondary.update-cart{
-	font-family: source-han-sans-japanese,sans-serif;
+.breadcrumb h2,
+.nav-footer li.menu-item,
+.copyright {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
-#RecoverPasswordForm input.btn:hover, #customer_login input.btn:hover, .contact-form input.btn:hover{
-  opacity:0.6;
-  cursor:pointer;
+button.btn.btn-checkout,
+input.btn-secondary.update-cart {
+  font-family: source-han-sans-japanese, sans-serif;
+}
+#RecoverPasswordForm input.btn:hover,
+#customer_login input.btn:hover,
+.contact-form input.btn:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
