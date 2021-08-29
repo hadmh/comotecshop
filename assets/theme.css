@@ -1521,7 +1521,7 @@ button.btn.btn-checkout:hover:after {
     text-align: left;
   }
   .device-tv .tab-content .tab-item {
-    padding: 15px 0;
+    padding: 15px 0 0;
   }
 
   .device-tv .sidebar {
