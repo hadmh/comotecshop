@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     // Select all tabs
-    $(".nav-tab a").click(function (e) {
+    $(".nav-tab a:not(.paging-btn)").click(function (e) {
         e.preventDefault();
         var tab_box = $(this).parent().parent().parent();
         var id = $(this).attr('href');
@@ -35,6 +35,31 @@ $(document).ready(function () {
         tab_box.find('.tab-content ' + id).addClass('active');
     });
 
+    $('.paging-btn.prev').click(function (e) {
+        e.preventDefault();
+
+        $(this).addClass('active');
+        $('.paging-btn.next').removeClass('active');
+
+        var _this = $('.tab-item.active .group-pro.active');
+        if (_this.prev()) {
+            _this.removeClass('active');
+            _this.prev().addClass('active');
+        }
+    });
+
+    $('.paging-btn.next').click(function (e) {
+        e.preventDefault();
+
+        $(this).addClass('active');
+        $('.paging-btn.prev').removeClass('active');
+
+        var _this = $('.tab-item.active .group-pro.active');
+        if (_this.prev()) {
+            _this.removeClass('active');
+            _this.prev().addClass('active');
+        }
+    });
 
     $('#nav-tab').change(function () {
         var id = $(this).val();

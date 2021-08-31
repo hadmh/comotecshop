@@ -1853,3 +1853,12 @@ input.btn-secondary.update-cart {
   opacity: 0.6;
   cursor: pointer;
 }
+
+
+/* TV */
+.group-pro {
+    display: none;
+}
+.group-pro.active {
+    display: block;
+}
