@@ -24,9 +24,7 @@
   <link rel="canonical" href="{{ canonical_url }}">
   {%- endif -%}
 
-  {%- if settings.favicon != blank -%}
-  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
-  {%- endif -%}
+  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png">
 
   {%- capture seo_title -%}
   {%- if request.page_type == 'search' and search.performed == true -%}
