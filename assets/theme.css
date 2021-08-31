@@ -1997,6 +1997,9 @@ button.btn.btn-checkout:hover:after {
   .device-tv .product-detail .box-order .price {
     order: 2;
   }
+  .device-tv .product-description {
+    font-size: 27px;
+  }
 }
 
 /* TV */
@@ -2004,12 +2007,14 @@ button.btn.btn-checkout:hover:after {
 .show-tv,
 .group_cart__row,
 .device-tv .update-cart,
-.device-tv .hide-tv {
+.device-tv .hide-tv,
+.detail-total-price-txt {
   display: none;
 }
 .group-pro.active,
 .device-tv .show-tv,
-.group_cart__row.active {
+.group_cart__row.active,
+.device-tv .detail-total-price-txt {
   display: block;
 }
 
