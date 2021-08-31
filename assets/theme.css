@@ -1467,6 +1467,7 @@ button.btn.btn-checkout:hover:after {
   }
   .device-tv .list-prooduct {
     margin-left: 80px;
+    max-width: 1300px;
   }
 
   .device-tv footer .col-12.large-12,
@@ -1546,7 +1547,7 @@ button.btn.btn-checkout:hover:after {
     width: 450px;
     position: fixed;
     top: 60px;
-    right: 50px;
+    right: 60px;
     z-index: 99;
   }
   .device-tv .sidebar-hearder {
