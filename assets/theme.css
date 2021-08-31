@@ -1965,12 +1965,18 @@ button.btn.btn-checkout:hover:after {
     text-align: left;
   }
 
-  .product-detail a.btn.btn-addcart {
+  .device-tv .product-detail a.btn.btn-addcart {
     position: fixed;
     bottom: 280px;
     right: 200px;
     font-size: 28px;
     border: solid 1px #b2b2b2;
+    width: 445px;
+    height: 60px;
+  }
+  .device-tv ..product-detail a.btn.btn-addcart:before {
+    height: 40px;
+    width: 40px;
   }
 }
 
