@@ -1822,6 +1822,32 @@ button.btn.btn-checkout:hover:after {
     background-color: #fbed21;
   }
 
+  .cart p.btn-addcart {
+    background: #fff;
+    height: 55px;
+    line-height: 55px;
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0 50px 0 30px;
+    position: relative;
+    margin-top: 20px;
+    max-width: 290px;
+    cursor: pointer;
+  }
+  .cart p.btn-addcart:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    background: #ff6a00;
+    -webkit-mask-image: url(cart-ico.svg);
+    mask-image: url(cart-ico.svg);
+    display: inline-block;
+  }
+
   /* TV */
   .group-pro,
   .show-tv {
