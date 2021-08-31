@@ -1994,6 +1994,9 @@ button.btn.btn-checkout:hover:after {
   .device-tv .product-detail .box-order .detail-num-wrap {
     order: 1;
   }
+  .device-tv .product-detail .box-order .price {
+    order: 2;
+  }
 }
 
 /* TV */
