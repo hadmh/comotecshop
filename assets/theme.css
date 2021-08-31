@@ -1513,7 +1513,7 @@ button.btn.btn-checkout:hover:after {
     flex: 0 0 calc(100% - 150px);
     max-width: calc(100% - 150px);
   }
-  .device-tv.template-product .image-box.col-5.large-3 {
+  .device-tv .image-box.col-5.large-3 {
     -ms-flex: 0 0 150px;
     flex: 0 0 150px;
     max-width: 150px;
@@ -1595,7 +1595,7 @@ button.btn.btn-checkout:hover:after {
     margin-left: 6px;
     border-radius: 0 !important;
   }
-  .device-tv .image-box {
+  .device-tv.template-product .image-box {
     margin-bottom: 5px;
     margin-bottom: 5px;
     -ms-flex: 25%;
