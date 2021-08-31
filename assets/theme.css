@@ -660,7 +660,7 @@ a.text-center.color-av-6.active {
 .product-detail .input-group {
   position: relative;
   display: inline-block;
-  padding-right: 15px;
+  padding-right: 25px;
 }
 
 .product-detail .input-group .input-group-btn {
@@ -668,7 +668,7 @@ a.text-center.color-av-6.active {
   right: 0;
   top: 0;
   height: 30px;
-  width: 15px;
+  width: 25px;
 }
 
 .product-detail .input-group .input-group-btn:last-child {
