@@ -2016,11 +2016,11 @@ button.btn.btn-checkout:hover:after {
 .group-pro.active,
 .device-tv .show-tv,
 .group_cart__row.active {
-  display: block;
+  display: inline-block;
 }
 
 .device-tv .detail-total-price-txt {
-  display: inline;
+  display: inline-block;
 }
 
 body.template-page .rte.container h2 {
