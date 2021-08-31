@@ -1978,8 +1978,21 @@ button.btn.btn-checkout:hover:after {
     height: 40px;
     width: 40px;
   }
+  .product-detail .box-order {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+  }
   .device-tv .product-detail .box-order > * {
-    width: 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .device-tv .product-detail .box-order .detail-num-wrap {
+    order: 1;
   }
 }
 
