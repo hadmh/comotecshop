@@ -1961,7 +1961,7 @@ button.btn.btn-checkout:hover:after {
   .device-tv .product-detail .image-box img {
     width: 100%;
   }
-  .device-tv .product-detail .product-title {
+  .device-tv.template-product .product-title {
     margin-bottom: 0.3em;
     padding: 0.72em 0;
     letter-spacing: 0.024em;
