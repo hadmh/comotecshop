@@ -1947,7 +1947,7 @@ button.btn.btn-checkout:hover:after {
     position: relative;
   }
 
-  .device-tv .product-detail .image-box {
+  .device-tv .product-detail .image-box img {
     width: 100%;
   }
   .device-tv .product-title {
