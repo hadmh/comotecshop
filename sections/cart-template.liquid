@@ -13,10 +13,7 @@
         data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
         {% if cart.item_count > 0 %}
         <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
-            <a class="btn btn-cart bgcl-white sm-hide" href="#">
-                <i class="cart" height="25px" width="25px"></i>
-                <span>買い物カゴを見る・購入へ</span>
-            </a>
+            <p class="btn-addcart">買い物カゴ一覧</p>
             <div data-cart-line-items>
                 {%- for item in cart.items -%}
                 <div class="cart__row">
