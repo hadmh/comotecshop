@@ -120,26 +120,30 @@ function loadstyleTV() {
             pro_list.push($(this).html());
         });
 
-        var pro_group = chunkArray(pro_list, 4);
+        if (pro_list.length > 0) {
+            var pro_group = chunkArray(pro_list, 4);
 
-        var html = '';
+            var html = '';
 
-        for (var i = 0; pro_group.length; i++) {
+            for (var i = 0; pro_group.length; i++) {
 
-            html = html + "<div class='group-pro'>";
+                html = html + "<div class='group-pro'>";
 
 
-            console.log(pro_group[i]);
+                console.log(pro_group[i]);
 
-            // for (var j = 0; pro_group[i].length; j++) {
-            //     html = html + pro_group[i][j];
-            // }
+                // for (var j = 0; pro_group[i].length; j++) {
+                //     html = html + pro_group[i][j];
+                // }
 
-            html = html + "</div>";
+                html = html + "</div>";
+            }
+
+            // $(this).html(html);
+
+            console.log(html);
         }
 
-        // $(this).html(html);
 
-        console.log(html);
     });
 }
