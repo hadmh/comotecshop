@@ -1,4 +1,6 @@
-<div class="product-template__container page-width" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" data-ajax-enabled="{{ settings.enable_ajax }}">
+<div class="product-template__container page-width" id="ProductSection-{{ section.id }}"
+    data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true"
+    data-ajax-enabled="{{ settings.enable_ajax }}">
     {% comment %}
     Get first variant, or deep linked one
     {% endcomment %}
@@ -25,6 +27,7 @@
         </div>
     </div>
     <div class="container w-1000">
+        <p class="item-title show-tv">{{ product.title }}</p>
         <div class="product-detail row row-large">
             <div class="image-box col-12 large-4">
                 <div class="col-inner">
@@ -34,7 +37,7 @@
 
                     <p class="product-cat">
                         {% for tag in product.tags %}
-                            {{ tag }}
+                        {{ tag }}
                         {% endfor %}
                     </p>
                 </div>
@@ -42,7 +45,7 @@
 
             <div class="text-box col-12 large-8">
                 <div class="col-inner">
-                    <h3 class="product-title">{{ product.title }}</h3>
+                    <h3 class="product-title hide-tv">{{ product.title }}</h3>
 
                     <div class="product-description">{{ product.description }}</div>
 
@@ -50,18 +53,18 @@
                         <div class="price">
                             <span class="price-yen">
                                 {% if on_sale %}
-                                    <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
+                                <span class="visually-hidden">{{ "products.product.sale_price" | t }}</span>
                                 {% else %}
-                                    <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
                                 {% endif %}
                                 {% include 'price' with product.price %}
                                 {% if on_sale and section.settings.product_show_compare_at_price %}
-                                    <small>
-                                        <s>
-                                            <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
-                                            {% include 'price' with product.compare_at_price %}
-                                        </s>
-                                    </small>
+                                <small>
+                                    <s>
+                                        <span class="visually-hidden">{{ "products.product.regular_price" | t }}</span>
+                                        {% include 'price' with product.compare_at_price %}
+                                    </s>
+                                </small>
                                 {% endif %}
                             </span>
 
@@ -69,7 +72,8 @@
                         </div>
                         <div class="detail-num-wrap">
                             <span class="detail-num-txt">個数</span>
-                            <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity" pattern="[0-9]*" type="number" value="1">
+                            <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
+                                pattern="[0-9]*" type="number" value="1">
                         </div>
 
                         <a class="btn btn-addcart" product="{{ product.variants.first.id }}">買い物カゴへ入れる</a>
