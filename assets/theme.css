@@ -1945,7 +1945,8 @@ button.btn.btn-checkout:hover:after {
   /* TV */
   .group-pro,
   .show-tv,
-  .group_cart__row {
+  .group_cart__row,
+  .device-tv .update-cart {
     display: none;
   }
   .group-pro.active,
