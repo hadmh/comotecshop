@@ -142,10 +142,9 @@
       var device = sessionStorage.getItem("device");
 
 
-      console.log(device == 'tv');
-
       if (device == 'tv') {
         $('body').addClass('device-tv');
+        console.log(device == 'tv');
         loadstyleTV();
       }
     } else {
