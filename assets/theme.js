@@ -101,5 +101,12 @@ function goBack() {
 }
 
 function loadstyleTV() {
+    $('.list-prooduct').each(function () {
+        var list_pro = [];
+        $(this).find('.product-item').each(function () {
+            list_pro.push($(this).html());
+        });
 
+        console.log(list_pro);
+    });
 }
