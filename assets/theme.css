@@ -1823,25 +1823,21 @@ button.btn.btn-checkout:hover:after {
   }
 
   .cart p.btn-addcart {
-    background: #fff;
-    height: 55px;
-    line-height: 55px;
-    font-weight: 700;
-    border-radius: 5px;
-    text-align: center;
-    padding: 0 50px 0 30px;
-    position: relative;
-    margin-top: 20px;
-    max-width: 290px;
-    cursor: pointer;
+    margin-bottom: 0.3em;
+    padding: 0.2em 0 0.2em 1.8em;
+    background-position: center left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    letter-spacing: 0.024em;
+    font-size: 2vw;
   }
   .cart p.btn-addcart:before {
     content: "";
     position: absolute;
     top: 10px;
     left: 10px;
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
     background: #ff6a00;
     -webkit-mask-image: url(cart-ico.svg);
     mask-image: url(cart-ico.svg);
