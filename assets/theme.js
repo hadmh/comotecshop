@@ -128,6 +128,24 @@ $(document).ready(function () {
         }
     });
 
+    $('a.page-numbers.prev').click(function (e) {
+        var current = $('a.page-numbers.active').data('number');
+        if (current > 1) {
+            $('.group_cart__row').removeClass('active');
+            $('.group_cart__row[data-number=' + current - 1 + ']').addClass('active');
+        }
+    });
+
+    $('a.page-numbers.next').click(function (e) {
+        var current = $('a.page-numbers.active').data('number');
+        if (current < $(this).prev().data('number')) {
+            $('.group_cart__row').removeClass('active');
+            $('.group_cart__row[data-number=' + current + 1 + ']').addClass('active');
+        }
+    });
+
+
+
     $('#nav-tab').change(function () {
         var id = $(this).val();
         $('.tab-content').find('.tab-item').removeClass('active');
