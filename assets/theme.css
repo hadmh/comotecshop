@@ -2049,6 +2049,7 @@ button.btn.btn-checkout:hover:after {
   }
   .device-tv .product-detail .box-order .detail-num-wrap {
     order: 1;
+    margin: 0 0 1.8em;
   }
   .device-tv .product-detail .box-order .price {
     order: 2;
