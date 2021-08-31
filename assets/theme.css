@@ -1964,6 +1964,14 @@ button.btn.btn-checkout:hover:after {
   .device-tv .product-detail .price {
     text-align: left;
   }
+
+  .product-detail a.btn.btn-addcart {
+    position: fixed;
+    bottom: 280px;
+    right: 200px;
+    font-size: 28px;
+    border: solid 1px #b2b2b2;
+  }
 }
 
 /* TV */
