@@ -1753,6 +1753,7 @@ button.btn.btn-checkout:hover:after {
 
   .device-tv .cart__row {
     padding: 25px 10px;
+    border-top: none;
   }
   .device-tv .cart__row .title-box {
     -ms-flex: 0 0 700px;
@@ -1762,9 +1763,9 @@ button.btn.btn-checkout:hover:after {
     padding-right: 100px;
   }
   .device-tv .cart__row .image-box {
-    -ms-flex: 0 0 70px;
-    flex: 0 0 70px;
-    max-width: 70px;
+    -ms-flex: 0 0 105px;
+    flex: 0 0 105px;
+    max-width: 105px;
   }
   .device-tv .cart__row .quantity-box {
     -ms-flex: 0 0 275px;
