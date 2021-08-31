@@ -143,9 +143,11 @@
 
 
       if (device == 'tv') {
-        $('body').addClass('device-tv');
-        console.log(device == 'tv');
-        loadstyleTV();
+        $(document).ready(function () {
+          $('body').addClass('device-tv');
+          console.log(device == 'tv');
+          loadstyleTV();
+        }
       }
     } else {
       function checkdevice() {
