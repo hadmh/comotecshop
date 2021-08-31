@@ -679,7 +679,7 @@ a.text-center.color-av-6.active {
   border: none;
   background-color: #fff;
   background-image: url(btn-number.png);
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   color: transparent;
@@ -691,7 +691,7 @@ a.text-center.color-av-6.active {
 }
 
 .product-detail .input-group > *:first-child button {
-  background-position: top;
+  background-position: bottom;
 }
 
 .product-detail .detail-num-wrap {
