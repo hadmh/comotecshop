@@ -49,16 +49,16 @@ function loadstyleTV() {
             }
             html = html + "</div>";
 
-            pagi = pagi + '<a class="page-numbers" href="#" data-number="' + (i + 1) + '">' + (i + 1) + '</a>';
+            pagi = pagi + '<a class="page-numbers ' + active + '" href="#" data-number="' + (i + 1) + '">' + (i + 1) + '</a>';
         }
 
         pagi = pagi + '<a class="page - numbers next" href="#"><span>次へ</span></a></div>';
-        //$('.cart .cart-row').insertBefore(pagi, $('.cart .cart-row').childNodes[0]);
+
+        $('.cart > div').html(html);
+        $('.cart .cart-row .grid').insertBefore(pagi);
 
         console.log(pagi);
         console.log(html);
-
-        $('.cart > div').html(html);
     }
 
 }
