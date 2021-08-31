@@ -1,3 +1,64 @@
+function chunkArray(myArray, chunk_size) {
+    var index = 0;
+    var arrayLength = myArray.length;
+    var tempArray = [];
+    for (index = 0; index < arrayLength; index += chunk_size) {
+        myChunk = myArray.slice(index, index + chunk_size);
+        // Do something if you want with the group
+        tempArray.push(myChunk);
+    }
+    return tempArray;
+}
+function loadstyleTV() {
+    $('.list-prooduct').each(function () {
+        var pro_list = [];
+        $(this).find('.product-item').each(function () {
+            pro_list.push($(this).html());
+        });
+        if (pro_list.length > 0) {
+            var pro_group = chunkArray(pro_list, 4);
+            var html = '';
+            for (var i = 0; i < pro_group.length; i++) {
+                var active = '';
+                if (i == 0) active = 'active';
+                html = html + "<div class='group-pro " + active + "'>";
+                for (var j = 0; j < pro_group[i].length; j++) {
+                    html = html + '<div class="product-item row">' + pro_group[i][j] + "</div>";
+                }
+                html = html + "</div>";
+            }
+            $(this).html(html);
+        }
+    });
+
+
+    var cart_list = [];
+    $('.cart .cart__row').each(function () {
+        cart_list.push($(this).html());
+    });
+    if (cart_list.length > 0) {
+        var pro_group = chunkArray(cart_list, 3);
+        var html = '';
+        var pagi = '<div class="local-navigation"><a class="page-numbers prev" href="#"><span>前へ</span></a>';
+        for (var i = 0; i < pro_group.length; i++) {
+            var active = '';
+            if (i == 0) active = 'active';
+            html = html + "<div class='group_cart__row " + active + "' data-number='" + (i + 1) + "'>";
+            for (var j = 0; j < pro_group[i].length; j++) {
+                html = html + '<div class="cart__row">' + pro_group[i][j] + "</div>";
+            }
+            html = html + "</div>";
+
+            pagi = pagi + '<a class="page-numbers" href="#" data-number="' + (i + 1) + '">' + (i + 1) + '</a>';
+        }
+
+        pagi = pagi + '<a class="page - numbers next" href="#"><span>次へ</span></a></div>';
+        $('.cart .cart-row').insertBefore(pagi, $('.cart .cart-row').childNodes[0]);
+        $(this).html(html);
+    }
+
+}
+
 // JavaScript Document
 $(document).ready(function () {
     // Tab
