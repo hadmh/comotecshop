@@ -54,7 +54,7 @@ function loadstyleTV() {
 
         pagi = pagi + '<a class="page - numbers next" href="#"><span>次へ</span></a></div>';
         $('.cart .cart-row').insertBefore(pagi, $('.cart .cart-row').childNodes[0]);
-        $(this).html(html);
+        $('.cart > div').html(html);
     }
 
 }
