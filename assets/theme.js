@@ -128,14 +128,17 @@ function loadstyleTV() {
 
             html = html + "<div class='group-pro'>";
 
-            for (var j = 0; pro_group[i].length; j++) {
-                html = html + pro_group[i][j];
-            }
+
+            console.log(pro_group[i]);
+
+            // for (var j = 0; pro_group[i].length; j++) {
+            //     html = html + pro_group[i][j];
+            // }
 
             html = html + "</div>";
         }
 
-        $(this).html(html);
+        // $(this).html(html);
 
         console.log(html);
     });
