@@ -103,6 +103,9 @@
   <script>
 
     if (sessionStorage.getItem("device")) {
+
+      console.log(sessionStorage.getItem("device"));
+
       if (sessionStorage.getItem("device") == "tv") {
         $('body').addClass('device-tv');
         loadstyleTV();
