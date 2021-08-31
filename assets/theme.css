@@ -1855,6 +1855,10 @@ button.btn.btn-checkout:hover:after {
     padding-left: 0;
     -ms-flex-align: start;
     align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    bottom: 160px;
+    max-width: 1690px;
   }
 
   .local-navigation {
