@@ -655,7 +655,11 @@ a.text-center.color-av-6.active {
   text-align: center;
   font-weight: bold;
   font-size: 24px;
+}
+
+.product-detail .input-group {
   position: relative;
+  display: inline-block;
 }
 
 .product-detail .input-group .input-group-btn {
