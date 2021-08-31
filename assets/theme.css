@@ -1896,6 +1896,11 @@ button.btn.btn-checkout:hover:after {
     background-image: url(arrow-red-next.svg);
   }
 
+  a.page-numbers.active {
+    background-color: #3f3f3f;
+    color: #fff;
+  }
+
   a.page-numbers {
     position: relative;
     display: inline-block;
