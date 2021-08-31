@@ -1383,9 +1383,10 @@ button.btn.btn-checkout:hover:after {
 
   .device-tv header {
     padding-bottom: 160px;
-    background-size: cover;
+    background-size: contain;
     padding-top: 20px;
     background-image: url(bg-header-tv-1.png);
+    background-position: top;
   }
   .device-tv main {
     margin-top: -150px;
