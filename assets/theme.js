@@ -130,6 +130,7 @@ $(document).ready(function () {
 
 
     $('a.page-numbers:not(.next, .prev)').click(function (e) {
+        e.preventDefault();
         console.log('111');
         var current = $(this).data('number');
         $('.group_cart__row, a.page-numbers:not(.next, .prev)').removeClass('active');
@@ -138,6 +139,7 @@ $(document).ready(function () {
     });
 
     $('a.page-numbers.prev').click(function (e) {
+        e.preventDefault();
         console.log('222');
         var current = $('a.page-numbers.active').data('number');
         if (current > 1) {
@@ -147,6 +149,7 @@ $(document).ready(function () {
     });
 
     $('a.page-numbers.next').click(function (e) {
+        e.preventDefault();
         console.log('333');
         var current = $('a.page-numbers.active').data('number');
         if (current < $(this).prev().data('number')) {
