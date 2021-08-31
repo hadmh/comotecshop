@@ -666,10 +666,10 @@ a.text-center.color-av-6.active {
 
 .product-detail .input-group .input-group-btn {
   position: absolute;
-  right: -5px;
+  right: -10px;
   top: 0;
   height: 22px;
-  width: 35px;
+  width: 25px;
   line-height: 1;
 }
 .product-detail .input-group .input-group-btn button {
@@ -681,6 +681,7 @@ a.text-center.color-av-6.active {
   background-image: url(btn-number.png);
   background-position: top;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .product-detail .input-group > *:last-child {
