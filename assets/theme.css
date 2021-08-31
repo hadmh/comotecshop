@@ -2015,9 +2015,12 @@ button.btn.btn-checkout:hover:after {
 }
 .group-pro.active,
 .device-tv .show-tv,
-.group_cart__row.active,
-.device-tv .detail-total-price-txt {
+.group_cart__row.active {
   display: block;
+}
+
+.device-tv .detail-total-price-txt {
+  display: inline;
 }
 
 body.template-page .rte.container h2 {
