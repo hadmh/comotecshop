@@ -672,7 +672,7 @@ a.text-center.color-av-6.active {
   line-height: 1;
   border: 1px solid;
 }
-.product-detail .input-group .input-group-btn .button {
+.product-detail .input-group .input-group-btn button {
   width: 100%;
   height: 100%;
   background: none;
