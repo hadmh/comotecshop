@@ -100,6 +100,9 @@
   {{ content_for_header }}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{{ 'bootstrap-input-number.js' | asset_url }}"></script>
+  <script src="{{ 'theme.js' | asset_url }}"></script>
+
   <script>
     if (sessionStorage.getItem("device")) {
       function checkdevice() {
@@ -133,7 +136,6 @@
 
 <body class="template-{{ request.page_type | handle }}" onload="checkdevice()">
 
-  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
 
   {% section 'header' %}
