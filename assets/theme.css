@@ -1823,10 +1823,12 @@ button.btn.btn-checkout:hover:after {
   }
 
   /* TV */
-  .group-pro {
+  .group-pro,
+  .show-tv {
     display: none;
   }
-  .group-pro.active {
+  .group-pro.active,
+  .device-tv .show-tv {
     display: block;
   }
 }
