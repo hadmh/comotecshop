@@ -684,6 +684,7 @@ a.text-center.color-av-6.active {
   background-size: cover;
   background-repeat: no-repeat;
   color: transparent;
+  cursor: pointer;
 }
 
 .input-group > *:first-child {
