@@ -209,7 +209,7 @@ $(document).on('click', '.btn-addcart', function () {
     });
 });
 
-$(document).on('click', '.device-tv.template-index .product-item', function () {
+$('.device-tv.template-index .product-item').click(function () {
     window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
 });
 
