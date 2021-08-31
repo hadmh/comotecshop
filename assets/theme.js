@@ -132,7 +132,8 @@ $(document).ready(function () {
     $('a.page-numbers:not(.next, .prev)').click(function (e) {
         var current = $(this).data('number');
         $('.group_cart__row, a.page-numbers:not(.next, .prev)').removeClass('active');
-        $('.group_cart__row[data-number=' + current + ']', this).addClass('active');
+        $('.group_cart__row[data-number=' + current + ']').addClass('active');
+        $(this).addClass('active');
     });
 
     $('a.page-numbers.prev').click(function (e) {
