@@ -42,7 +42,7 @@ $(document).ready(function () {
         $('.paging-btn.next').removeClass('active');
 
         var _this = $('.tab-item.active .group-pro.active');
-        if (_this.prev()) {
+        if (_this.prev().length > 0) {
             _this.removeClass('active');
             _this.prev().addClass('active');
         }
@@ -55,7 +55,7 @@ $(document).ready(function () {
         $('.paging-btn.prev').removeClass('active');
 
         var _this = $('.tab-item.active .group-pro.active');
-        if (_this.next()) {
+        if (_this.next().length > 0) {
             _this.removeClass('active');
             _this.next().addClass('active');
         }
