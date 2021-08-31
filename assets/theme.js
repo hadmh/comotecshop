@@ -138,6 +138,7 @@ $(document).ready(function () {
 
     $('a.page-numbers.prev').click(function (e) {
         var current = $('a.page-numbers.active').data('number');
+        console.log(current);
         if (current > 1) {
             $('.group_cart__row').removeClass('active');
             $('.group_cart__row[data-number=' + (current - 1) + ']').addClass('active');
@@ -146,7 +147,6 @@ $(document).ready(function () {
 
     $('a.page-numbers.next').click(function (e) {
         var current = $('a.page-numbers.active').data('number');
-        console.log($(this).prev().data('number'));
         if (current < $(this).prev().data('number')) {
             $('.group_cart__row').removeClass('active');
             $('.group_cart__row[data-number=' + (current + 1) + ']').addClass('active');
