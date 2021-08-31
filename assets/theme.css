@@ -1933,6 +1933,7 @@ button.btn.btn-checkout:hover:after {
   .device-tv button.btn.btn-checkout.selected {
     border: solid 0.24em #ec1c24;
     background-color: #fbed21;
+    color: #000;
   }
 
   .device-tv button.btn.btn-checkout {
