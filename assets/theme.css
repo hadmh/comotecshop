@@ -683,7 +683,7 @@ a.text-center.color-av-6.active {
   background-size: cover;
 }
 
-.product-detail .input-group .input-group-btn:last-child button {
+.product-detail .input-group > *:last-child button {
   top: 23px;
   height: 22px;
   background-position: bottom;
