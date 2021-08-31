@@ -1889,11 +1889,11 @@ button.btn.btn-checkout:hover:after {
   }
 
   a.page-numbers.prev {
-    background-image: url(../images/arrow-red.svg);
+    background-image: url(arrow-red.svg);
   }
 
   a.page-numbers.next {
-    background-image: url(../images/arrow-red-next.svg);
+    background-image: url(arrow-red-next.svg);
   }
 
   a.page-numbers {
