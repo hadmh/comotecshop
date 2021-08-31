@@ -126,7 +126,9 @@ function loadstyleTV() {
             var html = '';
 
             for (var i = 0; i < pro_group.length; i++) {
-                html = html + "<div class='group-pro'>";
+                var active = '';
+                if (i == 0) active = 'active';
+                html = html + "<div class='group-pro " + active + "'>";
 
                 for (var j = 0; j < pro_group[i].length; j++) {
                     html = html + '<div class="product-item row">' + pro_group[i][j] + "</div>";
