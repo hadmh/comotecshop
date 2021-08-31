@@ -1854,11 +1854,13 @@ button.btn.btn-checkout:hover:after {
 
   /* TV */
   .group-pro,
-  .show-tv {
+  .show-tv,
+  .group_cart__row {
     display: none;
   }
   .group-pro.active,
-  .device-tv .show-tv {
+  .device-tv .show-tv,
+  .group_cart__row.active {
     display: block;
   }
 }
