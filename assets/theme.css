@@ -667,7 +667,7 @@ a.text-center.color-av-6.active {
 .product-detail .input-group .input-group-btn {
   position: absolute;
   right: -10px;
-  top: 0;
+  top: 5px;
   height: 22px;
   width: 25px;
   line-height: 1;
@@ -682,6 +682,7 @@ a.text-center.color-av-6.active {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  color: transparent;
 }
 
 .product-detail .input-group > *:last-child {
