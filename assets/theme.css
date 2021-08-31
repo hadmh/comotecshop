@@ -1919,7 +1919,8 @@ button.btn.btn-checkout:hover:after {
     color: #fff;
   }
 
-  .page-numbers.selected::after {
+  .page-numbers.selected::after,
+  .device-tv button.btn.btn-checkout.selected::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -1928,6 +1929,17 @@ button.btn.btn-checkout:hover:after {
     height: 100%;
     border: solid 0.24em #ec1c24;
     content: "";
+  }
+
+  .device-tv button.btn.btn-checkout {
+    width: 415px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 1.5vw;
+    line-height: 1;
+    border: solid 1px #b2b2b2;
+    position: relative;
   }
 
   /* TV */
