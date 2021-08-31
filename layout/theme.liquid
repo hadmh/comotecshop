@@ -139,8 +139,10 @@
       function checkdevice() {
         console.log(sessionStorage.getItem("device"));
       }
+      var device = sessionStorage.getItem("device");
 
-      var device = sessionStorage.getItem("device")
+
+      console.log(device.indexOf('tv') > 0);
 
       if (device.indexOf('tv') > 0) {
         $('body').addClass('device-tv');
