@@ -652,9 +652,11 @@ a.text-center.color-av-6.active {
 .product-detail .num-quantity {
   width: 100px;
   height: 45px;
-  text-align: center;
+  text-align: right !important;
   font-weight: bold;
   font-size: 27px;
+  line-height: 1;
+  border: 1px solid;
 }
 
 .product-detail .input-group {
@@ -665,12 +667,10 @@ a.text-center.color-av-6.active {
 
 .product-detail .input-group .input-group-btn {
   position: absolute;
-  right: 0;
+  right: -5px;
   top: 0;
   height: 22px;
   width: 35px;
-  line-height: 1;
-  border: 1px solid;
 }
 .product-detail .input-group .input-group-btn button {
   width: 100%;
