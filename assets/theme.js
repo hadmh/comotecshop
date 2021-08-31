@@ -55,9 +55,9 @@ $(document).ready(function () {
         $('.paging-btn.prev').removeClass('active');
 
         var _this = $('.tab-item.active .group-pro.active');
-        if (_this.prev()) {
+        if (_this.next()) {
             _this.removeClass('active');
-            _this.prev().addClass('active');
+            _this.next().addClass('active');
         }
     });
 
