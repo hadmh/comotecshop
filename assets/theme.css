@@ -1930,16 +1930,9 @@ button.btn.btn-checkout:hover:after {
     content: "";
   }
 
-  .device-tv button.btn.btn-checkout.selected::before {
+  .device-tv button.btn.btn-checkout.selected {
     border: solid 0.24em #ec1c24;
     background-color: #fbed21;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    content: "";
   }
 
   .device-tv button.btn.btn-checkout {
