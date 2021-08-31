@@ -1694,6 +1694,7 @@ button.btn.btn-checkout:hover:after {
 
   .device-tv header .container .large-6 img {
     width: 100%;
+    opacity: 0;
   }
 
   .device-tv a.btn.btn-footer {
