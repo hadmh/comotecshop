@@ -48,6 +48,11 @@ $(document).ready(function () {
         }
     });
 
+    $('a, button').click(function () {
+        $('a, button').removeClass('selected');
+        $(this).addClass('selected');
+    })
+
     $('.paging-btn.next').click(function (e) {
         e.preventDefault();
 
