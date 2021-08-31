@@ -70,6 +70,7 @@ $(document).ready(function () {
         var id = $(this).attr('aria-owns');
         $('#' + id).toggleClass('hide');
     });
+
 });
 
 $(document).on('click', '.btn-addcart', function () {
@@ -97,4 +98,8 @@ $(document).on('click', '.device-tv .product-item', function () {
 
 function goBack() {
     window.history.back();
+}
+
+function loadstyleTV() {
+
 }
