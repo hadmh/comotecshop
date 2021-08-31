@@ -1927,6 +1927,16 @@ button.btn.btn-checkout:hover:after {
     font-size: 1.6vw;
   }
 
+  a.page-numbers {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.2em;
+    padding: 0.5em 1em;
+    border: solid 1px #3f3f3f;
+    line-height: 1;
+    background-color: white;
+  }
+
   a.page-numbers.prev,
   a.page-numbers.next {
     position: relative;
@@ -1963,15 +1973,6 @@ button.btn.btn-checkout:hover:after {
   a.page-numbers.active {
     background-color: #3f3f3f;
     color: #fff;
-  }
-
-  a.page-numbers {
-    position: relative;
-    display: inline-block;
-    margin: 0 0.2em;
-    padding: 0.5em 1em;
-    border: solid 1px #3f3f3f;
-    line-height: 1;
   }
 
   a.page-numbers.current {
