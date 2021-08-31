@@ -126,11 +126,7 @@ function loadstyleTV() {
             var html = '';
 
             for (var i = 0; i < pro_group.length; i++) {
-
                 html = html + "<div class='group-pro'>";
-
-
-                console.log(pro_group[i]);
 
                 for (var j = 0; j < pro_group[i].length; j++) {
                     html = html + pro_group[i][j];
@@ -140,8 +136,6 @@ function loadstyleTV() {
             }
 
             $(this).html(html);
-
-            // console.log(html);
         }
 
 
