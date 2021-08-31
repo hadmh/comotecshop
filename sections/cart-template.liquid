@@ -9,35 +9,49 @@
     </div>
 </div>
 <div class="container w-1200">
-    <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
+    <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template"
+        data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
         {% if cart.item_count > 0 %}
-          <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
+        <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
+            <a class="btn btn-cart bgcl-white sm-hide" href="#">
+                <i class="cart" height="25px" width="25px"></i>
+                <span>買い物カゴを見る・購入へ</span>
+            </a>
             <div data-cart-line-items>
                 {%- for item in cart.items -%}
-                    <div class="cart__row">
-                        <div class="image-box">
-                            <div class="cart__image-wrapper">
-                                <img class="cart__image{% if item.image == null %} hide{% endif %}" src="{{ item | img_url: 'x190' }}" alt="{{ item.image.alt | escape }}" data-cart-item-image>
-                            </div>
-                        </div>
-                        <div class="title-box">
-                            <a href="{{ item.url }}" class="cart__product-title" data-cart-item-title data-role="product-title">
-                                {{ item.product.title }}
-                            </a>
-                        </div>
-                        <div class="quantity-box">
-                            <span class="label">個数</span>
-                            <input id="updates_{{ item.key }}" class="cart__qty-input" type="number" value="{{ item.quantity }}" min="0" pattern="[0-9]*" data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-mobile data-role="product-quantity-mobile">
-                        </div>
-                        <div class="final-price-box">
-                            <span class="label">価格</span>
-                            <span class="price-yen">{{ item.original_line_price | money }}</span>
-                            <span class="vat_include">(税込)</span>
-                        </div>
-                        <div class="remove-box">
-                            <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link text-link--accent" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove data-role="product-remove">削除</a>
+                <div class="cart__row">
+                    <div class="image-box">
+                        <div class="cart__image-wrapper">
+                            <img class="cart__image{% if item.image == null %} hide{% endif %}"
+                                src="{{ item | img_url: 'x190' }}" alt="{{ item.image.alt | escape }}"
+                                data-cart-item-image>
                         </div>
                     </div>
+                    <div class="title-box">
+                        <a href="{{ item.url }}" class="cart__product-title" data-cart-item-title
+                            data-role="product-title">
+                            {{ item.product.title }}
+                        </a>
+                    </div>
+                    <div class="quantity-box">
+                        <span class="label">個数</span>
+                        <input id="updates_{{ item.key }}" class="cart__qty-input" type="number"
+                            value="{{ item.quantity }}" min="0" pattern="[0-9]*" data-quantity-input
+                            data-quantity-item="{{ forloop.index }}" data-quantity-input-mobile
+                            data-role="product-quantity-mobile">
+                    </div>
+                    <div class="final-price-box">
+                        <span class="label">価格</span>
+                        <span class="price-yen">{{ item.original_line_price | money }}</span>
+                        <span class="vat_include">(税込)</span>
+                    </div>
+                    <div class="remove-box">
+                        <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0"
+                            class="text-link text-link--accent"
+                            aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove
+                            data-role="product-remove">削除</a>
+                    </div>
+                </div>
                 {%- endfor -%}
             </div>
 
@@ -45,15 +59,16 @@
                 <div class="grid">
 
                     {% if settings.cart_notes_enable %}
-                        <div class="grid-item large--one-half">
-                            <label for="cartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
-                            <textarea class="input-full" id="cartSpecialInstructions" name="note">{{ cart.note }}</textarea>
-                        </div>
+                    <div class="grid-item large--one-half">
+                        <label for="cartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+                        <textarea class="input-full" id="cartSpecialInstructions" name="note">{{ cart.note }}</textarea>
+                    </div>
                     {% endif %}
 
                     <div class="grid-item text-right{% if settings.cart_notes_enable %} large--one-half{% endif %}">
 
-                        <div class="cart-subtotal{% if settings.cart_notes_enable %} cart-subtotal--notes-enabled{% endif %}">
+                        <div
+                            class="cart-subtotal{% if settings.cart_notes_enable %} cart-subtotal--notes-enabled{% endif %}">
                             <span class="label">合計</span>
                             <span class="h1 cart-subtotal--price">
                                 {% include 'price' with cart.total_price %}
@@ -61,7 +76,8 @@
                             <span class="vat_include">(税込)</span>
                         </div>
 
-                        <input type="submit" name="update" class="btn-secondary update-cart" value="{{ 'cart.general.update' | t }}">
+                        <input type="submit" name="update" class="btn-secondary update-cart"
+                            value="{{ 'cart.general.update' | t }}">
 
                         <button class="btn btn-checkout" name="checkout" type="submit">
                             レジに進む
@@ -71,11 +87,11 @@
             </div>
         </form>
         {% else %}
-          <div id="EmptyCart">
+        <div id="EmptyCart">
             <h1 class="h2">{{ 'cart.general.title' | t }}</h1>
             <p class="cart--empty-message">{{ 'cart.general.empty' | t }}</p>
-          </div>
+        </div>
         {% endif %}
-      </div>
-  </div>
+    </div>
+</div>
 </div>
