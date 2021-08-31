@@ -1376,6 +1376,11 @@ button.btn.btn-checkout:hover:after {
   .device-tv header .btn-cart {
     display: none !important;
   }
+
+  .device-tv a:hover {
+    opacity: 1;
+  }
+
   .device-tv header {
     padding-bottom: 160px;
     background-size: cover;
@@ -1854,11 +1859,10 @@ input.btn-secondary.update-cart {
   cursor: pointer;
 }
 
-
 /* TV */
 .group-pro {
-    display: none;
+  display: none;
 }
 .group-pro.active {
-    display: block;
+  display: block;
 }
