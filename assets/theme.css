@@ -1513,7 +1513,7 @@ button.btn.btn-checkout:hover:after {
     flex: 0 0 calc(100% - 150px);
     max-width: calc(100% - 150px);
   }
-  .device-tv .image-box.col-5.large-3 {
+  .device-tv.template-product .image-box.col-5.large-3 {
     -ms-flex: 0 0 150px;
     flex: 0 0 150px;
     max-width: 150px;
