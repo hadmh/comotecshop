@@ -1975,6 +1975,7 @@ button.btn.btn-checkout:hover:after {
     border: solid 1px #b2b2b2;
     width: 445px;
     height: 60px;
+    padding-left: 60px;
   }
   .device-tv .product-detail a.btn.btn-addcart:before {
     height: 40px;
