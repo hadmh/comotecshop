@@ -100,13 +100,41 @@ function goBack() {
     window.history.back();
 }
 
+function chunkArray(myArray, chunk_size) {
+    var index = 0;
+    var arrayLength = myArray.length;
+    var tempArray = [];
+
+    for (index = 0; index < arrayLength; index += chunk_size) {
+        myChunk = myArray.slice(index, index + chunk_size);
+        // Do something if you want with the group
+        tempArray.push(myChunk);
+    }
+    return tempArray;
+}
+
 function loadstyleTV() {
     $('.list-prooduct').each(function () {
-        var list_pro = [];
+        var pro_list = [];
         $(this).find('.product-item').each(function () {
-            list_pro.push($(this).html());
+            pro_list.push($(this).html());
         });
 
-        console.log(list_pro);
+        var pro_group = chunkArray(pro_list, 4);
+
+        var html = '';
+
+        for (var i = 0; pro_group.length; i++) {
+
+            html = html + "<div class='group-pro'>";
+
+            for (var j = 0; pro_group[i].length; j++) {
+                html = html + pro_group[i][j];
+            }
+
+            html = html + "</div>";
+        }
+
+        console.log(html);
     });
 }
