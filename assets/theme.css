@@ -660,10 +660,12 @@ a.text-center.color-av-6.active {
 .product-detail .input-group {
   position: relative;
   display: inline-block;
+  padding-right: 10px;
 }
 
 .product-detail .input-group .input-group-btn {
   position: absolute;
+  right: 0;
 }
 
 .product-detail .detail-num-wrap {
