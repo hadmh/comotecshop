@@ -1585,6 +1585,10 @@ button.btn.btn-checkout:hover:after {
   }
   .device-tv .image-box {
     margin-bottom: 5px;
+    margin-bottom: 5px;
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
   }
   .device-tv span.detail-num-txt {
     font-size: 18px;
@@ -1960,20 +1964,20 @@ button.btn.btn-checkout:hover:after {
   .device-tv .product-detail .price {
     text-align: left;
   }
+}
 
-  /* TV */
-  .group-pro,
-  .show-tv,
-  .group_cart__row,
-  .device-tv .update-cart,
-  .device-tv .hide-tv {
-    display: none;
-  }
-  .group-pro.active,
-  .device-tv .show-tv,
-  .group_cart__row.active {
-    display: block;
-  }
+/* TV */
+.group-pro,
+.show-tv,
+.group_cart__row,
+.device-tv .update-cart,
+.device-tv .hide-tv {
+  display: none;
+}
+.group-pro.active,
+.device-tv .show-tv,
+.group_cart__row.active {
+  display: block;
 }
 
 body.template-page .rte.container h2 {
