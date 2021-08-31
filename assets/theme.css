@@ -547,7 +547,7 @@ a.text-center.color-av-6.active {
 }
 .product-item span.tax-include {
   font-size: 17px;
-  1ily: fot-tsukuardgothic-std, sans-serif;
+  font-family: fot-tsukuardgothic-std, sans-serif;
 }
 .product-item span.detail-num-txt {
   font-size: 19px;
@@ -646,7 +646,7 @@ a.text-center.color-av-6.active {
   font-size: 17px;
 }
 .product-detail span.detail-num-txt {
-  font-size: 19px;
+  font-size: 27px;
 }
 .product-detail input[type="number"],
 .product-detail .num-quantity {
@@ -1998,6 +1998,7 @@ button.btn.btn-checkout:hover:after {
   }
   .device-tv .product-detail .price {
     text-align: left;
+    font-size: 27px;
   }
 
   .device-tv .product-detail a.btn.btn-addcart {
@@ -2035,6 +2036,10 @@ button.btn.btn-checkout:hover:after {
   }
   .device-tv .product-description {
     font-size: 27px;
+  }
+
+  .device-tv .product-detail span.price-yen {
+    font-size: 43px;
   }
 }
 
