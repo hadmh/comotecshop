@@ -1825,7 +1825,7 @@ button.btn.btn-checkout:hover:after {
     background-color: #fbed21;
   }
 
-  .cart p.btn-addcart {
+  .device-tv .cart p.btn-addcart {
     padding: 0.2em 0 0 1.8em;
     background-position: center left;
     background-size: contain;
@@ -1834,7 +1834,7 @@ button.btn.btn-checkout:hover:after {
     font-size: 2vw;
     position: relative;
   }
-  .cart p.btn-addcart:before {
+  .device-tv .cart p.btn-addcart:before {
     content: "";
     position: absolute;
     top: 5px;
@@ -1845,6 +1845,11 @@ button.btn.btn-checkout:hover:after {
     -webkit-mask-image: url(cart-ico.svg);
     mask-image: url(cart-ico.svg);
     display: inline-block;
+  }
+
+  .device-tv .cart-row {
+    padding-top: 20px;
+    padding-bottom: 0;
   }
 
   /* TV */
