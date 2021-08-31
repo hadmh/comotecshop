@@ -1486,8 +1486,13 @@ button.btn.btn-checkout:hover:after {
     background-color: #ffeedb;
   }
   .device-tv .image-box p.product-cat {
+    display: none;
+  }
+
+  .device-tv .product-detail .image-box p.product-cat {
     display: block !important;
   }
+
   .device-tv .product-item span.price-yen {
     font-size: 54px;
     line-height: 1.4;
