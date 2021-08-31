@@ -135,6 +135,8 @@ function loadstyleTV() {
             html = html + "</div>";
         }
 
+        $(this).html(html);
+
         console.log(html);
     });
 }
