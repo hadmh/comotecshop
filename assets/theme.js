@@ -152,7 +152,7 @@ $(document).ready(function () {
         }
     });
 
-
+    $('.num-quantity').bootstrapNumber();
 
     $('#nav-tab').change(function () {
         var id = $(this).val();
