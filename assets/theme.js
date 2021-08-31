@@ -141,8 +141,8 @@ $(document).ready(function () {
         var current = $('a.page-numbers.active').data('number');
         console.log(current);
         if (current > 1) {
-            $('.group_cart__row').removeClass('active');
-            $('.group_cart__row[data-number=' + (current - 1) + ']').addClass('active');
+            $('.group_cart__row, a.page-numbers:not(.next, .prev)').removeClass('active');
+            $('.group_cart__row[data-number=' + (current - 1) + '], .page-numbers[data - number= ' + current + ']').addClass('active');
         }
     });
 
@@ -150,7 +150,7 @@ $(document).ready(function () {
         var current = $('a.page-numbers.active').data('number');
         if (current < $(this).prev().data('number')) {
             $('.group_cart__row').removeClass('active');
-            $('.group_cart__row[data-number=' + (current + 1) + ']').addClass('active');
+            $('.group_cart__row[data-number=' + (current + 1) + '], .page-numbers[data - number= ' + current + ']').addClass('active');
         }
     });
 
