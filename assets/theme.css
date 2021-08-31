@@ -1986,7 +1986,7 @@ button.btn.btn-checkout:hover:after {
     height: 40px;
     width: 40px;
   }
-  .product-detail .box-order {
+  .device-tv .product-detail .box-order {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
