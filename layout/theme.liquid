@@ -101,17 +101,23 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
-    function checkdevice() {
-      var user_agent = navigator.userAgent;
 
-      console.log(user_agent);
-
-      if (user_agent.indexOf('TV') > 0 || user_agent.indexOf('Hybridcast') > 0) {
+    if (sessionStorage.getItem("device")) {
+      if (sessionStorage.getItem("device") == "tv") {
         $('body').addClass('device-tv');
-
         loadstyleTV();
       }
+    } else {
+      function checkdevice() {
+        var user_agent = navigator.userAgent;
+        if (user_agent.indexOf('TV') > 0 || user_agent.indexOf('Hybridcast') > 0) {
+          sessionStorage.setItem("device", "tv");
+          loadstyleTV();
+        }
+      }
     }
+
+
   </script>
 
 </head>
