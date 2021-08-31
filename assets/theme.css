@@ -1730,12 +1730,13 @@ button.btn.btn-checkout:hover:after {
 
   .device-tv .breadcrumb {
     background: #f4f4f4;
-    padding: 20px 0 20px;
+    padding: 11px 0;
     text-align: left;
   }
   .device-tv .breadcrumb .link {
     text-align: left;
-    font-size: 23px;
+    font-size: 20px;
+    color: #151515;
   }
   .device-tv .breadcrumb h2 {
     display: none;
