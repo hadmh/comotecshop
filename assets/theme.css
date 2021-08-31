@@ -668,10 +668,10 @@ a.text-center.color-av-6.active {
 .input-group .input-group-btn {
   position: absolute;
   right: -10px;
-  top: 5px;
+  top: 0;
   height: 22px;
   width: 25px;
-  line-height: 1;
+  line-height: 10px;
   z-index: 9;
 }
 .input-group .input-group-btn button {
