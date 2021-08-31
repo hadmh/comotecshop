@@ -14,7 +14,7 @@
         {% if cart.item_count > 0 %}
         <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
             <p class="btn-addcart show-tv">買い物カゴ一覧</p>
-            <div data-cart-line-items>
+            <div class="cart-line-items" data-cart-line-items>
                 {%- for item in cart.items -%}
                 <div class="cart__row">
                     <div class="image-box">
