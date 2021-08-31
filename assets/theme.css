@@ -1919,8 +1919,7 @@ button.btn.btn-checkout:hover:after {
     color: #fff;
   }
 
-  .page-numbers.selected::after,
-  .device-tv button.btn.btn-checkout.selected::after {
+  .page-numbers.selected::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -1929,6 +1928,11 @@ button.btn.btn-checkout:hover:after {
     height: 100%;
     border: solid 0.24em #ec1c24;
     content: "";
+  }
+
+  .device-tv button.btn.btn-checkout.selected::after {
+    border: solid 0.24em #ec1c24;
+    background-color: #fbed21;
   }
 
   .device-tv button.btn.btn-checkout {
