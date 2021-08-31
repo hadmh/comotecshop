@@ -128,6 +128,13 @@ $(document).ready(function () {
         }
     });
 
+
+    $('a.page-numbers:not(.next, .prev)').click(function (e) {
+        var current = $(this).data('number');
+        $('.group_cart__row').removeClass('active');
+        $('.group_cart__row[data-number=' + current + ']').addClass('active');
+    });
+
     $('a.page-numbers.prev').click(function (e) {
         var current = $('a.page-numbers.active').data('number');
         if (current > 1) {
