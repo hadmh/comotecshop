@@ -655,7 +655,6 @@ a.text-center.color-av-6.active {
   text-align: right !important;
   font-weight: bold;
   font-size: 27px;
-  line-height: 1;
   border: 1px solid;
 }
 
@@ -671,6 +670,7 @@ a.text-center.color-av-6.active {
   top: 0;
   height: 22px;
   width: 35px;
+  line-height: 1;
 }
 .product-detail .input-group .input-group-btn button {
   width: 100%;
