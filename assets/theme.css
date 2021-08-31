@@ -2017,7 +2017,7 @@ button.btn.btn-checkout:hover:after {
 .group-pro.active,
 .device-tv .show-tv,
 .group_cart__row.active {
-  display: inline-block;
+  display: block;
 }
 
 .device-tv .detail-total-price-txt {
