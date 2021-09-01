@@ -192,7 +192,7 @@ $(document).ready(function () {
         $('#' + id).toggleClass('hide');
     });
 
-    $('.template-index.device-tv .product-item').click(function () {
+    $('.template-index .product-item').click(function () {
         console.log($(this).find('.btn-readmore').attr('href'));
         window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
     });
