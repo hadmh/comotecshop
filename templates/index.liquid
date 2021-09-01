@@ -113,8 +113,18 @@
                             </div>
                             <div class="detail-num-wrap">
                                 <span class="detail-num-txt">個数</span>
-                                <input class="product-{{ product.variants.first.id }}-quantity" min="1" name="quantity"
-                                    pattern="[0-9]*" type="number" value="1">
+                                <select class="product-{{ product.variants.first.id }}-quantity" name="quantity">
+                                    <option value="1" selected="">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
                             </div>
                         </div>
                     </div>
