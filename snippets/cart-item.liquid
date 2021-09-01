@@ -1,10 +1,23 @@
 <div class="cart-item col-12 large-3">
     <div class="image-box">
-        <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}" alt="{{ item.image.alt | escape }}">
+        <img srcset="{{ item.image | img_url: '90x' }}" src="{{ item | img_url: '90x' }}"
+            alt="{{ item.image.alt | escape }}">
     </div>
 
     <div class="detail-num-wrap">
         <span class="detail-num-txt">個数</span>
-        <input id="quantity_{{ item.key }}" class="form__input cart-drawer__input" value="{{ item.quantity }}" type="number" pattern="\d*" min="1" aria-label="{{ 'cart.general.item_quantity' | t }}" data-cart-item-quantity>
+        <select id="quantity_{{ item.key }}" class="form__input cart-drawer__input"
+            aria-label="{{ 'cart.general.item_quantity' | t }}" data-cart-item-quantity>
+            <option value="1" {% if item.quantity==1 %} selected {% endif %}>1</option>
+            <option value="2" {% if item.quantity==2 %} selected {% endif %}>2</option>
+            <option value="3" {% if item.quantity==3 %} selected {% endif %}>3</option>
+            <option value="4" {% if item.quantity==4 %} selected {% endif %}>4</option>
+            <option value="5" {% if item.quantity==5 %} selected {% endif %}>5</option>
+            <option value="6" {% if item.quantity==6 %} selected {% endif %}>6</option>
+            <option value="7" {% if item.quantity==7 %} selected {% endif %}>7</option>
+            <option value="8" {% if item.quantity==8 %} selected {% endif %}>8</option>
+            <option value="9" {% if item.quantity==9 %} selected {% endif %}>9</option>
+            <option value="10" {% if item.quantity==10 %} selected {% endif %}>10</option>
+        </select>
     </div>
 </div>
