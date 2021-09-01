@@ -198,7 +198,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).on('click', '.btn-addcart', function () {
+$('.btn-addcart').click(function () {
     var ID = $(this).attr("product");
     var Quantity = $('.product-' + ID + '-quantity').val();
 
