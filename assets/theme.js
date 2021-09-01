@@ -213,7 +213,7 @@ $(document).ready(function () {
         $('a, button:not(.btn-default), .cart-item .image-box').focus(function(){
             $('a, button, .cart-item .image-box').removeClass('selected');
             $(this).addClass('selected');
-            $(this).closest('.product-item').addClass('focusing');
+            $(this).closest('.product-item').toggleClass('focusing');
         });
         $('.paging-btn.prev').focus(function(){
             $(this).addClass('active');
