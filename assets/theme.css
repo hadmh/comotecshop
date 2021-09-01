@@ -2139,11 +2139,11 @@ input.btn-secondary.update-cart {
   cursor: pointer;
 }
 .device-tv a.selected img{
-  border:0.2em solid #ec1c24;
+  border:0.4em solid #ec1c24;
 }
 
 .device-tv a.selected img{
-  border:0.2em solid #ec1c24;
+  border:0.4em solid #ec1c24;
 }
 .device-tv .nav-tab li.menu-item a:focus:before{
     border-left: .4em solid;
