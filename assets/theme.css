@@ -2154,3 +2154,7 @@ input.btn-secondary.update-cart {
 .device-tv li.paging a:focus:before{
     border:0.4em solid #ec1c24;
 }
+.device-tv .product-item.focusing{
+  
+    background-color: #ffeedb;
+}
