@@ -2158,3 +2158,6 @@ input.btn-secondary.update-cart {
   
     background-color: #ffeedb;
 }
+.device-tv select:focus{
+    border:0.4em solid #ec1c24;
+}
