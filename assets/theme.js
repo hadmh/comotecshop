@@ -187,11 +187,6 @@ $(document).ready(function () {
         $('#' + id).toggleClass('hide');
     });
 
-    $('.device-tv .product-item').click(function () {
-        console.log($(this).find('.btn-readmore').attr('href'));
-        window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
-    });
-
     $('.btn-addcart').click(function () {
         var ID = $(this).attr("product");
         var Quantity = $('.product-' + ID + '-quantity').val();
@@ -210,10 +205,17 @@ $(document).ready(function () {
         });
     });
 
-    $('a, button:not(.btn-default)').click(function () {
-        $('a, button').removeClass('selected');
-        $(this).addClass('selected');
-    });
+    setTimeout(function () {
+        $('a, button:not(.btn-default)').click(function () {
+            $('a, button').removeClass('selected');
+            $(this).addClass('selected');
+        });
+
+        $('.device-tv .product-item').click(function () {
+            console.log($(this).find('.btn-readmore').attr('href'));
+            window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
+        });
+    }, 1000);
 
     // $('.input-group').on('click', '.button-minus', function (e) {
     //     e.preventDefault();
