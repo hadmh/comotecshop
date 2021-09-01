@@ -192,30 +192,30 @@ $(document).ready(function () {
         $('#' + id).toggleClass('hide');
     });
 
-});
+    $('.device-tv .product-item').click(function () {
+        console.log($(this).find('.btn-readmore').attr('href'));
+        window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
+    });
 
-$('.template-index .product-item').click(function () {
-    console.log($(this).find('.btn-readmore').attr('href'));
-    window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
-});
+    $('.btn-addcart').click(function () {
+        var ID = $(this).attr("product");
+        var Quantity = $('.product-' + ID + '-quantity').val();
 
-$('.btn-addcart').click(function () {
-    var ID = $(this).attr("product");
-    var Quantity = $('.product-' + ID + '-quantity').val();
-
-    $.ajax({
-        type: 'POST',
-        url: '/cart/add',
-        data: {
-            quantity: Quantity,
-            id: ID
-        },
-        dataType: 'json',
-        success: function (data) {
-            window.location.href = window.location.origin + "/cart";
-        }
+        $.ajax({
+            type: 'POST',
+            url: '/cart/add',
+            data: {
+                quantity: Quantity,
+                id: ID
+            },
+            dataType: 'json',
+            success: function (data) {
+                window.location.href = window.location.origin + "/cart";
+            }
+        });
     });
 });
+
 
 
 
