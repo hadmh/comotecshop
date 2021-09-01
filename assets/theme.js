@@ -192,6 +192,9 @@ $(document).ready(function () {
         $('#' + id).toggleClass('hide');
     });
 
+    $('.device-tv.template-index .product-item').click(function () {
+        window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
+    });
 });
 
 $(document).on('click', '.btn-addcart', function () {
@@ -212,9 +215,6 @@ $(document).on('click', '.btn-addcart', function () {
     });
 });
 
-$('.device-tv.template-index .product-item').click(function () {
-    window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
-});
 
 
 function goBack() {
