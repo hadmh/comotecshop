@@ -206,9 +206,10 @@ $(document).ready(function () {
     });
 
     setTimeout(function () {
-        $('a, button:not(.btn-default), .cart-item .image-box').click(function () {
+        $('a, button:not(.btn-default), .cart-item .image-box').focus(function(){
             $('a, button, .cart-item .image-box').removeClass('selected');
             $(this).addClass('selected');
+            $(this).closest('.product-item').addClass('focusing');
         });
 
         $('.device-tv .product-item').click(function () {
