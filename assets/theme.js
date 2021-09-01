@@ -215,7 +215,16 @@ $(document).ready(function () {
             $(this).addClass('selected');
             $(this).closest('.product-item').addClass('focusing');
         });
-
+        $('.paging-btn.prev').focus(function(){
+            $(this).addClass('active');
+            $('.paging-btn.next').removeClass('active');
+        });
+    
+        $('.paging-btn.next').focus(function(){
+            $(this).addClass('active');
+            $('.paging-btn.prev').removeClass('active');
+    
+        });
         $('.device-tv .product-item').click(function () {
             console.log($(this).find('.btn-readmore').attr('href'));
             window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
