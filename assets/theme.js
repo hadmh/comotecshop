@@ -193,6 +193,7 @@ $(document).ready(function () {
     });
 
     $('.device-tv .product-item').click(function () {
+        console.log($(this).find('.btn-readmore').attr('href'));
         window.location.href = window.location.origin + $(this).find('.btn-readmore').attr('href');
     });
 });
