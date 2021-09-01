@@ -2158,6 +2158,6 @@ input.btn-secondary.update-cart {
   
     background-color: #ffeedb;
 }
-.device-tv select:focus{
+.device-tv select:focus,a.text-link.selected,a.page-numbers:focus{
     outline:0.2em solid #ec1c24;
 }
