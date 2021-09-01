@@ -138,11 +138,6 @@ $(document).ready(function () {
         }
     });
 
-    $('a, button:not(.btn-default)').click(function () {
-        $('a, button').removeClass('selected');
-        $(this).addClass('selected');
-    })
-
     $('.paging-btn.next').click(function (e) {
         e.preventDefault();
 
@@ -217,6 +212,11 @@ $(document).ready(function () {
 });
 
 
+
+$('a, button:not(.btn-default)').click(function () {
+    $('a, button').removeClass('selected');
+    $(this).addClass('selected');
+})
 
 
 function goBack() {
