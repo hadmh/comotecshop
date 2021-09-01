@@ -206,6 +206,10 @@ $(document).ready(function () {
     });
 
     setTimeout(function () {
+        $('.device-tv .nav-tab li.menu-item a').focus(function(){
+            $('.device-tv .nav-tab li.menu-item a').removeClass('active');
+            $(this).addClass('active');
+        });
         $('a, button:not(.btn-default), .cart-item .image-box').focus(function(){
             $('a, button, .cart-item .image-box').removeClass('selected');
             $(this).addClass('selected');
