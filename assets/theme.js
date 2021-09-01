@@ -206,8 +206,8 @@ $(document).ready(function () {
     });
 
     setTimeout(function () {
-        $('a, button:not(.btn-default), .cart-item .cart-item').click(function () {
-            $('a, button, .cart-item .cart-item').removeClass('selected');
+        $('a, button:not(.btn-default), .cart-item .image-box').click(function () {
+            $('a, button, .cart-item .image-box').removeClass('selected');
             $(this).addClass('selected');
         });
 
