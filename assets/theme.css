@@ -2138,3 +2138,6 @@ input.btn-secondary.update-cart {
   opacity: 0.6;
   cursor: pointer;
 }
+.device-tv a.selected img{
+  border:2px solid #ec1c24;
+}
