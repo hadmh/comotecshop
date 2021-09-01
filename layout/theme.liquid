@@ -119,6 +119,7 @@
     } else {
       function checkdevice() {
         var user_agent = navigator.userAgent;
+        console.log(user_agent);
         if (user_agent.indexOf('TV') > 0 || user_agent.indexOf('Hybridcast') > 0) {
           sessionStorage.setItem("device", "tv");
           $('body').addClass('device-tv');
