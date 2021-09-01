@@ -102,7 +102,7 @@
 
   <script>
 
-    if (sessionStorage.getItem("device") != "null") {
+    if (sessionStorage.getItem("device") != "null" && sessionStorage.getItem("device") != undefined) {
       function checkdevice() {
         console.log(sessionStorage.getItem("device"));
       }
@@ -121,6 +121,7 @@
         var user_agent = navigator.userAgent;
         if (user_agent.indexOf('TV') > 0 || user_agent.indexOf('Hybridcast') > 0) {
           sessionStorage.setItem("device", "tv");
+          $('body').addClass('device-tv');
           loadstyleTV();
         }
       }
