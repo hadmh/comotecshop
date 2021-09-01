@@ -2147,9 +2147,9 @@ input.btn-secondary.update-cart {
 }
 .device-tv .nav-tab li.menu-item a:focus,
 .device-tv .nav-tab li.menu-item a:focus-visible{
-    outline:0.4em solid #ec1c24;
+    border:0.4em solid #ec1c24;
 }
 .device-tv li.paging a:focus,
 .device-tv li.paging a:focus-visible{
-    outline:0.4em solid #ec1c24;
+    border:0.4em solid #ec1c24;
 }
