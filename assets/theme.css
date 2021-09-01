@@ -2147,7 +2147,10 @@ input.btn-secondary.update-cart {
 }
 .device-tv .nav-tab li.menu-item a:focus:before,
 .device-tv .nav-tab li.menu-item a:focus-visible:before{
-    border:0.4em solid #ec1c24;
+    border-left: .4em solid;
+    border-top: .4em solid;
+    border-right: .4em solid;
+    border-color: #ec1c24;
 }
 .device-tv li.paging a:focus,
 .device-tv li.paging a:focus-visible{
