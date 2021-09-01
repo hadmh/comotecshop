@@ -214,6 +214,16 @@ $(document).ready(function () {
         $('a, button').removeClass('selected');
         $(this).addClass('selected');
     });
+
+    // $('.input-group').on('click', '.button-minus', function (e) {
+    //     e.preventDefault();
+    //     var fieldName = $(e.target).data('field');
+    //     var parent = $(e.target).closest('div');
+    //     var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+    //     var currentVariant = parseInt(parent.find('input[name=' + fieldName + ']').attr('id'), 10);
+    //     jQuery.post('/cart/change.js', { quantity: currentVal - 1, id: currentVariant });
+
+    // });
 });
 
 function goBack() {
