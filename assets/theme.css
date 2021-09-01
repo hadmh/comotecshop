@@ -2145,8 +2145,8 @@ input.btn-secondary.update-cart {
 .device-tv a.selected img{
   border:0.2em solid #ec1c24;
 }
-.device-tv .nav-tab li.menu-item a:focus,
-.device-tv .nav-tab li.menu-item a:focus-visible{
+.device-tv .nav-tab li.menu-item a:focus:before,
+.device-tv .nav-tab li.menu-item a:focus-visible:before{
     border:0.4em solid #ec1c24;
 }
 .device-tv li.paging a:focus,
