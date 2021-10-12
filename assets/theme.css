@@ -1402,7 +1402,7 @@ button.btn.btn-checkout:hover:after {
     display: inline-block !important;
   }
   .image-box p.product-cat {
-    display: none !important;
+    /* display: none !important; */
   }
   .product-item h3.product-title {
     min-height: 140px;
