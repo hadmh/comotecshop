@@ -648,7 +648,7 @@ a.text-center.color-av-6.active {
 .product-detail span.detail-num-txt {
   font-size: 19px;
 }
-.product-detail input[type="number"],
+.product-detail input[type="number"],.detail-num-txt select
 .num-quantity {
   width: 50px;
   height: 37px;
@@ -1402,7 +1402,7 @@ button.btn.btn-checkout:hover:after {
     display: inline-block !important;
   }
   .image-box p.product-cat {
-    /* display: none !important; */
+    display: none !important;
   }
   .product-item h3.product-title {
     min-height: 140px;
