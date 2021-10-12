@@ -212,6 +212,9 @@ $(document).ready(function () {
         });
         $('a, button:not(.btn-default), .cart-item .image-box').focus(function(){
             $('a, button, .cart-item .image-box').removeClass('selected');
+            $('.paging-btn.next').removeClass('active');
+            $('.paging-btn.prev').removeClass('active');
+            $('.product-item').removeClass('focusing');
             $(this).addClass('selected');
             $(this).closest('.group-pro').find('.product-item').removeClass('focusing');
             $(this).closest('.product-item').addClass('focusing');
