@@ -123,7 +123,9 @@
         if (user_agent.indexOf('TV') > 0 || user_agent.indexOf('Hybridcast') > 0) {
           sessionStorage.setItem("device", "tv");
           $('body').addClass('device-tv');
-          loadstyleTV();
+          loadstyleTV(); 
+        }else{
+          sessionStorage.setItem("device", "");
         }
       }
 
