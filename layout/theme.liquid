@@ -120,13 +120,15 @@
       function checkdevice() {
         var user_agent = navigator.userAgent;
         console.log(user_agent);
-        if (user_agent.indexOf('TV') > 0 || user_agent.indexOf('Hybridcast') > 0) {
+        if (user_agent.indexOf('TV') > 0 || user_agent.indexOf('cast') > 0 || user_agent.indexOf('Hybrid') > 0) {
           sessionStorage.setItem("device", "tv");
+          console.log(true);
           $('body').addClass('device-tv');
           loadstyleTV(); 
         }else{
           $('body').addClass('device-tv');
           loadstyleTV(); 
+          sessionStorage.setItem("device", "");
         }
       }
 
