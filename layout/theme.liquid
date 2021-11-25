@@ -102,7 +102,7 @@
 
   <script>
 
-    if (sessionStorage.getItem("device") != "null" || sessionStorage.getItem("device") != undefined) {
+    if (sessionStorage.getItem("device") != "null" || sessionStorage.getItem("device") != undefined || sessionStorage.getItem("device") != '') {
       function checkdevice() {
         console.log(sessionStorage.getItem("device"));
       }
