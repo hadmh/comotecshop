@@ -119,7 +119,7 @@
       function checkdevice() {
         var user_agent = navigator.userAgent;
         console.log(user_agent);
-        if (user_agent.indexOf('TV') >= 0 || user_agent.indexOf('cast') >= 0 || user_agent.indexOf('Hybrid') >= 0 || user_agent.indexOf('hybrid') >= 0 || user_agent.indexOf('iptv') >= 0 || user_agent.indexOf('Iptv') >= 0 || user_agent.indexOf('IptvSvcClient') >= 0) {
+        if (user_agent.indexOf('TV') >= 0 || user_agent.indexOf('tv') >= 0 || user_agent.indexOf('Tv') >= 0 || user_agent.indexOf('cast') >= 0 || user_agent.indexOf('Hybrid') >= 0 || user_agent.indexOf('hybrid') >= 0 || user_agent.indexOf('iptv') >= 0 || user_agent.indexOf('Iptv') >= 0 || user_agent.indexOf('IptvSvcClient') >= 0) {
           sessionStorage.setItem("device", "tv");
           console.log(true);
           $('body').addClass('device-tv');
